@@ -1,0 +1,210 @@
+{
+  "metadata": {
+    "title": "ProductName — Tagline",
+    "description": "Descrição do produto em 150-160 caracteres para SEO.",
+    "siteName": "ProductName",
+    "keywords": "saas, product, keyword1, keyword2",
+    "og": {
+      "title": "ProductName — Tagline",
+      "description": "Descrição para redes sociais.",
+      "url": "https://example.com",
+      "imageAlt": "ProductName screenshot"
+    },
+    "canonical": "https://example.com"
+  },
+  "announcement": {
+    "text": "Novidade! Lançamos a versão 2.0",
+    "link": "/changelog",
+    "cta": "Ver novidades"
+  },
+  "navbar": {
+    "brand": "ProductName",
+    "features": "Funcionalidades",
+    "pricing": "Preços",
+    "faq": "FAQ",
+    "language": "PT",
+    "cta": "Começar grátis",
+    "login": "Entrar"
+  },
+  "hero": {
+    "badge": "Novo — Versão 2.0 disponível",
+    "title": "Headline focada em resultado",
+    "titleWord1": "Automatize.",
+    "titleWord2": "Colabore.",
+    "titleWord3": "Escale.",
+    "subtitle": "Subtítulo que expande o como e porquê, em 15-25 palavras que conectam com a dor do cliente.",
+    "cta": {
+      "primary": "Começar grátis",
+      "secondary": "Ver demonstração",
+      "microcopy": "Sem cartão de crédito. Grátis por 14 dias."
+    }
+  },
+  "socialProof": {
+    "title": "Usado por mais de 2.500 equipes em todo o mundo",
+    "cta": "Conheça nossos clientes"
+  },
+  "benefits": {
+    "title": "Por que escolher ProductName",
+    "subtitle": "Tudo que você precisa para escalar seu negócio com confiança.",
+    "item1": {
+      "title": "Rápido de configurar",
+      "description": "Comece em minutos, não em semanas. Setup guiado e integrações prontas."
+    },
+    "item2": {
+      "title": "Seguro por padrão",
+      "description": "Criptografia ponta a ponta e compliance com LGPD/GDPR integrado."
+    },
+    "item3": {
+      "title": "Resultados mensuráveis",
+      "description": "Dashboard em tempo real com métricas que importam para seu negócio."
+    },
+    "item4": {
+      "title": "Suporte dedicado",
+      "description": "Tempo médio de resposta de 2h. Suporte humano, não chatbot."
+    }
+  },
+  "features": {
+    "title": "Tudo que você precisa",
+    "subtitle": "Ferramentas poderosas para cada etapa do seu workflow.",
+    "feature1": {
+      "title": "Automação inteligente",
+      "description": "Reduza trabalho manual em 80% com workflows automatizados que aprendem com seu time."
+    },
+    "feature2": {
+      "title": "Colaboração em tempo real",
+      "description": "Trabalhe junto com seu time sem conflitos, com sync instantâneo."
+    },
+    "feature3": {
+      "title": "Analytics avançado",
+      "description": "Insights acionáveis com dashboards customizáveis e relatórios automáticos."
+    },
+    "feature4": {
+      "title": "Integrações nativas",
+      "description": "Conecte com 200+ ferramentas que seu time já usa. Setup em 1 clique."
+    },
+    "feature5": {
+      "title": "Busca inteligente",
+      "description": "Encontre qualquer coisa instantaneamente com busca semântica por IA em todos os seus projetos."
+    }
+  },
+  "testimonials": {
+    "title": "O que nossos clientes dizem",
+    "subtitle": "Histórias reais de times que transformaram seus resultados.",
+    "item1": {
+      "quote": "Reduzimos o tempo de deploy em 73% desde que começamos a usar o ProductName. O time agora gosta de fazer releases.",
+      "author": "Ana Silva",
+      "role": "CTO, TechCorp"
+    },
+    "item2": {
+      "quote": "A melhor decisão que tomamos foi migrar para o ProductName. ROI positivo no primeiro mês.",
+      "author": "Carlos Mendes",
+      "role": "Head de Produto, StartupXYZ"
+    },
+    "item3": {
+      "quote": "Finalmente um produto que entrega o que promete. Suporte incrível e produto sólido.",
+      "author": "Marina Costa",
+      "role": "VP de Engenharia, ScaleUp"
+    }
+  },
+  "pricing": {
+    "title": "Preços simples e transparentes",
+    "subtitle": "Escolha o plano ideal para o tamanho do seu time. Mude quando quiser.",
+    "month": "mês",
+    "recommended": "Mais popular",
+    "starter": {
+      "name": "Starter",
+      "price": "R$49",
+      "description": "Perfeito para times pequenos começando.",
+      "feature1": "Até 5 usuários",
+      "feature2": "10GB de armazenamento",
+      "feature3": "Integrações básicas",
+      "feature4": "Suporte por email",
+      "cta": "Começar grátis"
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "R$149",
+      "description": "Para times em crescimento que precisam de mais.",
+      "feature1": "Até 25 usuários",
+      "feature2": "100GB de armazenamento",
+      "feature3": "Todas as integrações",
+      "feature4": "Suporte prioritário",
+      "feature5": "Analytics avançado",
+      "cta": "Começar grátis"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Sob consulta",
+      "description": "Para grandes organizações com necessidades específicas.",
+      "feature1": "Usuários ilimitados",
+      "feature2": "Armazenamento ilimitado",
+      "feature3": "Integrações customizadas",
+      "feature4": "SLA garantido",
+      "feature5": "Suporte 24/7 dedicado",
+      "feature6": "Deploy on-premise",
+      "cta": "Falar com vendas"
+    }
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "subtitle": "Respostas para as dúvidas mais comuns sobre o ProductName.",
+    "q1": {
+      "question": "Posso testar antes de pagar?",
+      "answer": "Sim! Oferecemos 14 dias de teste grátis em todos os planos, sem necessidade de cartão de crédito."
+    },
+    "q2": {
+      "question": "Como funciona o billing?",
+      "answer": "Cobrança mensal ou anual (com 20% de desconto). Você pode cancelar a qualquer momento sem multa."
+    },
+    "q3": {
+      "question": "Meus dados estão seguros?",
+      "answer": "Absolutamente. Usamos criptografia AES-256, estamos em compliance com LGPD/GDPR e fazemos backups diários."
+    },
+    "q4": {
+      "question": "Posso migrar meus dados de outra plataforma?",
+      "answer": "Sim, oferecemos migração assistida gratuita. Nosso time cuida de tudo para você."
+    },
+    "q5": {
+      "question": "Vocês oferecem desconto para startups?",
+      "answer": "Sim! Startups em early-stage podem se candidatar ao nosso programa com 50% de desconto no primeiro ano."
+    },
+    "q6": {
+      "question": "Qual o tempo de resposta do suporte?",
+      "answer": "Plano Starter: 24h. Plano Pro: 4h. Enterprise: 1h com gerente de conta dedicado."
+    }
+  },
+  "finalCta": {
+    "title": "Pronto para transformar seus resultados?",
+    "subtitle": "Junte-se a milhares de equipes que já estão crescendo com ProductName.",
+    "cta": {
+      "primary": "Começar grátis agora",
+      "secondary": "Agendar demo"
+    },
+    "microcopy": "Setup em 5 minutos. Sem cartão de crédito."
+  },
+  "footer": {
+    "brand": "ProductName",
+    "tagline": "A plataforma que seu time merece.",
+    "product": {
+      "title": "Produto",
+      "features": "Funcionalidades",
+      "pricing": "Preços",
+      "changelog": "Changelog",
+      "docs": "Documentação"
+    },
+    "company": {
+      "title": "Empresa",
+      "about": "Sobre nós",
+      "blog": "Blog",
+      "careers": "Carreiras",
+      "contact": "Contato"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacidade",
+      "terms": "Termos de uso",
+      "cookies": "Cookies"
+    },
+    "copyright": "© {year} ProductName. Todos os direitos reservados."
+  }
+}

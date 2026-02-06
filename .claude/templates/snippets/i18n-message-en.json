@@ -1,0 +1,210 @@
+{
+  "metadata": {
+    "title": "ProductName — Tagline",
+    "description": "Product description in 150-160 characters for SEO purposes.",
+    "siteName": "ProductName",
+    "keywords": "saas, product, keyword1, keyword2",
+    "og": {
+      "title": "ProductName — Tagline",
+      "description": "Description for social media sharing.",
+      "url": "https://example.com",
+      "imageAlt": "ProductName screenshot"
+    },
+    "canonical": "https://example.com"
+  },
+  "announcement": {
+    "text": "New! We just launched version 2.0",
+    "link": "/changelog",
+    "cta": "See what's new"
+  },
+  "navbar": {
+    "brand": "ProductName",
+    "features": "Features",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "language": "EN",
+    "cta": "Get started free",
+    "login": "Login"
+  },
+  "hero": {
+    "badge": "New — Version 2.0 is here",
+    "title": "Result-focused headline",
+    "titleWord1": "Automate.",
+    "titleWord2": "Collaborate.",
+    "titleWord3": "Scale.",
+    "subtitle": "A subtitle that expands on the how and why, in 15-25 words that connect with the customer's pain point.",
+    "cta": {
+      "primary": "Get started free",
+      "secondary": "Watch demo",
+      "microcopy": "No credit card required. Free for 14 days."
+    }
+  },
+  "socialProof": {
+    "title": "Trusted by over 2,500 teams worldwide",
+    "cta": "Meet our customers"
+  },
+  "benefits": {
+    "title": "Why choose ProductName",
+    "subtitle": "Everything you need to scale your business with confidence.",
+    "item1": {
+      "title": "Quick to set up",
+      "description": "Get started in minutes, not weeks. Guided setup and ready-made integrations."
+    },
+    "item2": {
+      "title": "Secure by default",
+      "description": "End-to-end encryption and built-in GDPR/SOC2 compliance out of the box."
+    },
+    "item3": {
+      "title": "Measurable results",
+      "description": "Real-time dashboard with the metrics that matter most to your business."
+    },
+    "item4": {
+      "title": "Dedicated support",
+      "description": "Average response time under 2 hours. Real humans, not chatbots."
+    }
+  },
+  "features": {
+    "title": "Everything you need",
+    "subtitle": "Powerful tools for every step of your workflow.",
+    "feature1": {
+      "title": "Smart automation",
+      "description": "Cut manual work by 80% with automated workflows that learn from your team."
+    },
+    "feature2": {
+      "title": "Real-time collaboration",
+      "description": "Work together with your team seamlessly, with instant sync and zero conflicts."
+    },
+    "feature3": {
+      "title": "Advanced analytics",
+      "description": "Actionable insights with customizable dashboards and automated reports."
+    },
+    "feature4": {
+      "title": "Native integrations",
+      "description": "Connect with 200+ tools your team already uses. One-click setup."
+    },
+    "feature5": {
+      "title": "Smart Search",
+      "description": "Find anything instantly with AI-powered semantic search across all your projects."
+    }
+  },
+  "testimonials": {
+    "title": "What our customers say",
+    "subtitle": "Real stories from teams that transformed their results.",
+    "item1": {
+      "quote": "We cut deployment time by 73% since switching to ProductName. The team actually enjoys shipping releases now.",
+      "author": "Ana Silva",
+      "role": "CTO, TechCorp"
+    },
+    "item2": {
+      "quote": "The best decision we made was migrating to ProductName. Positive ROI within the first month.",
+      "author": "Carlos Mendes",
+      "role": "Head of Product, StartupXYZ"
+    },
+    "item3": {
+      "quote": "Finally a product that delivers on its promises. Incredible support and rock-solid platform.",
+      "author": "Marina Costa",
+      "role": "VP of Engineering, ScaleUp"
+    }
+  },
+  "pricing": {
+    "title": "Simple, transparent pricing",
+    "subtitle": "Pick the plan that fits your team. Upgrade or downgrade anytime.",
+    "month": "month",
+    "recommended": "Most popular",
+    "starter": {
+      "name": "Starter",
+      "price": "$29",
+      "description": "Perfect for small teams just getting started.",
+      "feature1": "Up to 5 users",
+      "feature2": "10GB storage",
+      "feature3": "Basic integrations",
+      "feature4": "Email support",
+      "cta": "Get started free"
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "$99",
+      "description": "For growing teams that need more power.",
+      "feature1": "Up to 25 users",
+      "feature2": "100GB storage",
+      "feature3": "All integrations",
+      "feature4": "Priority support",
+      "feature5": "Advanced analytics",
+      "cta": "Get started free"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Custom",
+      "description": "For large organizations with specific requirements.",
+      "feature1": "Unlimited users",
+      "feature2": "Unlimited storage",
+      "feature3": "Custom integrations",
+      "feature4": "Guaranteed SLA",
+      "feature5": "24/7 dedicated support",
+      "feature6": "On-premise deployment",
+      "cta": "Talk to sales"
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Answers to the most common questions about ProductName.",
+    "q1": {
+      "question": "Can I try before I buy?",
+      "answer": "Absolutely! We offer a 14-day free trial on all plans — no credit card required."
+    },
+    "q2": {
+      "question": "How does billing work?",
+      "answer": "Choose monthly or annual billing (save 20% annually). Cancel anytime with no penalties."
+    },
+    "q3": {
+      "question": "Is my data secure?",
+      "answer": "Yes. We use AES-256 encryption, are fully GDPR/SOC2 compliant, and perform daily backups."
+    },
+    "q4": {
+      "question": "Can I migrate data from another platform?",
+      "answer": "Yes, we offer free assisted migration. Our team handles everything for you."
+    },
+    "q5": {
+      "question": "Do you offer startup discounts?",
+      "answer": "Yes! Early-stage startups can apply for our program with 50% off the first year."
+    },
+    "q6": {
+      "question": "What's your support response time?",
+      "answer": "Starter: 24 hours. Pro: 4 hours. Enterprise: 1 hour with a dedicated account manager."
+    }
+  },
+  "finalCta": {
+    "title": "Ready to transform your results?",
+    "subtitle": "Join thousands of teams already growing with ProductName.",
+    "cta": {
+      "primary": "Get started free now",
+      "secondary": "Schedule a demo"
+    },
+    "microcopy": "5-minute setup. No credit card required."
+  },
+  "footer": {
+    "brand": "ProductName",
+    "tagline": "The platform your team deserves.",
+    "product": {
+      "title": "Product",
+      "features": "Features",
+      "pricing": "Pricing",
+      "changelog": "Changelog",
+      "docs": "Documentation"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About us",
+      "blog": "Blog",
+      "careers": "Careers",
+      "contact": "Contact"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
+    },
+    "copyright": "© {year} ProductName. All rights reserved."
+  }
+}

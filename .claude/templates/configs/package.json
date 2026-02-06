@@ -1,0 +1,38 @@
+{
+  "name": "saas-landing-page",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --max-warnings 0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build",
+    "commit": "cz",
+    "prepare": "husky"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "release": {
+    "branches": ["main"],
+    "plugins": [
+      ["@semantic-release/commit-analyzer", { "preset": "conventionalcommits" }],
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      ["@semantic-release/npm", { "npmPublish": false }],
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ]
+  }
+}
