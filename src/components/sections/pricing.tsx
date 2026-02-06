@@ -98,13 +98,8 @@ export function Pricing() {
             const yearlyPrice = t(`${plan.key}.yearlyPrice`)
             const isNumeric = monthlyPrice !== "" && !isNaN(Number(monthlyPrice))
 
-            // Try to get custom price for Enterprise-style plans
-            let customPrice = ""
-            try {
-              customPrice = t(`${plan.key}.customPrice`)
-            } catch {
-              customPrice = ""
-            }
+            // For plans without numeric price, show "Sob consulta"
+            const customPrice = !isNumeric ? "Sob consulta" : ""
 
             return (
               <motion.div
