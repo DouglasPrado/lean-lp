@@ -13,9 +13,10 @@
     "canonical": "https://example.com"
   },
   "announcement": {
-    "text": "Novidade! Lançamos a versão 2.0",
+    "cta": "Ver novidades",
+    "text": "Lançamos a versão 2.0 com novos recursos",
     "link": "/changelog",
-    "cta": "Ver novidades"
+    "close": "Fechar anúncio"
   },
   "navbar": {
     "brand": "ProductName",

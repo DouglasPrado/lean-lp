@@ -238,3 +238,76 @@ Dependências npm extras (além de framer-motion e next-intl):
 - **Cores**: Antes de criar componentes, gerar a paleta via `lp-colors`. Os componentes usam CSS variables (`bg-primary`, `text-muted-foreground`, etc.)
 - **Copy**: As seções usam `useTranslations()` do next-intl. O conteúdo vem de `lp-copy` + template i18n em `.claude/templates/snippets/i18n-message-template.json`
 - **SEO**: Seguir heading hierarchy de `lp-seo` (h1 apenas no hero, h2 por seção)
+
+## Validação Final (OBRIGATÓRIO)
+
+Após completar o setup do projeto e copiar todos os templates, **SEMPRE** executar os seguintes passos de validação:
+
+### 1. Instalar dependências
+
+```bash
+cd $PROJECT_DIR && npm install
+```
+
+Se houver erros de dependência, corrigir antes de continuar.
+
+### 2. Build do projeto
+
+```bash
+npm run build
+```
+
+Verificar se o build completa sem erros. Erros comuns:
+
+- **"Module not found"** → arquivo não copiado ou import path incorreto. Verificar que todos os snippets estão em `src/components/shared/` e seções em `src/components/sections/`
+- **"Cannot find module 'next-intl'"** → dependência não instalada. Rodar `npm install next-intl`
+- **"Couldn't find next-intl config"** → falta `createNextIntlPlugin` no `next.config.ts`. Verificar se o arquivo `next.config.ts` foi copiado do template
+- **TypeScript errors** → verificar tipos e props dos componentes. Rodar `npx tsc --noEmit` para listar todos os erros
+- **"Cannot find module '@/components/shared/...'"** → snippet não copiado. Verificar `templates/snippets/` vs `src/components/shared/`
+- **CSS/Tailwind errors** → verificar se `globals.css` foi gerado pelo `generate-palette.py` e está importado no layout
+
+### 3. Executar o projeto em dev
+
+```bash
+npm run dev
+```
+
+Aguardar o servidor iniciar e verificar:
+
+- Sem erros no terminal (warnings são aceitáveis)
+- Página carrega em `http://localhost:3000`
+- Sem erros de hydration no console do browser (SSR/CSR mismatch)
+
+### 4. Checklist de validação
+
+Ao executar o projeto, verificar que:
+
+- [ ] Todas as 11 seções renderizam (Announcement, Navbar, Hero, SocialProof, Benefits, Features, Testimonials, Pricing, FAQ, FinalCTA, Footer)
+- [ ] Textos i18n aparecem corretamente (não mostram chaves como `hero.title`)
+- [ ] Cores da paleta estão aplicadas (primary, secondary, background, foreground)
+- [ ] Dark mode funciona (se `next-themes` configurado)
+- [ ] Animações Framer Motion executam ao scroll
+- [ ] Responsivo funciona (mobile → desktop)
+
+### 5. Correção de erros
+
+Se encontrar erros:
+
+1. **Ler a mensagem de erro completa** antes de tentar corrigir
+2. **Corrigir um erro por vez** e re-executar o build
+3. **Não ignorar warnings** de TypeScript — podem indicar problemas futuros
+4. **Verificar o terminal E o browser console** — erros podem aparecer em ambos
+5. Após corrigir, rodar `npm run build` novamente para confirmar que a correção não introduziu novos erros
+
+### Fluxo resumido
+
+```bash
+# Após setup completo:
+cd $PROJECT_DIR
+npm install                          # 1. Dependências
+npm run build                        # 2. Build (deve passar sem erros)
+npm run dev                          # 3. Dev server (verificar visual)
+# Se tudo OK → projeto pronto para desenvolvimento
+```
+
+> **IMPORTANTE**: Não considere o setup completo até que `npm run build` passe sem erros. Se houver erros, corrija-os antes de informar ao usuário que o projeto está pronto.

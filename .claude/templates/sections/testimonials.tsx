@@ -4,6 +4,7 @@ import { AnimatedSection } from "@/components/shared/animated-section"
 import { SectionHeader } from "@/components/shared/section-header"
 import { cn } from "@/lib/utils"
 import { useTranslations } from "next-intl"
+import Image from "next/image"
 import { useState } from "react"
 
 // Replace avatar URLs with actual customer photos
@@ -94,9 +95,11 @@ export function Testimonials() {
                 >
                   {/* Avatar */}
                   <div className="relative flex-shrink-0">
-                    <img
+                    <Image
                       src={item.avatar}
                       alt={t(`${item.key}.author`)}
+                      width={32}
+                      height={32}
                       className={cn(
                         "h-8 w-8 rounded-full object-cover",
                         "transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]",
