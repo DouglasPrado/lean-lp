@@ -54,7 +54,8 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <head>
+      <body className={`${inter.variable} font-sans antialiased`}>
+        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -73,9 +74,6 @@ export default async function LocaleLayout({
             __html: JSON.stringify(generateWebsiteSchema()),
           }}
         />
-      </head>
-      <body className={`${inter.variable} font-sans antialiased`}>
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
       </body>
     </html>
   )
