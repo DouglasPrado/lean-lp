@@ -37,11 +37,17 @@
       "primary": "Começar grátis",
       "secondary": "Ver demonstração",
       "microcopy": "Sem cartão de crédito. Grátis por 14 dias."
+    },
+    "video": {
+      "src": "https://www.youtube.com/embed/VIDEO_ID",
+      "thumbnail": "/images/hero-thumbnail.png",
+      "thumbnailAlt": "Demonstração do ProductName em ação"
     }
   },
   "socialProof": {
     "title": "Usado por mais de 2.500 equipes em todo o mundo",
-    "cta": "Conheça nossos clientes"
+    "marquee1": "Enterprise Ready • SOC2 Compliance • 99.9% Uptime • Suporte 24/7 • 2.500+ Times •",
+    "marquee2": "Automação Inteligente • Analytics em Tempo Real • Integrações Nativas • Suporte Prioritário • Workflows Customizados •"
   },
   "benefits": {
     "title": "Por que escolher ProductName",
@@ -109,32 +115,32 @@
   "pricing": {
     "title": "Preços simples e transparentes",
     "subtitle": "Escolha o plano ideal para o tamanho do seu time. Mude quando quiser.",
-    "month": "mês",
     "recommended": "Mais popular",
     "starter": {
       "name": "Starter",
-      "price": "R$49",
       "description": "Perfeito para times pequenos começando.",
       "feature1": "Até 5 usuários",
       "feature2": "10GB de armazenamento",
       "feature3": "Integrações básicas",
       "feature4": "Suporte por email",
-      "cta": "Começar grátis"
+      "cta": "Começar grátis",
+      "monthlyPrice": "49",
+      "yearlyPrice": "39"
     },
     "pro": {
       "name": "Pro",
-      "price": "R$149",
       "description": "Para times em crescimento que precisam de mais.",
       "feature1": "Até 25 usuários",
       "feature2": "100GB de armazenamento",
       "feature3": "Todas as integrações",
       "feature4": "Suporte prioritário",
       "feature5": "Analytics avançado",
-      "cta": "Começar grátis"
+      "cta": "Começar grátis",
+      "monthlyPrice": "149",
+      "yearlyPrice": "119"
     },
     "enterprise": {
       "name": "Enterprise",
-      "price": "Sob consulta",
       "description": "Para grandes organizações com necessidades específicas.",
       "feature1": "Usuários ilimitados",
       "feature2": "Armazenamento ilimitado",
@@ -142,8 +148,17 @@
       "feature4": "SLA garantido",
       "feature5": "Suporte 24/7 dedicado",
       "feature6": "Deploy on-premise",
-      "cta": "Falar com vendas"
-    }
+      "cta": "Falar com vendas",
+      "monthlyPrice": "",
+      "yearlyPrice": "",
+      "customPrice": "Sob consulta"
+    },
+    "currency": "BRL",
+    "period": "mês",
+    "annualBilling": "Cobrança anual",
+    "savingsLabel": "(Economize 20%)",
+    "billedMonthly": "cobrado mensalmente",
+    "billedAnnually": "cobrado anualmente"
   },
   "faq": {
     "title": "Perguntas frequentes",

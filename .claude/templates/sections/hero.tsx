@@ -7,6 +7,7 @@ import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { AnimatedGroup } from "@/components/shared/animated-group"
 import { TextColor } from "@/components/shared/text-color"
+import { HeroVideoDialog } from "@/components/shared/hero-video-dialog"
 
 const transitionVariants = {
   item: {
@@ -157,10 +158,13 @@ export function Hero() {
               className="bg-gradient-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
             />
             <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
-              {/* Replace with actual product screenshot */}
-              <div className="bg-muted/50 aspect-[15/8] relative rounded-2xl flex items-center justify-center text-muted-foreground">
-                <span className="text-sm">Product Screenshot — Replace with actual image</span>
-              </div>
+              <HeroVideoDialog
+                animationStyle="from-center"
+                videoSrc={t("video.src")}
+                thumbnailSrc={t("video.thumbnail")}
+                thumbnailAlt={t("video.thumbnailAlt")}
+                className="rounded-xl"
+              />
             </div>
           </div>
         </AnimatedGroup>

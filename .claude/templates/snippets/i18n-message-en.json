@@ -37,11 +37,17 @@
       "primary": "Get started free",
       "secondary": "Watch demo",
       "microcopy": "No credit card required. Free for 14 days."
+    },
+    "video": {
+      "src": "https://www.youtube.com/embed/VIDEO_ID",
+      "thumbnail": "/images/hero-thumbnail.png",
+      "thumbnailAlt": "ProductName demo in action"
     }
   },
   "socialProof": {
     "title": "Trusted by over 2,500 teams worldwide",
-    "cta": "Meet our customers"
+    "marquee1": "Enterprise Ready • SOC2 Compliant • 99.9% Uptime • 24/7 Support • 2,500+ Teams •",
+    "marquee2": "Smart Automation • Real-time Analytics • Native Integrations • Priority Support • Custom Workflows •"
   },
   "benefits": {
     "title": "Why choose ProductName",
@@ -109,32 +115,32 @@
   "pricing": {
     "title": "Simple, transparent pricing",
     "subtitle": "Pick the plan that fits your team. Upgrade or downgrade anytime.",
-    "month": "month",
     "recommended": "Most popular",
     "starter": {
       "name": "Starter",
-      "price": "$29",
       "description": "Perfect for small teams just getting started.",
       "feature1": "Up to 5 users",
       "feature2": "10GB storage",
       "feature3": "Basic integrations",
       "feature4": "Email support",
-      "cta": "Get started free"
+      "cta": "Get started free",
+      "monthlyPrice": "29",
+      "yearlyPrice": "23"
     },
     "pro": {
       "name": "Pro",
-      "price": "$99",
       "description": "For growing teams that need more power.",
       "feature1": "Up to 25 users",
       "feature2": "100GB storage",
       "feature3": "All integrations",
       "feature4": "Priority support",
       "feature5": "Advanced analytics",
-      "cta": "Get started free"
+      "cta": "Get started free",
+      "monthlyPrice": "99",
+      "yearlyPrice": "79"
     },
     "enterprise": {
       "name": "Enterprise",
-      "price": "Custom",
       "description": "For large organizations with specific requirements.",
       "feature1": "Unlimited users",
       "feature2": "Unlimited storage",
@@ -142,8 +148,17 @@
       "feature4": "Guaranteed SLA",
       "feature5": "24/7 dedicated support",
       "feature6": "On-premise deployment",
-      "cta": "Talk to sales"
-    }
+      "cta": "Talk to sales",
+      "monthlyPrice": "",
+      "yearlyPrice": "",
+      "customPrice": "Custom"
+    },
+    "currency": "USD",
+    "period": "month",
+    "annualBilling": "Annual billing",
+    "savingsLabel": "(Save 20%)",
+    "billedMonthly": "billed monthly",
+    "billedAnnually": "billed annually"
   },
   "faq": {
     "title": "Frequently asked questions",

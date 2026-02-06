@@ -1,127 +1,243 @@
 "use client"
 
+import { useState, useRef } from "react"
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { useTranslations } from "next-intl"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Check } from "lucide-react"
+import { Check, Star } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
+import { Label } from "@/components/ui/label"
+import { Switch } from "@/components/ui/switch"
 import { SectionHeader } from "@/components/shared/section-header"
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-}
-
-const stagger = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.1 } },
-}
+import { AnimatedSection } from "@/components/shared/animated-section"
+import { useMediaQuery } from "@/hooks/use-media-query"
+import confetti from "canvas-confetti"
+import NumberFlow from "@number-flow/react"
 
 export function Pricing() {
   const t = useTranslations("pricing")
+  const [isMonthly, setIsMonthly] = useState(true)
+  const isDesktop = useMediaQuery("(min-width: 768px)")
+  const switchRef = useRef<HTMLButtonElement>(null)
+
+  const handleToggle = (checked: boolean) => {
+    setIsMonthly(!checked)
+    if (checked && switchRef.current) {
+      const rect = switchRef.current.getBoundingClientRect()
+      const x = rect.left + rect.width / 2
+      const y = rect.top + rect.height / 2
+      confetti({
+        particleCount: 50,
+        spread: 60,
+        origin: {
+          x: x / window.innerWidth,
+          y: y / window.innerHeight,
+        },
+        colors: [
+          "hsl(var(--primary))",
+          "hsl(var(--accent))",
+          "hsl(var(--secondary))",
+          "hsl(var(--muted))",
+        ],
+        ticks: 200,
+        gravity: 1.2,
+        decay: 0.94,
+        startVelocity: 30,
+        shapes: ["circle"],
+      })
+    }
+  }
 
   const plans = [
     {
-      name: t("starter.name"),
-      price: t("starter.price"),
-      description: t("starter.description"),
-      features: [
-        t("starter.feature1"),
-        t("starter.feature2"),
-        t("starter.feature3"),
-        t("starter.feature4"),
-      ],
-      cta: t("starter.cta"),
-      popular: false,
+      key: "starter" as const,
+      featureCount: 4,
+      isPopular: false,
     },
     {
-      name: t("pro.name"),
-      price: t("pro.price"),
-      description: t("pro.description"),
-      features: [
-        t("pro.feature1"),
-        t("pro.feature2"),
-        t("pro.feature3"),
-        t("pro.feature4"),
-        t("pro.feature5"),
-      ],
-      cta: t("pro.cta"),
-      popular: true,
+      key: "pro" as const,
+      featureCount: 5,
+      isPopular: true,
     },
     {
-      name: t("enterprise.name"),
-      price: t("enterprise.price"),
-      description: t("enterprise.description"),
-      features: [
-        t("enterprise.feature1"),
-        t("enterprise.feature2"),
-        t("enterprise.feature3"),
-        t("enterprise.feature4"),
-        t("enterprise.feature5"),
-        t("enterprise.feature6"),
-      ],
-      cta: t("enterprise.cta"),
-      popular: false,
+      key: "enterprise" as const,
+      featureCount: 6,
+      isPopular: false,
     },
   ]
 
   return (
-    <section className="py-20 md:py-32">
+    <section id="pricing" className="py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeader
-          title={t("title")}
-          subtitle={t("subtitle")}
-        />
+        <AnimatedSection>
+          <SectionHeader title={t("title")} subtitle={t("subtitle")} />
+        </AnimatedSection>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={stagger}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start"
-        >
-          {plans.map((plan, i) => (
-            <motion.div
-              key={i}
-              variants={fadeUp}
-              className={cn(
-                "rounded-2xl border p-8 flex flex-col",
-                plan.popular
-                  ? "border-primary bg-primary/5 shadow-lg shadow-primary/10 md:scale-105 relative"
-                  : "border-border bg-background/50"
-              )}
-            >
-              {plan.popular && (
-                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  {t("recommended")}
-                </Badge>
-              )}
-              <h3 className="text-2xl font-bold">{plan.name}</h3>
-              <p className="text-sm text-muted-foreground mt-1">
-                {plan.description}
-              </p>
-              <div className="mt-6 flex items-baseline gap-1">
-                <span className="text-4xl font-bold">{plan.price}</span>
-                <span className="text-muted-foreground">/{t("month")}</span>
-              </div>
-              <ul className="mt-8 space-y-3 flex-1">
-                {plan.features.map((feature, j) => (
-                  <li key={j} className="flex items-center gap-2">
-                    <Check className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span className="text-sm">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button
-                className="mt-8 w-full rounded-full"
-                variant={plan.popular ? "default" : "outline"}
+        {/* Monthly / Annual toggle */}
+        <div className="flex justify-center items-center gap-2 mb-10">
+          <label className="relative inline-flex items-center cursor-pointer">
+            <Label>
+              <Switch
+                ref={switchRef as React.Ref<HTMLButtonElement>}
+                checked={!isMonthly}
+                onCheckedChange={handleToggle}
+                className="relative"
+              />
+            </Label>
+          </label>
+          <span className="font-semibold">
+            {t("annualBilling")}{" "}
+            <span className="text-primary">{t("savingsLabel")}</span>
+          </span>
+        </div>
+
+        {/* Pricing cards with 3D perspective */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {plans.map((plan, index) => {
+            const monthlyPrice = t(`${plan.key}.monthlyPrice`)
+            const yearlyPrice = t(`${plan.key}.yearlyPrice`)
+            const isNumeric =
+              monthlyPrice !== "" && !isNaN(Number(monthlyPrice))
+
+            // Try to get custom price for Enterprise-style plans
+            let customPrice = ""
+            try {
+              customPrice = t(`${plan.key}.customPrice`)
+            } catch {
+              customPrice = ""
+            }
+
+            return (
+              <motion.div
+                key={plan.key}
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={
+                  isDesktop
+                    ? {
+                        y: plan.isPopular ? -20 : 0,
+                        opacity: 1,
+                        x: index === 2 ? -30 : index === 0 ? 30 : 0,
+                        scale: index === 0 || index === 2 ? 0.94 : 1.0,
+                      }
+                    : { y: 0, opacity: 1 }
+                }
+                viewport={{ once: true }}
+                transition={{
+                  duration: 1.6,
+                  type: "spring" as const,
+                  stiffness: 100,
+                  damping: 30,
+                  delay: 0.4,
+                  opacity: { duration: 0.5 },
+                }}
+                className={cn(
+                  "rounded-2xl border p-6 bg-background text-center lg:flex lg:flex-col lg:justify-center relative flex flex-col",
+                  plan.isPopular
+                    ? "border-primary border-2"
+                    : "border-border",
+                  !plan.isPopular && "mt-5",
+                  index === 0 || index === 2 ? "z-0" : "z-10",
+                  index === 0 && "origin-right",
+                  index === 2 && "origin-left"
+                )}
               >
-                {plan.cta}
-              </Button>
-            </motion.div>
-          ))}
-        </motion.div>
+                {/* Popular badge */}
+                {plan.isPopular && (
+                  <div className="absolute top-0 right-0 bg-primary py-0.5 px-2 rounded-bl-xl rounded-tr-xl flex items-center">
+                    <Star className="text-primary-foreground h-4 w-4 fill-current" />
+                    <span className="text-primary-foreground ml-1 font-semibold">
+                      {t("recommended")}
+                    </span>
+                  </div>
+                )}
+
+                <div className="flex-1 flex flex-col">
+                  {/* Plan name */}
+                  <p className="text-base font-semibold text-muted-foreground">
+                    {t(`${plan.key}.name`)}
+                  </p>
+
+                  {/* Price with NumberFlow animation */}
+                  <div className="mt-6 flex items-center justify-center gap-x-2">
+                    {isNumeric ? (
+                      <>
+                        <span className="text-5xl font-bold tracking-tight text-foreground tabular-nums">
+                          <NumberFlow
+                            value={
+                              isMonthly
+                                ? Number(monthlyPrice)
+                                : Number(yearlyPrice)
+                            }
+                            format={{
+                              style: "currency",
+                              currency: t("currency"),
+                              minimumFractionDigits: 0,
+                              maximumFractionDigits: 0,
+                            }}
+                            transformTiming={{
+                              duration: 500,
+                              easing: "ease-out",
+                            }}
+                            willChange
+                          />
+                        </span>
+                        <span className="text-sm font-semibold leading-6 tracking-wide text-muted-foreground">
+                          / {t("period")}
+                        </span>
+                      </>
+                    ) : (
+                      <span className="text-4xl font-bold tracking-tight text-foreground">
+                        {customPrice}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Billing period label */}
+                  {isNumeric && (
+                    <p className="text-xs leading-5 text-muted-foreground">
+                      {isMonthly ? t("billedMonthly") : t("billedAnnually")}
+                    </p>
+                  )}
+
+                  {/* Plan description */}
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    {t(`${plan.key}.description`)}
+                  </p>
+
+                  {/* Features list */}
+                  <ul className="mt-5 gap-2 flex flex-col flex-1">
+                    {Array.from({ length: plan.featureCount }, (_, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <Check className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-left text-sm">
+                          {t(`${plan.key}.feature${idx + 1}`)}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <hr className="w-full my-4" />
+
+                  {/* CTA button with hover ring effect */}
+                  <Link
+                    href="#"
+                    className={cn(
+                      buttonVariants({ variant: "outline" }),
+                      "group relative w-full gap-2 overflow-hidden text-lg font-semibold tracking-tighter",
+                      "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-1 hover:bg-primary hover:text-primary-foreground",
+                      plan.isPopular
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-background text-foreground"
+                    )}
+                  >
+                    {t(`${plan.key}.cta`)}
+                  </Link>
+                </div>
+              </motion.div>
+            )
+          })}
+        </div>
       </div>
     </section>
   )

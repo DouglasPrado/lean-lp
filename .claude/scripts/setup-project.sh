@@ -32,6 +32,7 @@ mkdir -p "$PROJECT_DIR/src/lib"
 mkdir -p "$PROJECT_DIR/src/config"
 mkdir -p "$PROJECT_DIR/src/messages"
 mkdir -p "$PROJECT_DIR/src/__tests__"
+mkdir -p "$PROJECT_DIR/src/hooks"
 mkdir -p "$PROJECT_DIR/src/types"
 mkdir -p "$PROJECT_DIR/e2e"
 mkdir -p "$PROJECT_DIR/.husky"
@@ -132,6 +133,15 @@ for file in "$SNIPPETS_DIR"/*.tsx; do
     filename=$(basename "$file")
     cp "$file" "$PROJECT_DIR/src/components/shared/$filename"
     echo "   ✅ shared/$filename"
+  fi
+done
+
+# Hooks (use-*.ts → src/hooks/)
+for file in "$SNIPPETS_DIR"/use-*.ts; do
+  if [ -f "$file" ]; then
+    filename=$(basename "$file")
+    cp "$file" "$PROJECT_DIR/src/hooks/$filename"
+    echo "   ✅ hooks/$filename"
   fi
 done
 

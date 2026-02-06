@@ -187,13 +187,28 @@ Snippets compartilhados (importar de `@/components/shared/`):
 - `AnimatedSection` — wrapper com Framer Motion whileInView
 - `AnimatedGroup` — animação stagger de grupo com presets (fade, slide, blur, zoom, flip, bounce, etc). Usado no Hero para as animações estilo Tailark
 - `GlowingEffect` — efeito de borda brilhante que segue o cursor. Usado no Features (bento grid). Requer `motion` (npm). Props: `spread`, `glow`, `proximity`, `inactiveZone`, `borderWidth`, `disabled`
-- `InfiniteSlider` — carrossel infinito de logos/itens. Usado no Social Proof. Requer `react-use-measure`. Props: `gap`, `speed`, `speedOnHover`, `reverse`, `direction`
+- `MarqueeAnimation` — marquee de texto com velocidade reativa ao scroll. Usado no Social Proof. Requer `@motionone/utils`. Props: `children` (string), `direction` ("left"|"right"), `baseVelocity` (number), `className`
+- `InfiniteSlider` — carrossel infinito de logos/itens (componente utilitário). Requer `react-use-measure`. Props: `gap`, `speed`, `speedOnHover`, `reverse`, `direction`
 - `TextColor` — texto com gradiente animado que cicla entre 3 palavras (efeito neon cycling). Usado no Hero title. Props: `words` (tupla de 3 strings), `className`. Gradientes customizáveis via `gradientPairs` no componente. Injeta keyframes CSS automaticamente
+- `HeroVideoDialog` — modal de vídeo com thumbnail clicável + play button animado. Usado no Hero (product screenshot → video). Props: `videoSrc` (string, URL embed), `thumbnailSrc` (string), `thumbnailAlt` (string), `animationStyle` ("from-center"|"from-bottom"|"from-top"|"fade"|etc), `className`. Usa `next/image`, `lucide-react` (Play, XIcon), `framer-motion` (AnimatePresence + motion)
 - `GlassCard` — card com glassmorphism padrão
 - `CtaButtonPair` — par de botões primary + outline (props: `primaryText`, `secondaryText`, `className`)
 - `BadgePill` — badge/pill para tags e labels (variants: default, primary, outline)
 - `GradientText` — texto com gradiente animado
 - `LanguageSwitcher` — switcher de idioma next-intl (usar no Navbar)
+
+Hooks (importar de `@/hooks/`):
+- `useMediaQuery` — hook responsivo para detectar breakpoints. Usado no Pricing (efeito 3D apenas em desktop). Arquivo: `use-media-query.ts`
+
+Componentes shadcn/ui necessários (instalar via `npx shadcn-ui@latest add`):
+- `button`, `badge`, `switch`, `label`, `accordion` (usado no FAQ)
+
+Dependências npm extras (além de framer-motion e next-intl):
+- `motion` — para GlowingEffect (Features)
+- `@motionone/utils` — para MarqueeAnimation (Social Proof) — função `wrap`
+- `react-use-measure` — para InfiniteSlider (componente utilitário)
+- `canvas-confetti` — confetti no toggle anual (Pricing)
+- `@number-flow/react` — animação de preços no toggle mensal/anual (Pricing)
 
 ### Conexão com Outras Skills
 - **Cores**: Antes de criar componentes, gerar a paleta via `lp-colors`. Os componentes usam CSS variables (`bg-primary`, `text-muted-foreground`, etc.)
