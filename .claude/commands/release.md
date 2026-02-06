@@ -67,6 +67,7 @@ Uses Semantic Release for automated versioning and changelog generation.
 
 8. **Semantic Release Pipeline**
    Triggered automatically on merge to `main` via CI:
+
    ```
    @semantic-release/commit-analyzer    → Determine version bump (patch/minor/major)
    @semantic-release/release-notes-gen  → Generate release notes from commits
@@ -77,6 +78,7 @@ Uses Semantic Release for automated versioning and changelog generation.
    ```
 
    Config (`.releaserc.json` or `package.json`):
+
    ```json
    {
      "branches": ["main"],
@@ -92,6 +94,7 @@ Uses Semantic Release for automated versioning and changelog generation.
    ```
 
    Commitizen config:
+
    ```json
    {
      "config": {

@@ -1,0 +1,225 @@
+{
+  "metadata": {
+    "title": "LeanERP — Seu ERP, do seu jeito, em qualquer máquina",
+    "description": "ERP modular para micro e pequenas empresas do varejo. 100% offline, ultra-rápido, funciona em qualquer computador. Teste grátis por 30 dias.",
+    "siteName": "LeanERP",
+    "keywords": "ERP, sistema de gestão, ERP offline, ERP varejo, gestão empresarial, PDV, controle de estoque, software de gestão, ERP leve, ERP modular",
+    "og": {
+      "title": "LeanERP — ERP Modular para Varejo",
+      "description": "100% offline. Ultra-rápido. Roda em qualquer máquina.",
+      "url": "https://leanerp.com.br",
+      "imageAlt": "LeanERP - Sistema de Gestão Empresarial"
+    },
+    "canonical": "https://leanerp.com.br"
+  },
+  "announcement": {
+    "text": "Novidade! Versão 3.0 com módulos sob demanda",
+    "link": "/changelog",
+    "cta": "Saiba mais"
+  },
+  "navbar": {
+    "brand": "LeanERP",
+    "features": "Funcionalidades",
+    "pricing": "Preços",
+    "faq": "FAQ",
+    "language": "PT",
+    "cta": "Testar grátis",
+    "login": "Entrar"
+  },
+  "hero": {
+    "badge": "Novo — Versão 3.0 com módulos sob demanda",
+    "title": "Gerencie seu negócio",
+    "titleWord1": "Offline.",
+    "titleWord2": "Rápido.",
+    "titleWord3": "Simples.",
+    "subtitle": "ERP modular que funciona sem internet, responde em milissegundos e roda até no computador mais antigo da sua loja.",
+    "cta": {
+      "primary": "Testar grátis por 30 dias",
+      "secondary": "Ver demonstração",
+      "microcopy": "Sem cartão de crédito. Cancele quando quiser."
+    },
+    "video": {
+      "src": "https://www.youtube.com/embed/LEANERP_DEMO",
+      "thumbnail": "/images/hero-leanerp.png",
+      "thumbnailAlt": "LeanERP em funcionamento em um PDV"
+    }
+  },
+  "socialProof": {
+    "subtitle": "Já utilizado por",
+    "title": "Mais de 500 lojas em todo o Brasil"
+  },
+  "benefits": {
+    "title": "Por que o LeanERP é diferente",
+    "subtitle": "Construído para o varejo brasileiro, com foco em simplicidade e performance.",
+    "item1": {
+      "title": "100% offline",
+      "description": "Funciona sem internet. Suas vendas nunca param, mesmo se a conexão cair."
+    },
+    "item2": {
+      "title": "Ultra-rápido",
+      "description": "Resposta em milissegundos. Projetado para alto volume de transações constantes."
+    },
+    "item3": {
+      "title": "Modular sob demanda",
+      "description": "Pague apenas pelos módulos que usa. Adicione funcionalidades quando precisar."
+    },
+    "item4": {
+      "title": "Qualquer máquina",
+      "description": "Roda do MacBook mais novo ao Windows XP. Seu hardware atual é suficiente."
+    }
+  },
+  "features": {
+    "title": "Tudo que você precisa para gerenciar",
+    "subtitle": "Módulos integrados que funcionam juntos ou separadamente.",
+    "feature1": {
+      "title": "PDV completo",
+      "description": "Frente de caixa rápida com atalhos de teclado, múltiplas formas de pagamento e emissão de NFC-e."
+    },
+    "feature2": {
+      "title": "Controle de estoque",
+      "description": "Entrada, saída, inventário e alertas de estoque mínimo. Nunca perca uma venda por falta de produto."
+    },
+    "feature3": {
+      "title": "Gestão financeira",
+      "description": "Contas a pagar e receber, fluxo de caixa e DRE simplificado. Saiba exatamente para onde vai seu dinheiro."
+    },
+    "feature4": {
+      "title": "Relatórios em tempo real",
+      "description": "Dashboards que mostram vendas, margem e performance. Dados atualizados a cada transação."
+    },
+    "feature5": {
+      "title": "Multi-loja",
+      "description": "Gerencie várias unidades de um único lugar. Estoque compartilhado ou separado, você decide."
+    }
+  },
+  "testimonials": {
+    "title": "O que nossos clientes dizem",
+    "subtitle": "Histórias reais de lojistas que transformaram seus negócios.",
+    "item1": {
+      "quote": "Finalmente um sistema que não trava! Mesmo nos dias de maior movimento, o LeanERP aguenta firme. E quando cai a internet? Nem percebo.",
+      "author": "Roberto Almeida",
+      "role": "Dono, Mercadinho Bom Preço"
+    },
+    "item2": {
+      "quote": "Instalei no computador velho da loja e funciona melhor que o sistema anterior no computador novo. Economia de R$3.000 em hardware.",
+      "author": "Cláudia Santos",
+      "role": "Proprietária, Papelaria Central"
+    },
+    "item3": {
+      "quote": "O suporte resolveu minha migração em 1 dia. Importaram 15.000 produtos sem eu perder uma venda sequer.",
+      "author": "Marcos Oliveira",
+      "role": "Gerente, Ferragens do Bairro"
+    }
+  },
+  "pricing": {
+    "title": "Preços simples e honestos",
+    "subtitle": "Escolha o plano ideal para o tamanho da sua operação. 30 dias grátis para testar.",
+    "recommended": "Mais escolhido",
+    "minus": {
+      "name": "Minus",
+      "description": "Para quem está começando ou tem operação enxuta.",
+      "feature1": "1 PDV",
+      "feature2": "Módulo de vendas",
+      "feature3": "Controle de estoque básico",
+      "feature4": "Suporte por email",
+      "cta": "Começar grátis",
+      "monthlyPrice": "19",
+      "yearlyPrice": "15"
+    },
+    "essential": {
+      "name": "Essential",
+      "description": "Para lojas em crescimento que precisam de controle total.",
+      "feature1": "Até 3 PDVs",
+      "feature2": "Todos os módulos",
+      "feature3": "Relatórios avançados",
+      "feature4": "Suporte prioritário",
+      "feature5": "Backup automático local",
+      "cta": "Começar grátis",
+      "monthlyPrice": "89",
+      "yearlyPrice": "71"
+    },
+    "hardcore": {
+      "name": "Hardcore",
+      "description": "Para operações de alto volume com necessidades específicas.",
+      "feature1": "PDVs ilimitados",
+      "feature2": "Módulos customizados",
+      "feature3": "API para integrações",
+      "feature4": "Suporte 24/7",
+      "feature5": "Gerente de conta dedicado",
+      "feature6": "SLA garantido",
+      "cta": "Falar com especialista",
+      "monthlyPrice": "300",
+      "yearlyPrice": "240"
+    },
+    "currency": "BRL",
+    "period": "mês",
+    "annualBilling": "Cobrança anual",
+    "savingsLabel": "(Economize 20%)",
+    "billedMonthly": "cobrado mensalmente",
+    "billedAnnually": "cobrado anualmente"
+  },
+  "faq": {
+    "title": "Dúvidas frequentes",
+    "subtitle": "Respostas para suas principais perguntas",
+    "support": "Não encontrou o que procura? Fale com nosso",
+    "supportLink": "time de suporte",
+    "q1": {
+      "question": "Como funciona o modo 100% offline?",
+      "answer": "O LeanERP armazena todos os dados localmente no seu computador. Você pode vender, emitir notas e gerenciar estoque sem internet. Quando a conexão volta, sincronizamos automaticamente com backup na nuvem."
+    },
+    "q2": {
+      "question": "Meu computador é antigo. Vai rodar?",
+      "answer": "Sim. Testamos o LeanERP em máquinas com Windows XP, 2GB de RAM e processadores de 2008. Se o computador liga, o LeanERP roda."
+    },
+    "q3": {
+      "question": "Posso migrar dados do meu sistema atual?",
+      "answer": "Sim, oferecemos migração assistida gratuita. Nosso time importa seus produtos, clientes e histórico de vendas sem você perder um dia de operação."
+    },
+    "q4": {
+      "question": "E se eu precisar de mais módulos depois?",
+      "answer": "Você adiciona módulos quando quiser, sem mudar de plano. Pague apenas pelo que usar, quando precisar."
+    },
+    "q5": {
+      "question": "Os dados ficam seguros offline?",
+      "answer": "Sim. Usamos criptografia AES-256 no banco de dados local. Backups automáticos são enviados para a nuvem quando há conexão disponível."
+    },
+    "q6": {
+      "question": "Quanto tempo leva para começar a usar?",
+      "answer": "Instalação em 5 minutos. Cadastro básico de produtos em 30 minutos. Você está operando no mesmo dia."
+    }
+  },
+  "finalCta": {
+    "title": "Pronto para simplificar sua gestão?",
+    "subtitle": "Junte-se a mais de 500 lojistas que já descobriram que ERP pode ser leve, rápido e barato.",
+    "cta": {
+      "primary": "Testar grátis por 30 dias",
+      "secondary": "Agendar demonstração"
+    },
+    "microcopy": "Instalação em 5 minutos. Sem cartão de crédito."
+  },
+  "footer": {
+    "brand": "LeanERP",
+    "tagline": "Seu ERP, do seu jeito, em qualquer máquina.",
+    "product": {
+      "title": "Produto",
+      "features": "Funcionalidades",
+      "pricing": "Preços",
+      "changelog": "Novidades",
+      "docs": "Documentação"
+    },
+    "company": {
+      "title": "Empresa",
+      "about": "Sobre nós",
+      "blog": "Blog",
+      "careers": "Trabalhe conosco",
+      "contact": "Contato"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacidade",
+      "terms": "Termos de uso",
+      "cookies": "Cookies"
+    },
+    "copyright": "© {year} LeanERP. Todos os direitos reservados."
+  }
+}

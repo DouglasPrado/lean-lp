@@ -14,6 +14,7 @@ Coletar as informações em 4 rodadas de perguntas. Em cada rodada, fazer as per
 ### Rodada 1 — Identidade do Produto
 
 Perguntar:
+
 - **Nome do produto** — nome oficial (ex: FlowDesk, Notion, Linear)
 - **Tagline** — frase curta que resume o valor (ex: "Gestão inteligente para times remotos")
 - **Público-alvo** — quem compra e quem usa (ex: "CTOs e tech leads em startups")
@@ -22,6 +23,7 @@ Perguntar:
 ### Rodada 2 — Pricing
 
 Perguntar:
+
 - **Planos e preços** — nomes dos planos + preço mensal cada (ex: Starter R$59, Pro R$179, Enterprise sob consulta)
 - **Moeda** — BRL, USD, EUR (default: BRL)
 - **Tem trial grátis?** — se sim, quantos dias (default: 14 dias, sem cartão)
@@ -29,6 +31,7 @@ Perguntar:
 ### Rodada 3 — Design
 
 Perguntar:
+
 - **Cor primária** — hex da cor principal da marca (ex: #6C3CE1)
 - **Cor secundária** — hex da cor de destaque (ex: #10B981)
 - Se o usuário não souber, sugerir: consultar `.claude/skills/lp-colors/references/color-theory.md`
@@ -36,6 +39,7 @@ Perguntar:
 ### Rodada 4 — Conteúdo (Opcional)
 
 Perguntar se o usuário quer fornecer agora ou deixar para a Fase 3 (lp-copy):
+
 - **URL do vídeo demo** — YouTube embed URL (default: placeholder)
 - **Thumbnail do hero** — path da imagem (default: `/images/hero-thumbnail.png`)
 - **Fases do CLAUDE.md** — quais fases executar automaticamente (default: 0 a 4)
@@ -67,6 +71,7 @@ No copy, preencha o conteúdo real para o {nome} (não deixe placeholders).
 ## Validação Pós-Geração
 
 Após gerar o PROMPT.MD, verificar:
+
 1. Todas as variáveis `{...}` foram substituídas — nenhum placeholder restou
 2. Hex das cores é válido (formato `#XXXXXX`, 6 dígitos)
 3. Pelo menos 2 planos de pricing definidos
@@ -86,6 +91,7 @@ Ver [references/example-flowdesk.md](references/example-flowdesk.md) para um PRO
 ## Conexão com o Workflow
 
 O PROMPT.MD alimenta:
+
 - **Fase 0** (Setup) — nome do produto para configs
 - **Fase 1** (Cores) — cores primária e secundária para `generate-palette.py`
 - **Fase 2** (Estrutura) — nome e tagline para personalizar componentes

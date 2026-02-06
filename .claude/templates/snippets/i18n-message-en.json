@@ -45,9 +45,8 @@
     }
   },
   "socialProof": {
-    "title": "Trusted by over 2,500 teams worldwide",
-    "marquee1": "Enterprise Ready • SOC2 Compliant • 99.9% Uptime • 24/7 Support • 2,500+ Teams •",
-    "marquee2": "Smart Automation • Real-time Analytics • Native Integrations • Priority Support • Custom Workflows •"
+    "subtitle": "Already used by",
+    "title": "Best in the Game"
   },
   "benefits": {
     "title": "Why choose ProductName",
@@ -161,8 +160,10 @@
     "billedAnnually": "billed annually"
   },
   "faq": {
-    "title": "Frequently asked questions",
-    "subtitle": "Answers to the most common questions about ProductName.",
+    "title": "FAQs",
+    "subtitle": "Your questions answered",
+    "support": "Can't find what you're looking for? Contact our",
+    "supportLink": "customer support team",
     "q1": {
       "question": "Can I try before I buy?",
       "answer": "Absolutely! We offer a 14-day free trial on all plans — no credit card required."

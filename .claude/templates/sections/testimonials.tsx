@@ -1,10 +1,10 @@
 "use client"
 
-import { useState } from "react"
-import { useTranslations } from "next-intl"
-import { cn } from "@/lib/utils"
-import { SectionHeader } from "@/components/shared/section-header"
 import { AnimatedSection } from "@/components/shared/animated-section"
+import { SectionHeader } from "@/components/shared/section-header"
+import { cn } from "@/lib/utils"
+import { useTranslations } from "next-intl"
+import { useState } from "react"
 
 // Replace avatar URLs with actual customer photos
 const testimonialAvatars = [
@@ -42,35 +42,31 @@ export function Testimonials() {
     <AnimatedSection id="testimonials" className="py-20 md:py-32">
       <SectionHeader title={t("title")} subtitle={t("subtitle")} />
 
-      <div className="flex flex-col items-center gap-10">
+      <div className="flex w-full flex-col items-center gap-10">
         {/* Quote container */}
         <div className="relative px-8">
-          <span className="absolute -left-2 -top-6 text-7xl font-serif text-foreground/[0.06] select-none pointer-events-none">
+          <span className="text-foreground/[0.06] pointer-events-none absolute -top-6 -left-2 font-serif text-7xl select-none">
             &ldquo;
           </span>
           <p
             className={cn(
-              "text-2xl md:text-3xl font-light text-foreground text-center max-w-lg leading-relaxed transition-all duration-400 ease-out",
-              isAnimating
-                ? "opacity-0 blur-sm scale-[0.98]"
-                : "opacity-100 blur-0 scale-100"
+              "text-foreground max-w-7xl text-center text-2xl leading-relaxed font-light transition-all duration-400 ease-out md:text-3xl",
+              isAnimating ? "scale-[0.98] opacity-0 blur-sm" : "blur-0 scale-100 opacity-100",
             )}
           >
             {t(`${displayedKey}.quote`)}
           </p>
-          <span className="absolute -right-2 -bottom-8 text-7xl font-serif text-foreground/[0.06] select-none pointer-events-none">
+          <span className="text-foreground/[0.06] pointer-events-none absolute -right-2 -bottom-8 font-serif text-7xl select-none">
             &rdquo;
           </span>
         </div>
 
-        <div className="flex flex-col items-center gap-6 mt-2">
+        <div className="mt-2 flex flex-col items-center gap-6">
           {/* Role text */}
           <p
             className={cn(
-              "text-xs text-muted-foreground tracking-[0.2em] uppercase transition-all duration-500 ease-out",
-              isAnimating
-                ? "opacity-0 translate-y-2"
-                : "opacity-100 translate-y-0"
+              "text-muted-foreground text-xs tracking-[0.2em] uppercase transition-all duration-500 ease-out",
+              isAnimating ? "translate-y-2 opacity-0" : "translate-y-0 opacity-100",
             )}
           >
             {t(`${displayedKey}.role`)}
@@ -90,12 +86,10 @@ export function Testimonials() {
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                   className={cn(
-                    "relative flex items-center gap-0 rounded-full cursor-pointer",
+                    "relative flex cursor-pointer items-center gap-0 rounded-full",
                     "transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]",
-                    isActive
-                      ? "bg-foreground shadow-lg"
-                      : "bg-transparent hover:bg-muted/80",
-                    showName ? "pr-4 pl-2 py-2" : "p-0.5"
+                    isActive ? "bg-primary shadow-lg" : "hover:bg-muted/80 bg-transparent",
+                    showName ? "py-2 pr-4 pl-2" : "p-0.5",
                   )}
                 >
                   {/* Avatar */}
@@ -104,10 +98,10 @@ export function Testimonials() {
                       src={item.avatar}
                       alt={t(`${item.key}.author`)}
                       className={cn(
-                        "w-8 h-8 rounded-full object-cover",
+                        "h-8 w-8 rounded-full object-cover",
                         "transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]",
-                        isActive ? "ring-2 ring-background/30" : "ring-0",
-                        !isActive && "hover:scale-105"
+                        isActive ? "ring-background/30 ring-2" : "ring-0",
+                        !isActive && "hover:scale-105",
                       )}
                     />
                   </div>
@@ -117,16 +111,16 @@ export function Testimonials() {
                     className={cn(
                       "grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]",
                       showName
-                        ? "grid-cols-[1fr] opacity-100 ml-2"
-                        : "grid-cols-[0fr] opacity-0 ml-0"
+                        ? "ml-2 grid-cols-[1fr] opacity-100"
+                        : "ml-0 grid-cols-[0fr] opacity-0",
                     )}
                   >
                     <div className="overflow-hidden">
                       <span
                         className={cn(
-                          "text-sm font-medium whitespace-nowrap block",
+                          "block text-sm font-medium whitespace-nowrap",
                           "transition-colors duration-300",
-                          isActive ? "text-background" : "text-foreground"
+                          isActive ? "text-background" : "text-foreground",
                         )}
                       >
                         {t(`${item.key}.author`)}

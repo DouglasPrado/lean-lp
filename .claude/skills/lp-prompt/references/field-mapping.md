@@ -4,39 +4,39 @@ Como cada campo do PROMPT.MD se traduz nas chaves dos JSONs de i18n (`pt-BR.json
 
 ## Campos Diretos
 
-| Campo PROMPT.MD | Chaves i18n afetadas |
-|---|---|
-| Nome | `navbar.brand`, `footer.brand`, `metadata.siteName`, todas as menções a "ProductName" |
-| Tagline | `footer.tagline`, `metadata.og.title` (parcial) |
-| Público | Informa o tom do copy em `hero.subtitle`, `benefits.*`, `features.*` |
-| Diferencial | Alimenta `hero.title`, `hero.titleWord1/2/3`, `features.feature1-5` |
+| Campo PROMPT.MD | Chaves i18n afetadas                                                                  |
+| --------------- | ------------------------------------------------------------------------------------- |
+| Nome            | `navbar.brand`, `footer.brand`, `metadata.siteName`, todas as menções a "ProductName" |
+| Tagline         | `footer.tagline`, `metadata.og.title` (parcial)                                       |
+| Público         | Informa o tom do copy em `hero.subtitle`, `benefits.*`, `features.*`                  |
+| Diferencial     | Alimenta `hero.title`, `hero.titleWord1/2/3`, `features.feature1-5`                   |
 
 ## Campos de Pricing
 
-| Campo PROMPT.MD | Chaves i18n |
-|---|---|
-| Plano 1 nome | `pricing.starter.name` |
-| Plano 1 preço | `pricing.starter.monthlyPrice`, `pricing.starter.yearlyPrice` (calcular ~80% do mensal) |
-| Plano 2 nome | `pricing.pro.name` |
-| Plano 2 preço | `pricing.pro.monthlyPrice`, `pricing.pro.yearlyPrice` |
-| Plano 3 nome | `pricing.enterprise.name` |
-| Plano 3 preço | `pricing.enterprise.customPrice` (se "sob consulta") |
-| Moeda | `pricing.currency` (BRL, USD, EUR) |
-| Trial | `hero.cta.microcopy`, `faq.q1.answer` |
+| Campo PROMPT.MD | Chaves i18n                                                                             |
+| --------------- | --------------------------------------------------------------------------------------- |
+| Plano 1 nome    | `pricing.starter.name`                                                                  |
+| Plano 1 preço   | `pricing.starter.monthlyPrice`, `pricing.starter.yearlyPrice` (calcular ~80% do mensal) |
+| Plano 2 nome    | `pricing.pro.name`                                                                      |
+| Plano 2 preço   | `pricing.pro.monthlyPrice`, `pricing.pro.yearlyPrice`                                   |
+| Plano 3 nome    | `pricing.enterprise.name`                                                               |
+| Plano 3 preço   | `pricing.enterprise.customPrice` (se "sob consulta")                                    |
+| Moeda           | `pricing.currency` (BRL, USD, EUR)                                                      |
+| Trial           | `hero.cta.microcopy`, `faq.q1.answer`                                                   |
 
 ## Campos de Design
 
-| Campo PROMPT.MD | Uso |
-|---|---|
-| Cor primária | Input `--primary` do `generate-palette.py` → gera `globals.css` |
-| Cor secundária | Input `--secondary` do `generate-palette.py` → gera `globals.css` |
+| Campo PROMPT.MD | Uso                                                               |
+| --------------- | ----------------------------------------------------------------- |
+| Cor primária    | Input `--primary` do `generate-palette.py` → gera `globals.css`   |
+| Cor secundária  | Input `--secondary` do `generate-palette.py` → gera `globals.css` |
 
 ## Campos Opcionais
 
-| Campo PROMPT.MD | Chaves i18n |
-|---|---|
-| URL vídeo demo | `hero.video.src` |
-| Thumbnail hero | `hero.video.thumbnail` |
+| Campo PROMPT.MD | Chaves i18n            |
+| --------------- | ---------------------- |
+| URL vídeo demo  | `hero.video.src`       |
+| Thumbnail hero  | `hero.video.thumbnail` |
 
 ## Chaves Derivadas (geradas na Fase 3 via lp-copy)
 

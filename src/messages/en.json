@@ -1,0 +1,225 @@
+{
+  "metadata": {
+    "title": "LeanERP — Your ERP, Your Way, Any Machine",
+    "description": "Modular ERP for small retail businesses. 100% offline, blazing fast, runs on any hardware. 30-day free trial.",
+    "siteName": "LeanERP",
+    "keywords": "ERP, business management, offline ERP, retail ERP, point of sale, inventory control, lightweight ERP, modular ERP",
+    "og": {
+      "title": "LeanERP — Modular ERP for Retail",
+      "description": "100% offline. Blazing fast. Runs on any machine.",
+      "url": "https://leanerp.com.br/en",
+      "imageAlt": "LeanERP - Business Management System"
+    },
+    "canonical": "https://leanerp.com.br/en"
+  },
+  "announcement": {
+    "text": "New! Version 3.0 with on-demand modules",
+    "link": "/changelog",
+    "cta": "Learn more"
+  },
+  "navbar": {
+    "brand": "LeanERP",
+    "features": "Features",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "language": "EN",
+    "cta": "Try free",
+    "login": "Sign in"
+  },
+  "hero": {
+    "badge": "New — Version 3.0 with on-demand modules",
+    "title": "Run your business",
+    "titleWord1": "Offline.",
+    "titleWord2": "Fast.",
+    "titleWord3": "Simple.",
+    "subtitle": "A modular ERP that works without internet, responds in milliseconds, and runs even on your oldest computer.",
+    "cta": {
+      "primary": "Start 30-day free trial",
+      "secondary": "Watch demo",
+      "microcopy": "No credit card required. Cancel anytime."
+    },
+    "video": {
+      "src": "https://www.youtube.com/embed/LEANERP_DEMO",
+      "thumbnail": "/images/hero-leanerp.png",
+      "thumbnailAlt": "LeanERP running on a point of sale"
+    }
+  },
+  "socialProof": {
+    "subtitle": "Already used by",
+    "title": "Over 500 stores across Brazil"
+  },
+  "benefits": {
+    "title": "Why LeanERP is different",
+    "subtitle": "Built for retail, focused on simplicity and performance.",
+    "item1": {
+      "title": "100% offline",
+      "description": "Works without internet. Your sales never stop, even when the connection drops."
+    },
+    "item2": {
+      "title": "Blazing fast",
+      "description": "Millisecond response times. Designed for high-volume, constant transactions."
+    },
+    "item3": {
+      "title": "Modular on-demand",
+      "description": "Pay only for the modules you use. Add features when you need them."
+    },
+    "item4": {
+      "title": "Any machine",
+      "description": "Runs from the newest MacBook to Windows XP. Your current hardware is enough."
+    }
+  },
+  "features": {
+    "title": "Everything you need to manage",
+    "subtitle": "Integrated modules that work together or separately.",
+    "feature1": {
+      "title": "Complete POS",
+      "description": "Fast checkout with keyboard shortcuts, multiple payment methods, and receipt printing."
+    },
+    "feature2": {
+      "title": "Inventory control",
+      "description": "Inbound, outbound, inventory counts, and low-stock alerts. Never miss a sale due to stockouts."
+    },
+    "feature3": {
+      "title": "Financial management",
+      "description": "Accounts payable and receivable, cash flow, and simplified P&L. Know exactly where your money goes."
+    },
+    "feature4": {
+      "title": "Real-time reports",
+      "description": "Dashboards showing sales, margins, and performance. Data updated with every transaction."
+    },
+    "feature5": {
+      "title": "Multi-store",
+      "description": "Manage multiple locations from one place. Shared or separate inventory—you decide."
+    }
+  },
+  "testimonials": {
+    "title": "What our customers say",
+    "subtitle": "Real stories from retailers who transformed their businesses.",
+    "item1": {
+      "quote": "Finally a system that doesn't crash! Even on our busiest days, LeanERP holds strong. And when the internet goes down? I don't even notice.",
+      "author": "Roberto Almeida",
+      "role": "Owner, Mercadinho Bom Preço"
+    },
+    "item2": {
+      "quote": "I installed it on the old store computer and it runs better than our previous system on the new computer. Saved $600 on hardware.",
+      "author": "Cláudia Santos",
+      "role": "Owner, Papelaria Central"
+    },
+    "item3": {
+      "quote": "Support handled my migration in 1 day. They imported 15,000 products without me missing a single sale.",
+      "author": "Marcos Oliveira",
+      "role": "Manager, Ferragens do Bairro"
+    }
+  },
+  "pricing": {
+    "title": "Simple and honest pricing",
+    "subtitle": "Choose the right plan for your operation size. 30 days free to try.",
+    "recommended": "Most popular",
+    "minus": {
+      "name": "Minus",
+      "description": "For those just starting out or running lean.",
+      "feature1": "1 POS terminal",
+      "feature2": "Sales module",
+      "feature3": "Basic inventory control",
+      "feature4": "Email support",
+      "cta": "Start free",
+      "monthlyPrice": "19",
+      "yearlyPrice": "15"
+    },
+    "essential": {
+      "name": "Essential",
+      "description": "For growing stores that need full control.",
+      "feature1": "Up to 3 POS terminals",
+      "feature2": "All modules",
+      "feature3": "Advanced reports",
+      "feature4": "Priority support",
+      "feature5": "Auto local backup",
+      "cta": "Start free",
+      "monthlyPrice": "89",
+      "yearlyPrice": "71"
+    },
+    "hardcore": {
+      "name": "Hardcore",
+      "description": "For high-volume operations with specific needs.",
+      "feature1": "Unlimited POS terminals",
+      "feature2": "Custom modules",
+      "feature3": "API for integrations",
+      "feature4": "24/7 support",
+      "feature5": "Dedicated account manager",
+      "feature6": "Guaranteed SLA",
+      "cta": "Talk to an expert",
+      "monthlyPrice": "300",
+      "yearlyPrice": "240"
+    },
+    "currency": "BRL",
+    "period": "month",
+    "annualBilling": "Annual billing",
+    "savingsLabel": "(Save 20%)",
+    "billedMonthly": "billed monthly",
+    "billedAnnually": "billed annually"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Answers to your top questions",
+    "support": "Didn't find what you're looking for? Contact our",
+    "supportLink": "support team",
+    "q1": {
+      "question": "How does 100% offline mode work?",
+      "answer": "LeanERP stores all data locally on your computer. You can sell, print receipts, and manage inventory without internet. When connection returns, we automatically sync with cloud backup."
+    },
+    "q2": {
+      "question": "My computer is old. Will it run?",
+      "answer": "Yes. We've tested LeanERP on Windows XP machines, 2GB RAM, and processors from 2008. If it turns on, LeanERP runs."
+    },
+    "q3": {
+      "question": "Can I migrate data from my current system?",
+      "answer": "Yes, we offer free assisted migration. Our team imports your products, customers, and sales history without you losing a single day of operation."
+    },
+    "q4": {
+      "question": "What if I need more modules later?",
+      "answer": "You add modules whenever you want, without changing plans. Pay only for what you use, when you need it."
+    },
+    "q5": {
+      "question": "Is data secure offline?",
+      "answer": "Yes. We use AES-256 encryption on the local database. Automatic backups are sent to the cloud when connection is available."
+    },
+    "q6": {
+      "question": "How long does it take to start using?",
+      "answer": "Installation in 5 minutes. Basic product setup in 30 minutes. You're operational the same day."
+    }
+  },
+  "finalCta": {
+    "title": "Ready to simplify your management?",
+    "subtitle": "Join over 500 retailers who discovered that ERP can be light, fast, and affordable.",
+    "cta": {
+      "primary": "Start 30-day free trial",
+      "secondary": "Schedule a demo"
+    },
+    "microcopy": "Setup in 5 minutes. No credit card required."
+  },
+  "footer": {
+    "brand": "LeanERP",
+    "tagline": "Your ERP, your way, any machine.",
+    "product": {
+      "title": "Product",
+      "features": "Features",
+      "pricing": "Pricing",
+      "changelog": "Changelog",
+      "docs": "Documentation"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About us",
+      "blog": "Blog",
+      "careers": "Careers",
+      "contact": "Contact"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy",
+      "terms": "Terms of use",
+      "cookies": "Cookies"
+    },
+    "copyright": "© {year} LeanERP. All rights reserved."
+  }
+}

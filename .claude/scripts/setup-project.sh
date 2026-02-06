@@ -69,6 +69,10 @@ echo "   ✅ playwright.config.ts"
 cp "$CONFIGS_DIR/crowdin.yml" "$PROJECT_DIR/crowdin.yml"
 echo "   ✅ crowdin.yml"
 
+# next.config.ts (com plugin next-intl)
+cp "$CONFIGS_DIR/next.config.ts" "$PROJECT_DIR/next.config.ts"
+echo "   ✅ next.config.ts (next-intl plugin)"
+
 # Storybook
 cp "$CONFIGS_DIR/.storybook/main.ts" "$PROJECT_DIR/.storybook/main.ts"
 cp "$CONFIGS_DIR/.storybook/preview.ts" "$PROJECT_DIR/.storybook/preview.ts"
@@ -226,13 +230,13 @@ UTILS_EOF
 fi
 
 # =============================================================================
-# 8. MIDDLEWARE (next-intl)
+# 8. PROXY (next-intl — Next.js 16+ usa proxy em vez de middleware)
 # =============================================================================
 echo ""
-echo "🔀 Criando middleware next-intl..."
+echo "🔀 Criando proxy next-intl (Next.js 16+)..."
 
-if [ ! -f "$PROJECT_DIR/src/middleware.ts" ]; then
-  cat > "$PROJECT_DIR/src/middleware.ts" << 'MIDDLEWARE_EOF'
+if [ ! -f "$PROJECT_DIR/src/proxy.ts" ]; then
+  cat > "$PROJECT_DIR/src/proxy.ts" << 'MIDDLEWARE_EOF'
 import createMiddleware from "next-intl/middleware"
 import { routing } from "./i18n/routing"
 
@@ -242,7 +246,7 @@ export const config = {
   matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
 }
 MIDDLEWARE_EOF
-  echo "   ✅ middleware.ts"
+  echo "   ✅ proxy.ts"
 fi
 
 # i18n routing config

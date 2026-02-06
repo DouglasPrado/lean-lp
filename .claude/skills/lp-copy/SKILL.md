@@ -23,20 +23,23 @@ description: "Copywriting guide for SaaS landing pages focused on conversion. Us
 ## Section Copy Frameworks
 
 ### Hero Section
-- **Headline**: 6-12 words, outcome-focused, no jargon
+
+- **Headline**: 4-8 words, outcome-focused, no jargon
   - Formula: `[Action verb] + [desired outcome] + [without pain point]`
   - Example: "Ship faster without breaking things"
-- **Subheadline**: 15-25 words expanding the how
+- **Subheadline**: 10-20 words expanding the how
   - Formula: `[Product category] that [key benefit] so you can [outcome]`
 - **CTA Primary**: 2-4 words, action verb + value ("Start free trial", "Get started free")
 - **CTA Secondary**: Lower commitment ("See how it works", "Watch demo")
 
 ### Social Proof Bar
+
 - Format: "[Number]+ [entity] [verb] [product]"
 - Example: "Trusted by 2,500+ engineering teams worldwide"
 - Use real numbers, real logos, always round down
 
 ### Benefits Section
+
 - **Title**: 3-6 words, outcome-focused
 - **Description**: 1-2 sentences, specific and quantified
 - Pattern: `[What it does] → [Why it matters] → [Proof point]`
@@ -45,18 +48,21 @@ description: "Copywriting guide for SaaS landing pages focused on conversion. Us
   - Description: "Automated testing catches 99.2% of bugs before they hit production. Your team ships daily instead of weekly."
 
 ### Features Section
+
 - Lead with the user story, not the tech
 - Pattern: `[User role] can [action] [qualifier]`
 - Each feature: title (4-6 words) + description (2 sentences) + visual
 - Use power words: automate, instant, seamless, real-time
 
 ### Testimonials
+
 - Framework: [Specific result] + [emotional benefit] + [recommendation]
 - Always include: name, role, company, photo
 - Best format: "We [specific metric improvement] since switching to [product]. [Emotional benefit]. [Would recommend statement]."
 - Example: "We cut deploy time by 73% since switching to ShipFast. The team actually enjoys releases now. Absolute game-changer for any engineering team."
 
 ### Pricing Section
+
 - **Headline**: Restate value proposition ("Simple pricing for every team")
 - Plan names: descriptive, not clever (Starter, Pro, Enterprise)
 - Highlight the recommended plan visually
@@ -65,12 +71,14 @@ description: "Copywriting guide for SaaS landing pages focused on conversion. Us
 - Add "Most popular" or "Recommended" badge
 
 ### FAQ Section
+
 - Address the top 5-7 objections as questions
 - Must include: pricing/billing, security, migration, support, cancellation
 - Answers: 2-3 sentences max, link to docs for details
 - Tone: reassuring, transparent
 
 ### Final CTA Section
+
 - Restate the #1 benefit as headline
 - Add urgency or exclusivity when genuine
 - Repeat primary CTA from hero
@@ -96,6 +104,7 @@ description: "Copywriting guide for SaaS landing pages focused on conversion. Us
 ## Copy Checklist
 
 Before finalizing any section copy:
+
 1. Does it pass the "So what?" test?
 2. Is there a clear single CTA?
 3. Are numbers specific and verifiable?
@@ -138,6 +147,7 @@ footer.copyright            → "© {year} ProductName..."
 ```
 
 ### Conexão com Outras Skills
+
 - **Estrutura**: Os componentes em `lp-structure` usam `useTranslations('seção')` — as chaves acima são exatamente o que `t("campo")` espera
 - **SEO**: As chaves `metadata.*` são usadas pelo `generateMetadata()` de `lp-seo`
 - **i18n**: PT-BR é a língua fonte. EN deve ser adaptação cultural, não tradução literal

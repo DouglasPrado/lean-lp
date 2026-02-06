@@ -69,14 +69,14 @@ export function Pricing() {
 
   return (
     <section id="pricing" className="py-20 md:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <SectionHeader title={t("title")} subtitle={t("subtitle")} />
         </AnimatedSection>
 
         {/* Monthly / Annual toggle */}
-        <div className="flex justify-center items-center gap-2 mb-10">
-          <label className="relative inline-flex items-center cursor-pointer">
+        <div className="mb-10 flex items-center justify-center gap-2">
+          <label className="relative inline-flex cursor-pointer items-center">
             <Label>
               <Switch
                 ref={switchRef as React.Ref<HTMLButtonElement>}
@@ -87,18 +87,16 @@ export function Pricing() {
             </Label>
           </label>
           <span className="font-semibold">
-            {t("annualBilling")}{" "}
-            <span className="text-primary">{t("savingsLabel")}</span>
+            {t("annualBilling")} <span className="text-primary">{t("savingsLabel")}</span>
           </span>
         </div>
 
         {/* Pricing cards with 3D perspective */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           {plans.map((plan, index) => {
             const monthlyPrice = t(`${plan.key}.monthlyPrice`)
             const yearlyPrice = t(`${plan.key}.yearlyPrice`)
-            const isNumeric =
-              monthlyPrice !== "" && !isNaN(Number(monthlyPrice))
+            const isNumeric = monthlyPrice !== "" && !isNaN(Number(monthlyPrice))
 
             // Try to get custom price for Enterprise-style plans
             let customPrice = ""
@@ -132,19 +130,17 @@ export function Pricing() {
                   opacity: { duration: 0.5 },
                 }}
                 className={cn(
-                  "rounded-2xl border p-6 bg-background text-center lg:flex lg:flex-col lg:justify-center relative flex flex-col",
-                  plan.isPopular
-                    ? "border-primary border-2"
-                    : "border-border",
+                  "bg-background relative flex flex-col rounded-2xl border p-6 text-center lg:flex lg:flex-col lg:justify-center",
+                  plan.isPopular ? "border-primary border-2" : "border-border",
                   !plan.isPopular && "mt-5",
                   index === 0 || index === 2 ? "z-0" : "z-10",
                   index === 0 && "origin-right",
-                  index === 2 && "origin-left"
+                  index === 2 && "origin-left",
                 )}
               >
                 {/* Popular badge */}
                 {plan.isPopular && (
-                  <div className="absolute top-0 right-0 bg-primary py-0.5 px-2 rounded-bl-xl rounded-tr-xl flex items-center">
+                  <div className="bg-primary absolute top-0 right-0 flex items-center rounded-tr-xl rounded-bl-xl px-2 py-0.5">
                     <Star className="text-primary-foreground h-4 w-4 fill-current" />
                     <span className="text-primary-foreground ml-1 font-semibold">
                       {t("recommended")}
@@ -152,9 +148,9 @@ export function Pricing() {
                   </div>
                 )}
 
-                <div className="flex-1 flex flex-col">
+                <div className="flex flex-1 flex-col">
                   {/* Plan name */}
-                  <p className="text-base font-semibold text-muted-foreground">
+                  <p className="text-muted-foreground text-base font-semibold">
                     {t(`${plan.key}.name`)}
                   </p>
 
@@ -162,13 +158,9 @@ export function Pricing() {
                   <div className="mt-6 flex items-center justify-center gap-x-2">
                     {isNumeric ? (
                       <>
-                        <span className="text-5xl font-bold tracking-tight text-foreground tabular-nums">
+                        <span className="text-foreground text-5xl font-bold tracking-tight tabular-nums">
                           <NumberFlow
-                            value={
-                              isMonthly
-                                ? Number(monthlyPrice)
-                                : Number(yearlyPrice)
-                            }
+                            value={isMonthly ? Number(monthlyPrice) : Number(yearlyPrice)}
                             format={{
                               style: "currency",
                               currency: t("currency"),
@@ -182,12 +174,12 @@ export function Pricing() {
                             willChange
                           />
                         </span>
-                        <span className="text-sm font-semibold leading-6 tracking-wide text-muted-foreground">
+                        <span className="text-muted-foreground text-sm leading-6 font-semibold tracking-wide">
                           / {t("period")}
                         </span>
                       </>
                     ) : (
-                      <span className="text-4xl font-bold tracking-tight text-foreground">
+                      <span className="text-foreground text-4xl font-bold tracking-tight">
                         {customPrice}
                       </span>
                     )}
@@ -195,21 +187,21 @@ export function Pricing() {
 
                   {/* Billing period label */}
                   {isNumeric && (
-                    <p className="text-xs leading-5 text-muted-foreground">
+                    <p className="text-muted-foreground text-xs leading-5">
                       {isMonthly ? t("billedMonthly") : t("billedAnnually")}
                     </p>
                   )}
 
                   {/* Plan description */}
-                  <p className="mt-2 text-sm text-muted-foreground">
+                  <p className="text-muted-foreground mt-2 text-sm">
                     {t(`${plan.key}.description`)}
                   </p>
 
                   {/* Features list */}
-                  <ul className="mt-5 gap-2 flex flex-col flex-1">
+                  <ul className="mt-5 flex flex-1 flex-col gap-2">
                     {Array.from({ length: plan.featureCount }, (_, idx) => (
                       <li key={idx} className="flex items-start gap-2">
-                        <Check className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                        <Check className="text-primary mt-1 h-4 w-4 flex-shrink-0" />
                         <span className="text-left text-sm">
                           {t(`${plan.key}.feature${idx + 1}`)}
                         </span>
@@ -217,7 +209,7 @@ export function Pricing() {
                     ))}
                   </ul>
 
-                  <hr className="w-full my-4" />
+                  <hr className="my-4 w-full" />
 
                   {/* CTA button with hover ring effect */}
                   <Link
@@ -225,10 +217,10 @@ export function Pricing() {
                     className={cn(
                       buttonVariants({ variant: "outline" }),
                       "group relative w-full gap-2 overflow-hidden text-lg font-semibold tracking-tighter",
-                      "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-1 hover:bg-primary hover:text-primary-foreground",
+                      "hover:ring-primary hover:bg-primary hover:text-primary-foreground transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-offset-1",
                       plan.isPopular
                         ? "bg-primary text-primary-foreground"
-                        : "bg-background text-foreground"
+                        : "bg-background text-foreground",
                     )}
                   >
                     {t(`${plan.key}.cta`)}

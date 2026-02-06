@@ -42,7 +42,7 @@ Execute this checklist for quality assurance before any significant update.
 
 - [ ] All anchor links scroll to correct sections
 - [ ] Language switcher changes locale and preserves route
-- [ ] External links open in new tab (target="_blank" rel="noopener")
+- [ ] External links open in new tab (target="\_blank" rel="noopener")
 - [ ] Keyboard navigation works (Tab, Enter, Escape)
 - [ ] Screen reader compatible (proper ARIA labels)
 - [ ] No JavaScript errors in console

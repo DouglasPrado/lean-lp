@@ -11,7 +11,6 @@ Usage:
 
 Outputs:
   - globals.css (CSS variables for light + dark themes)
-  - tailwind.config.ts (Tailwind config with shadcn/ui color mapping)
   - palette-preview.html (visual preview of the generated palette)
 """
 
@@ -140,6 +139,10 @@ def generate_theme(primary: HSL, secondary: HSL, preset: str = "soft", radius: f
         "sidebar-accent-foreground": HSL(primary.h, 5, 25),
         "sidebar-border": HSL(primary.h, primary.s * 0.1, 91),
         "sidebar-ring": primary.adjusted(l=max(35, min(55, primary.l))),
+        # Sparkles / Social Proof
+        "gradient-color": primary.adjusted(s=min(90, primary.s * 1.2), l=55),
+        "sparkles-color": HSL(primary.h, 5, 9),
+        "sparkles-color-dark": HSL(primary.h, 5, 95),
     }
 
     # ─── Dark Theme ───
@@ -178,6 +181,10 @@ def generate_theme(primary: HSL, secondary: HSL, preset: str = "soft", radius: f
         "sidebar-accent-foreground": HSL(primary.h, 5, 90),
         "sidebar-border": HSL(primary.h, primary.s * 0.1, 14),
         "sidebar-ring": primary.adjusted(l=max(55, min(70, primary.l + 15))),
+        # Sparkles / Social Proof
+        "gradient-color": primary.adjusted(s=min(90, primary.s * 1.2), l=55),
+        "sparkles-color": HSL(primary.h, 5, 9),
+        "sparkles-color-dark": HSL(primary.h, 5, 95),
     }
 
     return light, dark, radius
@@ -195,6 +202,7 @@ def generate_globals_css(light: dict, dark: dict, radius: float) -> str:
         "chart-1", "chart-2", "chart-3", "chart-4", "chart-5",
         "sidebar-background", "sidebar-foreground", "sidebar-primary", "sidebar-primary-foreground",
         "sidebar-accent", "sidebar-accent-foreground", "sidebar-border", "sidebar-ring",
+        "gradient-color", "sparkles-color", "sparkles-color-dark",
     ]
     for key in color_keys:
         lines.append(f"  --color-{key}: hsl(var(--{key}));")
@@ -223,6 +231,8 @@ def generate_globals_css(light: dict, dark: dict, radius: float) -> str:
     lines.append("  --animate-fade-up: fade-up 0.5s ease-out forwards;")
     lines.append("  --animate-fade-in: fade-in 0.5s ease-out forwards;")
     lines.append("  --animate-scale-in: scale-in 0.3s ease-out forwards;")
+    lines.append("  --animate-accordion-down: accordion-down 0.2s ease-out;")
+    lines.append("  --animate-accordion-up: accordion-up 0.2s ease-out;")
     lines.append("}")
     lines.append("")
     lines.append("@keyframes fade-up {")
@@ -238,6 +248,16 @@ def generate_globals_css(light: dict, dark: dict, radius: float) -> str:
     lines.append("@keyframes scale-in {")
     lines.append("  0% { opacity: 0; transform: scale(0.95); }")
     lines.append("  100% { opacity: 1; transform: scale(1); }")
+    lines.append("}")
+    lines.append("")
+    lines.append("@keyframes accordion-down {")
+    lines.append("  from { height: 0; }")
+    lines.append("  to { height: var(--radix-accordion-content-height); }")
+    lines.append("}")
+    lines.append("")
+    lines.append("@keyframes accordion-up {")
+    lines.append("  from { height: var(--radix-accordion-content-height); }")
+    lines.append("  to { height: 0; }")
     lines.append("}")
     lines.append("")
 
@@ -446,13 +466,6 @@ def main():
         with open(css_path, "w") as f:
             f.write(css)
         generated.append(f"  globals.css → {css_path}")
-
-    if args.mode in ("tailwind", "both"):
-        tw = generate_tailwind_config()
-        tw_path = os.path.join(args.output, "tailwind.config.ts")
-        with open(tw_path, "w") as f:
-            f.write(tw)
-        generated.append(f"  tailwind.config.ts → {tw_path} (legacy Tailwind v3)")
 
     if args.preview or args.mode == "all":
         html = generate_preview_html(light, dark, args.primary, args.secondary)

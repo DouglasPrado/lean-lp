@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: {
       default: t("title"), // "ProductName — Tagline"
-      template: `%s | ${t("siteName")}`
+      template: `%s | ${t("siteName")}`,
     },
     description: t("description"), // 150-160 chars, include primary keyword
     keywords: t("keywords"),
@@ -35,24 +35,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url: "/og-image.png", // 1200x630px
           width: 1200,
           height: 630,
-          alt: t("og.imageAlt")
-        }
+          alt: t("og.imageAlt"),
+        },
       ],
       locale: locale,
-      type: "website"
+      type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title: t("og.title"),
       description: t("og.description"),
-      images: ["/og-image.png"]
+      images: ["/og-image.png"],
     },
     alternates: {
       canonical: t("canonical"),
       languages: {
         "pt-BR": "/pt-BR",
-        "en": "/en"
-      }
+        en: "/en",
+      },
     },
     robots: {
       index: true,
@@ -62,9 +62,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         follow: true,
         "max-video-preview": -1,
         "max-image-preview": "large",
-        "max-snippet": -1
-      }
-    }
+        "max-snippet": -1,
+      },
+    },
   }
 }
 ```
@@ -92,6 +92,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 ```
 
 ### Heading Hierarchy
+
 - `h1`: ONE per page — hero headline only
 - `h2`: Section titles (Benefits, Features, Pricing, FAQ, etc.)
 - `h3`: Sub-items (feature names, plan names, FAQ questions)
@@ -102,27 +103,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 For complete JSON-LD schema templates (SoftwareApplication, FAQPage, Organization, BreadcrumbList), see [references/schema-markup.md](references/schema-markup.md).
 
 Add schemas in layout.tsx:
+
 ```tsx
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-/>
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 ```
 
 ## Core Web Vitals Optimization
 
 ### LCP (Largest Contentful Paint) < 2.5s
+
 - Preload hero image/font in `<head>`
 - Use `next/image` with `priority` for hero
 - Inline critical CSS
 - Avoid layout shifts in hero
 
 ### FID/INP (Interaction) < 200ms
+
 - Defer non-critical JS
 - Use `dynamic(() => import(...))` for below-fold sections
 - Minimize third-party scripts
 
 ### CLS (Cumulative Layout Shift) < 0.1
+
 - Set explicit `width`/`height` on all images
 - Reserve space for dynamic content
 - Avoid injecting content above fold after load
@@ -134,12 +136,12 @@ Add schemas in layout.tsx:
 // Always use next/image
 import Image from "next/image"
 
-<Image
+;<Image
   src="/hero-screenshot.webp"
-  alt="Descriptive alt text with keywords"  // SEO: include keywords naturally
+  alt="Descriptive alt text with keywords" // SEO: include keywords naturally
   width={1200}
   height={800}
-  priority  // Only for above-fold images
+  priority // Only for above-fold images
   quality={85}
   placeholder="blur"
   blurDataURL="..."
@@ -154,6 +156,7 @@ import Image from "next/image"
 ## i18n SEO
 
 ### hreflang Tags (auto via next-intl + metadata alternates)
+
 ```html
 <link rel="alternate" hreflang="pt-BR" href="https://example.com/pt-BR" />
 <link rel="alternate" hreflang="en" href="https://example.com/en" />
@@ -161,6 +164,7 @@ import Image from "next/image"
 ```
 
 ### Per-Locale SEO
+
 - Each locale has unique title + description
 - Canonical URLs include locale prefix
 - Sitemap includes all locale variants
@@ -174,16 +178,14 @@ export default function sitemap() {
   const locales = ["pt-BR", "en"]
   const baseUrl = "https://example.com"
 
-  return locales.map(locale => ({
+  return locales.map((locale) => ({
     url: `${baseUrl}/${locale}`,
     lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 1.0,
     alternates: {
-      languages: Object.fromEntries(
-        locales.map(l => [l, `${baseUrl}/${l}`])
-      )
-    }
+      languages: Object.fromEntries(locales.map((l) => [l, `${baseUrl}/${l}`])),
+    },
   }))
 }
 
@@ -191,7 +193,7 @@ export default function sitemap() {
 export default function robots() {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://example.com/sitemap.xml"
+    sitemap: "https://example.com/sitemap.xml",
   }
 }
 ```
@@ -199,6 +201,7 @@ export default function robots() {
 ## SEO Checklist
 
 Before launch:
+
 1. H1 is unique, keyword-rich, present on page
 2. Meta title ≤ 60 chars, meta description 150-160 chars
 3. OG image is 1200x630, renders correctly on social
@@ -214,6 +217,7 @@ Before launch:
 13. 404 page exists and is styled
 
 ## Conexão com Outras Skills
+
 - **Estrutura**: Seguir a heading hierarchy ao criar componentes em `lp-structure`. Hero usa `<h1>`, todas outras seções usam `<h2>`, sub-items usam `<h3>`
 - **Copy**: As chaves `metadata.*` no template i18n (`.claude/templates/snippets/i18n-message-template.json`) são usadas pelo `generateMetadata()` acima. Ao escrever copy via `lp-copy`, preencher `metadata.title` (≤60 chars) e `metadata.description` (150-160 chars)
 - **Cores**: O `globals.css` gerado por `lp-colors` define as CSS variables que os componentes usam. Gerar cores ANTES de configurar SEO/metadata

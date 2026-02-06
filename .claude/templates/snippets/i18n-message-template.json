@@ -45,9 +45,8 @@
     }
   },
   "socialProof": {
-    "title": "Usado por mais de 2.500 equipes em todo o mundo",
-    "marquee1": "Enterprise Ready • SOC2 Compliance • 99.9% Uptime • Suporte 24/7 • 2.500+ Times •",
-    "marquee2": "Automação Inteligente • Analytics em Tempo Real • Integrações Nativas • Suporte Prioritário • Workflows Customizados •"
+    "subtitle": "Já utilizado por",
+    "title": "Os melhores do mercado"
   },
   "benefits": {
     "title": "Por que escolher ProductName",
@@ -162,7 +161,9 @@
   },
   "faq": {
     "title": "Perguntas frequentes",
-    "subtitle": "Respostas para as dúvidas mais comuns sobre o ProductName.",
+    "subtitle": "Suas dúvidas respondidas",
+    "support": "Não encontrou o que procura? Entre em contato com nosso",
+    "supportLink": "suporte ao cliente",
     "q1": {
       "question": "Posso testar antes de pagar?",
       "answer": "Sim! Oferecemos 14 dias de teste grátis em todos os planos, sem necessidade de cartão de crédito."

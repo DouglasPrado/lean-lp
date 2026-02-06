@@ -11,11 +11,11 @@ O produto é o **LeanERP** — Seu ERP, do seu jeito, em qualquer máquina.
 
 ## Pricing
 
-| Plano     | Preço          |
-|-----------|----------------|
-| Minus     | R$19,00/mês    |
-| Essential | R$89,00/mês    |
-| Hardcore  | R$300,00/mês   |
+| Plano     | Preço        |
+| --------- | ------------ |
+| Minus     | R$19,00/mês  |
+| Essential | R$89,00/mês  |
+| Hardcore  | R$300,00/mês |
 
 - **Moeda**: BRL
 - **Trial**: 30 dias grátis, sem necessidade de cartão
