@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { useTranslations } from "next-intl"
-import { WifiOff, Zap, Layers, Monitor } from "lucide-react"
+import { Rocket, Target, Code, Megaphone } from "lucide-react"
 import { SectionHeader } from "@/components/shared/section-header"
 
 const fadeUp = {
@@ -15,7 +15,7 @@ const stagger = {
   visible: { transition: { staggerChildren: 0.1 } },
 }
 
-const icons = [WifiOff, Zap, Layers, Monitor]
+const icons = [Rocket, Target, Code, Megaphone]
 
 export function Benefits() {
   const t = useTranslations("benefits")

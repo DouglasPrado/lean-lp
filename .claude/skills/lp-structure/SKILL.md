@@ -46,7 +46,6 @@ export function SectionName() {
 
 ```tsx
 // app/[locale]/page.tsx
-import { AnnouncementBar } from "@/components/sections/announcement-bar"
 import { Navbar } from "@/components/sections/navbar"
 import { Hero } from "@/components/sections/hero"
 import { SocialProof } from "@/components/sections/social-proof"
@@ -62,7 +61,6 @@ import { Footer } from "@/components/sections/footer"
 export default function Home() {
   return (
     <>
-      <AnnouncementBar />
       <Navbar />
       <main>
         <HeroBackground>
@@ -189,14 +187,15 @@ Copiar templates de seções de `.claude/templates/sections/` para `src/componen
 Copiar snippets de `.claude/templates/snippets/` para `src/components/shared/`.
 Cada seção importa snippets de `@/components/shared/` — NÃO duplicar código manualmente.
 
-Templates disponíveis:
+Templates disponíveis (10 seções):
 
-- `announcement-bar.tsx`, `navbar.tsx`, `hero.tsx`, `social-proof.tsx`
+- `navbar.tsx`, `hero.tsx`, `social-proof.tsx`
 - `benefits.tsx`, `features.tsx`, `testimonials.tsx`, `pricing.tsx`
 - `faq.tsx`, `final-cta.tsx`, `footer.tsx`
 
 Snippets compartilhados (importar de `@/components/shared/`):
 
+- `AnnouncementBar` — pill banner animado com ícones flutuantes (Sparkles), dismissível via botão X. Usado DENTRO do Hero (não é seção separada). Props: `cta` (string), `text` (string), `href` (string), `closeLabel` (string, optional), `className` (string, optional). Usa `framer-motion` (AnimatePresence + motion), `lucide-react` (X, Sparkles). i18n: chaves ficam em `hero.announcement.*`
 - `SectionHeader` — h2 + subtitle com animação (usar em TODAS as seções)
 - `AnimatedSection` — wrapper com Framer Motion whileInView
 - `AnimatedGroup` — animação stagger de grupo com presets (fade, slide, blur, zoom, flip, bounce, etc). Usado no Hero para as animações estilo Tailark
@@ -282,7 +281,7 @@ Aguardar o servidor iniciar e verificar:
 
 Ao executar o projeto, verificar que:
 
-- [ ] Todas as 11 seções renderizam (Announcement, Navbar, Hero, SocialProof, Benefits, Features, Testimonials, Pricing, FAQ, FinalCTA, Footer)
+- [ ] Todas as 10 seções renderizam (Navbar, Hero com AnnouncementBar, SocialProof, Benefits, Features, Testimonials, Pricing, FAQ, FinalCTA, Footer)
 - [ ] Textos i18n aparecem corretamente (não mostram chaves como `hero.title`)
 - [ ] Cores da paleta estão aplicadas (primary, secondary, background, foreground)
 - [ ] Dark mode funciona (se `next-themes` configurado)

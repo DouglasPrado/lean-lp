@@ -1,6 +1,14 @@
----
+Copy Landing Page
+
+Criar copy para landing pages
+
+Criar copy para landing page, criar copy para lp, criar copy para site, criar copy para saas
+
+## copy, landing pages, lp, landingpages, saas
+
 name: lp-copy
 description: "Copywriting guide for SaaS landing pages focused on conversion. Use when writing headlines, subheadlines, CTAs, benefit descriptions, feature copy, testimonial frameworks, pricing copy, FAQ content, or any text content for SaaS landing pages. Triggers: copy, texto, headline, CTA, copywriting, landing page text, conversion copy."
+
 ---
 
 # SaaS Landing Page Copywriting

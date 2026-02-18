@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/admin/"],
     },
-    sitemap: "https://leanerp.com.br/sitemap.xml",
+    sitemap: "https://dify.com.br/sitemap.xml",
   }
 }

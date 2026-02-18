@@ -1,30 +1,23 @@
 export const pricingConfig = {
   currency: "BRL",
   trial: {
-    days: 30,
+    days: 14,
     requiresCard: false,
   },
   plans: [
     {
-      key: "minus" as const,
-      monthlyPrice: 19,
-      yearlyPrice: 15,
+      key: "free" as const,
+      monthlyPrice: 0,
+      yearlyPrice: 0,
       featureCount: 4,
       isPopular: false,
     },
     {
-      key: "essential" as const,
-      monthlyPrice: 89,
-      yearlyPrice: 71,
+      key: "pro" as const,
+      monthlyPrice: 97,
+      yearlyPrice: 77,
       featureCount: 5,
       isPopular: true,
-    },
-    {
-      key: "hardcore" as const,
-      monthlyPrice: 300,
-      yearlyPrice: 240,
-      featureCount: 6,
-      isPopular: false,
     },
   ],
 }

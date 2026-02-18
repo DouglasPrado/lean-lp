@@ -22,7 +22,7 @@ export function Faq() {
   ]
 
   return (
-    <section className="py-16 md:py-24">
+    <section id="faq" className="py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-5 md:gap-12">
           {/* Left column — heading + support link (desktop) */}

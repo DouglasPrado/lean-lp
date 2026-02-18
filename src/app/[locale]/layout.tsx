@@ -2,16 +2,16 @@ import type { Metadata } from "next"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations } from "next-intl/server"
 import { notFound } from "next/navigation"
+import { ThemeProvider } from "next-themes"
 import { routing } from "@/i18n/routing"
-import { Inter } from "next/font/google"
+import { calSans, inter } from "@/lib/fonts"
 import {
   generateSoftwareApplicationSchema,
+  generateFAQSchema,
   generateOrganizationSchema,
   generateWebsiteSchema,
 } from "@/lib/schema"
 import "../globals.css"
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
 export async function generateMetadata({
   params,
@@ -51,15 +51,29 @@ export default async function LocaleLayout({
   if (!routing.locales.includes(locale as (typeof routing.locales)[number])) notFound()
 
   const messages = await getMessages()
+  const t = await getTranslations({ locale, namespace: "faq" })
+
+  const faqs = Array.from({ length: 6 }, (_, i) => ({
+    question: t(`q${i + 1}.question`),
+    answer: t(`q${i + 1}.answer`),
+  }))
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans antialiased`}>
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+      <body className={`${calSans.variable} ${inter.variable} font-sans antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+        </ThemeProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateSoftwareApplicationSchema()),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqs)),
           }}
         />
         <script

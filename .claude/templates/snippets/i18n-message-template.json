@@ -12,12 +12,6 @@
     },
     "canonical": "https://example.com"
   },
-  "announcement": {
-    "cta": "Ver novidades",
-    "text": "Lançamos a versão 2.0 com novos recursos",
-    "link": "/changelog",
-    "close": "Fechar anúncio"
-  },
   "navbar": {
     "brand": "ProductName",
     "features": "Funcionalidades",
@@ -28,7 +22,12 @@
     "login": "Entrar"
   },
   "hero": {
-    "badge": "Novo — Versão 2.0 disponível",
+    "announcement": {
+      "cta": "Ver novidades",
+      "text": "Lançamos a versão 2.0 com novos recursos",
+      "link": "/changelog",
+      "close": "Fechar anúncio"
+    },
     "title": "Headline focada em resultado",
     "titleWord1": "Automatize.",
     "titleWord2": "Colabore.",

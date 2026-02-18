@@ -51,19 +51,14 @@ export function Pricing() {
 
   const plans = [
     {
-      key: "minus" as const,
+      key: "free" as const,
       featureCount: 4,
       isPopular: false,
     },
     {
-      key: "essential" as const,
+      key: "pro" as const,
       featureCount: 5,
       isPopular: true,
-    },
-    {
-      key: "hardcore" as const,
-      featureCount: 6,
-      isPopular: false,
     },
   ]
 
@@ -92,7 +87,7 @@ export function Pricing() {
         </div>
 
         {/* Pricing cards with 3D perspective */}
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="mx-auto grid max-w-3xl grid-cols-1 gap-4 md:grid-cols-2">
           {plans.map((plan, index) => {
             const monthlyPrice = t(`${plan.key}.monthlyPrice`)
             const yearlyPrice = t(`${plan.key}.yearlyPrice`)
@@ -108,10 +103,10 @@ export function Pricing() {
                 whileInView={
                   isDesktop
                     ? {
-                        y: plan.isPopular ? -20 : 0,
+                        y: 0,
                         opacity: 1,
-                        x: index === 2 ? -30 : index === 0 ? 30 : 0,
-                        scale: index === 0 || index === 2 ? 0.94 : 1.0,
+                        x: 0,
+                        scale: 1.0,
                       }
                     : { y: 0, opacity: 1 }
                 }
@@ -128,9 +123,7 @@ export function Pricing() {
                   "bg-background relative flex flex-col rounded-2xl border p-6 text-center lg:flex lg:flex-col lg:justify-center",
                   plan.isPopular ? "border-primary border-2" : "border-border",
                   !plan.isPopular && "mt-5",
-                  index === 0 || index === 2 ? "z-0" : "z-10",
-                  index === 0 && "origin-right",
-                  index === 2 && "origin-left",
+                  "z-10",
                 )}
               >
                 {/* Popular badge */}

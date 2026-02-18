@@ -1,155 +1,154 @@
 {
   "metadata": {
-    "title": "LeanERP — Seu ERP, do seu jeito, em qualquer máquina",
-    "description": "ERP modular para micro e pequenas empresas do varejo. 100% offline, ultra-rápido, funciona em qualquer computador. Teste grátis por 30 dias.",
-    "siteName": "LeanERP",
-    "keywords": "ERP, sistema de gestão, ERP offline, ERP varejo, gestão empresarial, PDV, controle de estoque, software de gestão, ERP leve, ERP modular",
+    "title": "Dify — Seu time de agentes que trabalha enquanto você dorme",
+    "description": "Agentes de IA que pesquisam, escrevem, analisam, conectam, agendam e entregam. Tudo via conversa, tudo no automático.",
+    "siteName": "Dify",
+    "keywords": "time de agentes IA, agentes que executam tarefas, automação com inteligência artificial, assistentes IA para empresas, plataforma agentes inteligentes",
     "og": {
-      "title": "LeanERP — ERP Modular para Varejo",
-      "description": "100% offline. Ultra-rápido. Roda em qualquer máquina.",
-      "url": "https://leanerp.com.br",
-      "imageAlt": "LeanERP - Sistema de Gestão Empresarial"
+      "title": "Dify — Seu time de agentes que trabalha enquanto você dorme",
+      "description": "Pesquisa, documentação, análise de dados, automações, integrações — tudo que você pediria pra um time inteiro, o Dify resolve numa conversa.",
+      "url": "https://dify.com.br",
+      "imageAlt": "Dify - Seu time de agentes de IA"
     },
-    "canonical": "https://leanerp.com.br"
+    "canonical": "https://dify.com.br"
   },
   "announcement": {
-    "text": "Novidade! Versão 3.0 com módulos sob demanda",
+    "text": "Novo: +50 apps conectados — WhatsApp, GitHub, Notion e mais",
     "link": "/changelog",
     "cta": "Saiba mais"
   },
   "navbar": {
-    "brand": "LeanERP",
-    "features": "Funcionalidades",
+    "brand": "dify",
+    "features": "Recursos",
     "pricing": "Preços",
     "faq": "FAQ",
     "language": "PT",
-    "cta": "Testar grátis",
+    "cta": "Comece agora",
     "login": "Entrar"
   },
   "hero": {
-    "badge": "Novo — Versão 3.0 com módulos sob demanda",
-    "title": "Gerencie seu negócio",
-    "titleWord1": "Offline.",
-    "titleWord2": "Rápido.",
-    "titleWord3": "Simples.",
-    "subtitle": "ERP modular que funciona sem internet, responde em milissegundos e roda até no computador mais antigo da sua loja.",
+    "badge": "Seu time de agentes de IA",
+    "title": "Somos o seu time de agentes",
+    "titleWord1": "que trabalha",
+    "titleWord2": "enquanto você",
+    "titleWord3": "dorme.",
+    "subtitle": "Você conversa, a gente executa. Pesquisa, documentação, análise de dados, automações, integrações — tudo que você precisaria pedir pra um time inteiro, o Dify resolve numa conversa.",
     "cta": {
-      "primary": "Testar grátis por 30 dias",
-      "secondary": "Ver demonstração",
-      "microcopy": "Sem cartão de crédito. Cancele quando quiser."
+      "primary": "Comece agora",
+      "secondary": "Veja como funciona",
+      "microcopy": "+17 ferramentas prontas. +50 apps conectados."
     },
     "video": {
-      "src": "https://www.youtube.com/embed/LEANERP_DEMO",
-      "thumbnail": "/images/hero-leanerp.png",
-      "thumbnailAlt": "LeanERP em funcionamento em um PDV"
+      "src": "https://www.youtube.com/embed/dify-demo",
+      "thumbnail": "/images/hero-dify.png",
+      "thumbnailAlt": "Dify — time de agentes de IA executando tarefas em tempo real"
     }
   },
   "socialProof": {
-    "subtitle": "Já utilizado por",
-    "title": "Mais de 500 lojas em todo o Brasil"
+    "subtitle": "Você fala. A gente faz.",
+    "title": "Números que provam",
+    "metric1": { "value": "17+", "label": "ferramentas prontas" },
+    "metric2": { "value": "50+", "label": "apps conectados" },
+    "metric3": { "value": "5+", "label": "modelos de IA" },
+    "metric4": { "value": "24/7", "label": "disponibilidade" }
   },
   "benefits": {
-    "title": "Por que o LeanERP é diferente",
-    "subtitle": "Construído para o varejo brasileiro, com foco em simplicidade e performance.",
+    "title": "Pra quem é o Dify?",
+    "subtitle": "Founders, PMs, devs e marketing já usam o Dify pra fazer em minutos o que levaria horas.",
     "item1": {
-      "title": "100% offline",
-      "description": "Funciona sem internet. Suas vendas nunca param, mesmo se a conexão cair."
+      "title": "Escale sem contratar",
+      "description": "Estruturamos seu MVP, analisamos o mercado, geramos documentação, automatizamos processos. Trabalhamos dia e noite enquanto você foca em crescer o negócio."
     },
     "item2": {
-      "title": "Ultra-rápido",
-      "description": "Resposta em milissegundos. Projetado para alto volume de transações constantes."
+      "title": "Da ideia ao resultado",
+      "description": "Pesquisas automáticas, priorização de features, documentação completa, análise de dados. Tudo que você pediria pra 3 pessoas diferentes, uma conversa com a gente resolve."
     },
     "item3": {
-      "title": "Modular sob demanda",
-      "description": "Pague apenas pelos módulos que usa. Adicione funcionalidades quando precisar."
+      "title": "Entregue 10x mais rápido",
+      "description": "Pull requests automáticos, consultas ao banco assistidas, review de código, documentação que se escreve sozinha. Menos burocracia, mais resultado."
     },
     "item4": {
-      "title": "Qualquer máquina",
-      "description": "Roda do MacBook mais novo ao Windows XP. Seu hardware atual é suficiente."
+      "title": "Operação no automático",
+      "description": "Criamos conteúdo, automatizamos WhatsApp, analisamos métricas, entregamos relatórios periódicos. Sua operação de marketing roda sozinha."
     }
   },
   "features": {
-    "title": "Tudo que você precisa para gerenciar",
-    "subtitle": "Módulos integrados que funcionam juntos ou separadamente.",
+    "title": "Tudo que você precisa, numa só plataforma",
+    "subtitle": "Ferramentas que fazem acontecer enquanto você foca no que importa.",
     "feature1": {
-      "title": "PDV completo",
-      "description": "Frente de caixa rápida com atalhos de teclado, múltiplas formas de pagamento e emissão de NFC-e."
+      "title": "Chat que Executa",
+      "description": "Não somos um chatbot. Entendemos o que você quer fazer e fazemos. Sem menus, sem botões — só fale normalmente e a gente executa na hora."
     },
     "feature2": {
-      "title": "Controle de estoque",
-      "description": "Entrada, saída, inventário e alertas de estoque mínimo. Nunca perca uma venda por falta de produto."
+      "title": "Receitas Automatizadas",
+      "description": "Defina os passos uma vez e a gente executa sempre. Pesquisa de mercado, estruturação de produto, pull requests — tudo vira receita no piloto automático."
     },
     "feature3": {
-      "title": "Gestão financeira",
-      "description": "Contas a pagar e receber, fluxo de caixa e DRE simplificado. Saiba exatamente para onde vai seu dinheiro."
+      "title": "Agentes Especializados",
+      "description": "Um time inteiro, cada um com seu talento. Pesquisador, redator, dev, analista — dividimos tarefas e trabalhamos juntos como um time de verdade."
     },
     "feature4": {
-      "title": "Relatórios em tempo real",
-      "description": "Dashboards que mostram vendas, margem e performance. Dados atualizados a cada transação."
+      "title": "Base de Conhecimento",
+      "description": "Suba PDFs, planilhas, documentos. A gente lê tudo e usa esse conhecimento pra dar respostas precisas. Cada agente acessa só o que é relevante."
     },
     "feature5": {
-      "title": "Multi-loja",
-      "description": "Gerencie várias unidades de um único lugar. Estoque compartilhado ou separado, você decide."
+      "title": "Loja de Conexões",
+      "description": "WhatsApp, GitHub, Notion, banco de dados e mais de 50 ferramentas. Conecte em dois cliques e a gente já começa a usar."
+    },
+    "feature6": {
+      "title": "Agendador",
+      "description": "Diga 'quero um relatório toda segunda às 9h' e pronto. Agendamos, executamos e te avisamos. Tudo no piloto automático."
+    },
+    "feature7": {
+      "title": "Proteção Inteligente",
+      "description": "Você define nossos limites. Filtramos conteúdo, detectamos dados sensíveis e validamos tudo que entra e sai. Potentes e seguros."
     }
   },
   "testimonials": {
-    "title": "O que nossos clientes dizem",
-    "subtitle": "Histórias reais de lojistas que transformaram seus negócios.",
+    "title": "Quem usa, recomenda",
+    "subtitle": "Times que já transformaram seus resultados com o Dify.",
     "item1": {
-      "quote": "Finalmente um sistema que não trava! Mesmo nos dias de maior movimento, o LeanERP aguenta firme. E quando cai a internet? Nem percebo.",
-      "author": "Roberto Almeida",
-      "role": "Dono, Mercadinho Bom Preço"
+      "quote": "Reduzimos 80% do tempo com documentação. O ROI foi imediato. Recomendo para qualquer operação que depende de processos manuais.",
+      "author": "Lucas Ferreira",
+      "role": "Diretor de Operações, TechScale"
     },
     "item2": {
-      "quote": "Instalei no computador velho da loja e funciona melhor que o sistema anterior no computador novo. Economia de R$3.000 em hardware.",
-      "author": "Cláudia Santos",
-      "role": "Proprietária, Papelaria Central"
+      "quote": "A satisfação do cliente subiu 40% desde que nossos agentes começaram a atender 24h. É como ter um time que nunca dorme.",
+      "author": "Ana Beatriz Costa",
+      "role": "Head de CX, Inova Digital"
     },
     "item3": {
-      "quote": "O suporte resolveu minha migração em 1 dia. Importaram 15.000 produtos sem eu perder uma venda sequer.",
-      "author": "Marcos Oliveira",
-      "role": "Gerente, Ferragens do Bairro"
+      "quote": "Automatizamos 3 dias de análise por semana. Agora temos dashboards em tempo real e o time foca no que importa.",
+      "author": "Pedro Henrique Silva",
+      "role": "CTO, DataFlow"
     }
   },
   "pricing": {
-    "title": "Preços simples e honestos",
-    "subtitle": "Escolha o plano ideal para o tamanho da sua operação. 30 dias grátis para testar.",
+    "title": "Invista em resultado, não em custo",
+    "subtitle": "Comece grátis e escale conforme seus resultados crescem.",
     "recommended": "Mais escolhido",
-    "minus": {
-      "name": "Minus",
-      "description": "Para quem está começando ou tem operação enxuta.",
-      "feature1": "1 PDV",
-      "feature2": "Módulo de vendas",
-      "feature3": "Controle de estoque básico",
-      "feature4": "Suporte por email",
+    "free": {
+      "name": "Starter",
+      "description": "Para conhecer o poder do seu time de agentes.",
+      "feature1": "1 agente ativo",
+      "feature2": "100 execuções por mês",
+      "feature3": "Integrações básicas",
+      "feature4": "Suporte da comunidade",
       "cta": "Começar grátis",
-      "monthlyPrice": "19",
-      "yearlyPrice": "15"
+      "monthlyPrice": "0",
+      "yearlyPrice": "0"
     },
-    "essential": {
-      "name": "Essential",
-      "description": "Para lojas em crescimento que precisam de controle total.",
-      "feature1": "Até 3 PDVs",
-      "feature2": "Todos os módulos",
-      "feature3": "Relatórios avançados",
+    "pro": {
+      "name": "Pro",
+      "description": "Para quem quer o time completo trabalhando 24/7.",
+      "feature1": "Agentes ilimitados",
+      "feature2": "10.000 execuções por mês",
+      "feature3": "Base de conhecimento completa",
       "feature4": "Suporte prioritário",
-      "feature5": "Backup automático local",
-      "cta": "Começar grátis",
-      "monthlyPrice": "89",
-      "yearlyPrice": "71"
-    },
-    "hardcore": {
-      "name": "Hardcore",
-      "description": "Para operações de alto volume com necessidades específicas.",
-      "feature1": "PDVs ilimitados",
-      "feature2": "Módulos customizados",
-      "feature3": "API para integrações",
-      "feature4": "Suporte 24/7",
-      "feature5": "Gerente de conta dedicado",
-      "feature6": "SLA garantido",
-      "cta": "Falar com especialista",
-      "monthlyPrice": "300",
-      "yearlyPrice": "240"
+      "feature5": "Todas as conexões (+50 apps)",
+      "cta": "Comece agora",
+      "monthlyPrice": "97",
+      "yearlyPrice": "77"
     },
     "currency": "BRL",
     "period": "mês",
@@ -159,59 +158,59 @@
     "billedAnnually": "cobrado anualmente"
   },
   "faq": {
-    "title": "Dúvidas frequentes",
-    "subtitle": "Respostas para suas principais perguntas",
-    "support": "Não encontrou o que procura? Fale com nosso",
+    "title": "Perguntas frequentes",
+    "subtitle": "Tudo o que você precisa saber antes de começar",
+    "support": "Ainda com dúvidas? Fale com nosso",
     "supportLink": "time de suporte",
     "q1": {
-      "question": "Como funciona o modo 100% offline?",
-      "answer": "O LeanERP armazena todos os dados localmente no seu computador. Você pode vender, emitir notas e gerenciar estoque sem internet. Quando a conexão volta, sincronizamos automaticamente com backup na nuvem."
+      "question": "O que é o Dify?",
+      "answer": "Somos o seu time de agentes que trabalha enquanto você dorme. Pesquisamos, escrevemos, analisamos dados, conectamos ferramentas, agendamos tarefas — tudo via conversa. É como ter um time de assistentes inteligentes disponível 24 horas."
     },
     "q2": {
-      "question": "Meu computador é antigo. Vai rodar?",
-      "answer": "Sim. Testamos o LeanERP em máquinas com Windows XP, 2GB de RAM e processadores de 2008. Se o computador liga, o LeanERP roda."
+      "question": "Preciso saber programar?",
+      "answer": "Não. Tudo funciona por conversa em linguagem normal. As receitas automatizadas vêm prontas, os agentes já estão configurados e as conexões são plug-and-play."
     },
     "q3": {
-      "question": "Posso migrar dados do meu sistema atual?",
-      "answer": "Sim, oferecemos migração assistida gratuita. Nosso time importa seus produtos, clientes e histórico de vendas sem você perder um dia de operação."
+      "question": "Quais IAs vocês usam?",
+      "answer": "Funcionamos com ChatGPT, Claude, Gemini, modelos locais via Ollama e mais de 100 modelos via OpenRouter. Você escolhe qual a gente usa em cada situação."
     },
     "q4": {
-      "question": "E se eu precisar de mais módulos depois?",
-      "answer": "Você adiciona módulos quando quiser, sem mudar de plano. Pague apenas pelo que usar, quando precisar."
+      "question": "Meus dados estão seguros?",
+      "answer": "Sim. Cada espaço de trabalho é completamente separado dos outros. Senhas são criptografadas, temos proteções de segurança ativas e detectamos dados sensíveis automaticamente."
     },
     "q5": {
-      "question": "Os dados ficam seguros offline?",
-      "answer": "Sim. Usamos criptografia AES-256 no banco de dados local. Backups automáticos são enviados para a nuvem quando há conexão disponível."
+      "question": "Posso conectar com as ferramentas que já uso?",
+      "answer": "Sim. Temos mais de 50 conexões prontas — WhatsApp, banco de dados, GitHub, Notion, Google Calendar e muito mais. E se precisar de algo específico, criamos conexões customizadas."
     },
     "q6": {
-      "question": "Quanto tempo leva para começar a usar?",
-      "answer": "Instalação em 5 minutos. Cadastro básico de produtos em 30 minutos. Você está operando no mesmo dia."
+      "question": "Como funciona o time de agentes?",
+      "answer": "Somos agentes especializados — um pesquisador, um redator, um analista, um dev. Cada um de nós tem seu jeito de trabalhar e suas ferramentas. Conversamos entre nós, dividimos tarefas e trabalhamos juntos. Você acompanha tudo num painel visual em tempo real."
     }
   },
   "finalCta": {
-    "title": "Pronto para simplificar sua gestão?",
-    "subtitle": "Junte-se a mais de 500 lojistas que já descobriram que ERP pode ser leve, rápido e barato.",
+    "title": "Seu time de agentes está pronto pra começar",
+    "subtitle": "Converse com a gente e veja tudo acontecer. Grátis para começar, sem compromisso.",
     "cta": {
-      "primary": "Testar grátis por 30 dias",
-      "secondary": "Agendar demonstração"
+      "primary": "Comece agora",
+      "secondary": "Veja como funciona"
     },
-    "microcopy": "Instalação em 5 minutos. Sem cartão de crédito."
+    "microcopy": "Setup em 5 minutos. Sem cartão de crédito."
   },
   "footer": {
-    "brand": "LeanERP",
-    "tagline": "Seu ERP, do seu jeito, em qualquer máquina.",
+    "brand": "dify",
+    "tagline": "Somos o seu time de agentes que trabalha enquanto você dorme.",
     "product": {
       "title": "Produto",
-      "features": "Funcionalidades",
+      "features": "Recursos",
       "pricing": "Preços",
       "changelog": "Novidades",
       "docs": "Documentação"
     },
     "company": {
-      "title": "Empresa",
+      "title": "Comunidade",
       "about": "Sobre nós",
       "blog": "Blog",
-      "careers": "Trabalhe conosco",
+      "careers": "Contribuir",
       "contact": "Contato"
     },
     "legal": {
@@ -220,6 +219,6 @@
       "terms": "Termos de uso",
       "cookies": "Cookies"
     },
-    "copyright": "© {year} LeanERP. Todos os direitos reservados."
+    "copyright": "© {year} Dify. Todos os direitos reservados."
   }
 }

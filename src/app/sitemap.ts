@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://leanerp.com.br"
+  const baseUrl = "https://dify.com.br"
   const locales = ["pt-BR", "en"]
   const lastModified = new Date()
 

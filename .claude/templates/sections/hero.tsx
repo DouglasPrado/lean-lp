@@ -1,13 +1,13 @@
 "use client"
 
-import React from "react"
-import Link from "next/link"
-import { useTranslations } from "next-intl"
-import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { AnimatedGroup } from "@/components/shared/animated-group"
-import { TextColor } from "@/components/shared/text-color"
+import { AnnouncementBar } from "@/components/shared/announcement-bar"
 import { HeroVideoDialog } from "@/components/shared/hero-video-dialog"
+import { TextColor } from "@/components/shared/text-color"
+import { Button } from "@/components/ui/button"
+import { useTranslations } from "next-intl"
+import Link from "next/link"
+import React from "react"
 
 const transitionVariants = {
   item: {
@@ -55,24 +55,13 @@ export function Hero() {
           <div className="text-center sm:mx-auto">
             {/* Badge + Title + Subtitle */}
             <AnimatedGroup variants={transitionVariants}>
-              {/* Animated badge */}
-              <Link
-                href="#"
-                className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-black/5 transition-all duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
-              >
-                <span className="text-foreground text-sm">{t("badge")}</span>
-                <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700" />
-                <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
-                  <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
-                    <span className="flex size-6">
-                      <ArrowRight className="m-auto size-3" />
-                    </span>
-                    <span className="flex size-6">
-                      <ArrowRight className="m-auto size-3" />
-                    </span>
-                  </div>
-                </div>
-              </Link>
+              {/* Announcement bar */}
+              <AnnouncementBar
+                cta={t("announcement.cta")}
+                text={t("announcement.text")}
+                href={t("announcement.link")}
+                closeLabel={t("announcement.close")}
+              />
 
               {/* Main headline — static line + animated gradient words */}
               <h1 className="mx-auto mt-8 max-w-4xl text-5xl font-bold tracking-tight text-balance sm:text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem]">

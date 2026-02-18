@@ -43,6 +43,7 @@ export function FinalCta() {
             <CtaButtonPair
               primaryText={t("cta.primary")}
               secondaryText={t("cta.secondary")}
+              secondaryHref="https://github.com/DouglasPrado/dify-agent"
               className="justify-center"
             />
           </motion.div>

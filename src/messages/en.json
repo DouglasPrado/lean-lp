@@ -1,155 +1,154 @@
 {
   "metadata": {
-    "title": "LeanERP — Your ERP, Your Way, Any Machine",
-    "description": "Modular ERP for small retail businesses. 100% offline, blazing fast, runs on any hardware. 30-day free trial.",
-    "siteName": "LeanERP",
-    "keywords": "ERP, business management, offline ERP, retail ERP, point of sale, inventory control, lightweight ERP, modular ERP",
+    "title": "Dify — Your AI Agent Team That Works While You Sleep",
+    "description": "AI agents that research, write, analyze, connect, schedule, and deliver. All through conversation, all on autopilot.",
+    "siteName": "Dify",
+    "keywords": "AI agent team, agents that execute tasks, AI automation, AI assistants for business, intelligent agent platform",
     "og": {
-      "title": "LeanERP — Modular ERP for Retail",
-      "description": "100% offline. Blazing fast. Runs on any machine.",
-      "url": "https://leanerp.com.br/en",
-      "imageAlt": "LeanERP - Business Management System"
+      "title": "Dify — Your AI Agent Team That Works While You Sleep",
+      "description": "Research, docs, data analysis, automations, integrations — everything you'd ask a whole team to do, Dify handles in a conversation.",
+      "url": "https://dify.com.br/en",
+      "imageAlt": "Dify - Your AI Agent Team"
     },
-    "canonical": "https://leanerp.com.br/en"
+    "canonical": "https://dify.com.br/en"
   },
   "announcement": {
-    "text": "New! Version 3.0 with on-demand modules",
+    "text": "New: 50+ connected apps — WhatsApp, GitHub, Notion and more",
     "link": "/changelog",
     "cta": "Learn more"
   },
   "navbar": {
-    "brand": "LeanERP",
+    "brand": "dify",
     "features": "Features",
     "pricing": "Pricing",
     "faq": "FAQ",
     "language": "EN",
-    "cta": "Try free",
+    "cta": "Get started",
     "login": "Sign in"
   },
   "hero": {
-    "badge": "New — Version 3.0 with on-demand modules",
-    "title": "Run your business",
-    "titleWord1": "Offline.",
-    "titleWord2": "Fast.",
-    "titleWord3": "Simple.",
-    "subtitle": "A modular ERP that works without internet, responds in milliseconds, and runs even on your oldest computer.",
+    "badge": "Your AI agent team",
+    "title": "We're your agent team",
+    "titleWord1": "that works",
+    "titleWord2": "while you",
+    "titleWord3": "sleep.",
+    "subtitle": "You talk, we execute. Research, documentation, data analysis, automations, integrations — everything you'd ask a whole team to do, Dify handles in a single conversation.",
     "cta": {
-      "primary": "Start 30-day free trial",
-      "secondary": "Watch demo",
-      "microcopy": "No credit card required. Cancel anytime."
+      "primary": "Get started",
+      "secondary": "See how it works",
+      "microcopy": "17+ tools ready to use. 50+ connected apps."
     },
     "video": {
-      "src": "https://www.youtube.com/embed/LEANERP_DEMO",
-      "thumbnail": "/images/hero-leanerp.png",
-      "thumbnailAlt": "LeanERP running on a point of sale"
+      "src": "https://www.youtube.com/embed/dify-demo",
+      "thumbnail": "/images/hero-dify.png",
+      "thumbnailAlt": "Dify — AI agent team executing tasks in real time"
     }
   },
   "socialProof": {
-    "subtitle": "Already used by",
-    "title": "Over 500 stores across Brazil"
+    "subtitle": "You talk. We deliver.",
+    "title": "Numbers that prove it",
+    "metric1": { "value": "17+", "label": "ready-to-use tools" },
+    "metric2": { "value": "50+", "label": "connected apps" },
+    "metric3": { "value": "5+", "label": "AI models" },
+    "metric4": { "value": "24/7", "label": "availability" }
   },
   "benefits": {
-    "title": "Why LeanERP is different",
-    "subtitle": "Built for retail, focused on simplicity and performance.",
+    "title": "Who is Dify for?",
+    "subtitle": "Founders, PMs, devs, and marketers already use Dify to do in minutes what used to take hours.",
     "item1": {
-      "title": "100% offline",
-      "description": "Works without internet. Your sales never stop, even when the connection drops."
+      "title": "Scale without hiring",
+      "description": "We structure your MVP, analyze the market, generate documentation, automate processes. We work day and night while you focus on growing the business."
     },
     "item2": {
-      "title": "Blazing fast",
-      "description": "Millisecond response times. Designed for high-volume, constant transactions."
+      "title": "From idea to results",
+      "description": "Automated research, feature prioritization, complete documentation, data analysis. Everything you'd ask 3 different people, one conversation with us handles it."
     },
     "item3": {
-      "title": "Modular on-demand",
-      "description": "Pay only for the modules you use. Add features when you need them."
+      "title": "Ship 10x faster",
+      "description": "Automated pull requests, assisted database queries, code reviews, self-writing documentation. Less busywork, more results."
     },
     "item4": {
-      "title": "Any machine",
-      "description": "Runs from the newest MacBook to Windows XP. Your current hardware is enough."
+      "title": "Marketing on autopilot",
+      "description": "We create content, automate WhatsApp, analyze metrics, deliver periodic reports. Your marketing operation runs itself."
     }
   },
   "features": {
-    "title": "Everything you need to manage",
-    "subtitle": "Integrated modules that work together or separately.",
+    "title": "Everything you need, one platform",
+    "subtitle": "Tools that make things happen while you focus on what matters.",
     "feature1": {
-      "title": "Complete POS",
-      "description": "Fast checkout with keyboard shortcuts, multiple payment methods, and receipt printing."
+      "title": "Chat that Executes",
+      "description": "We're not a chatbot. We understand what you want done and do it. No menus, no buttons — just talk naturally and we execute instantly."
     },
     "feature2": {
-      "title": "Inventory control",
-      "description": "Inbound, outbound, inventory counts, and low-stock alerts. Never miss a sale due to stockouts."
+      "title": "Automated Recipes",
+      "description": "Define the steps once and we run them every time. Market research, product structuring, pull requests — everything becomes a recipe on autopilot."
     },
     "feature3": {
-      "title": "Financial management",
-      "description": "Accounts payable and receivable, cash flow, and simplified P&L. Know exactly where your money goes."
+      "title": "Specialized Agents",
+      "description": "A full team, each with their own talent. Researcher, writer, dev, analyst — we split tasks and work together like a real team."
     },
     "feature4": {
-      "title": "Real-time reports",
-      "description": "Dashboards showing sales, margins, and performance. Data updated with every transaction."
+      "title": "Knowledge Base",
+      "description": "Upload PDFs, spreadsheets, documents. We read everything and use that knowledge for precise answers. Each agent accesses only what's relevant."
     },
     "feature5": {
-      "title": "Multi-store",
-      "description": "Manage multiple locations from one place. Shared or separate inventory—you decide."
+      "title": "Connection Store",
+      "description": "WhatsApp, GitHub, Notion, databases, and 50+ more tools. Connect in two clicks and we start using them right away."
+    },
+    "feature6": {
+      "title": "Scheduler",
+      "description": "Say 'I want a report every Monday at 9am' and done. We schedule, execute, and notify you. Everything on autopilot."
+    },
+    "feature7": {
+      "title": "Smart Protection",
+      "description": "You set our limits. We filter content, detect sensitive data, and validate everything in and out. Powerful and secure."
     }
   },
   "testimonials": {
-    "title": "What our customers say",
-    "subtitle": "Real stories from retailers who transformed their businesses.",
+    "title": "Trusted by teams",
+    "subtitle": "Teams that already transformed their results with Dify.",
     "item1": {
-      "quote": "Finally a system that doesn't crash! Even on our busiest days, LeanERP holds strong. And when the internet goes down? I don't even notice.",
-      "author": "Roberto Almeida",
-      "role": "Owner, Mercadinho Bom Preço"
+      "quote": "We cut 80% of documentation time. The ROI was immediate. I recommend it for any operation that relies on manual processes.",
+      "author": "Lucas Ferreira",
+      "role": "Director of Operations, TechScale"
     },
     "item2": {
-      "quote": "I installed it on the old store computer and it runs better than our previous system on the new computer. Saved $600 on hardware.",
-      "author": "Cláudia Santos",
-      "role": "Owner, Papelaria Central"
+      "quote": "Customer satisfaction went up 40% since our agents started serving 24/7. It's like having a team that never sleeps.",
+      "author": "Ana Beatriz Costa",
+      "role": "Head of CX, Inova Digital"
     },
     "item3": {
-      "quote": "Support handled my migration in 1 day. They imported 15,000 products without me missing a single sale.",
-      "author": "Marcos Oliveira",
-      "role": "Manager, Ferragens do Bairro"
+      "quote": "We automated 3 days of analysis per week. Now we have real-time dashboards and the team focuses on what matters.",
+      "author": "Pedro Henrique Silva",
+      "role": "CTO, DataFlow"
     }
   },
   "pricing": {
-    "title": "Simple and honest pricing",
-    "subtitle": "Choose the right plan for your operation size. 30 days free to try.",
+    "title": "Invest in results, not costs",
+    "subtitle": "Start free and scale as your results grow.",
     "recommended": "Most popular",
-    "minus": {
-      "name": "Minus",
-      "description": "For those just starting out or running lean.",
-      "feature1": "1 POS terminal",
-      "feature2": "Sales module",
-      "feature3": "Basic inventory control",
-      "feature4": "Email support",
-      "cta": "Start free",
-      "monthlyPrice": "19",
-      "yearlyPrice": "15"
+    "free": {
+      "name": "Starter",
+      "description": "To experience the power of your agent team.",
+      "feature1": "1 active agent",
+      "feature2": "100 executions per month",
+      "feature3": "Basic integrations",
+      "feature4": "Community support",
+      "cta": "Get started free",
+      "monthlyPrice": "0",
+      "yearlyPrice": "0"
     },
-    "essential": {
-      "name": "Essential",
-      "description": "For growing stores that need full control.",
-      "feature1": "Up to 3 POS terminals",
-      "feature2": "All modules",
-      "feature3": "Advanced reports",
+    "pro": {
+      "name": "Pro",
+      "description": "For those who want the full team working 24/7.",
+      "feature1": "Unlimited agents",
+      "feature2": "10,000 executions per month",
+      "feature3": "Full knowledge base",
       "feature4": "Priority support",
-      "feature5": "Auto local backup",
-      "cta": "Start free",
-      "monthlyPrice": "89",
-      "yearlyPrice": "71"
-    },
-    "hardcore": {
-      "name": "Hardcore",
-      "description": "For high-volume operations with specific needs.",
-      "feature1": "Unlimited POS terminals",
-      "feature2": "Custom modules",
-      "feature3": "API for integrations",
-      "feature4": "24/7 support",
-      "feature5": "Dedicated account manager",
-      "feature6": "Guaranteed SLA",
-      "cta": "Talk to an expert",
-      "monthlyPrice": "300",
-      "yearlyPrice": "240"
+      "feature5": "All connections (50+ apps)",
+      "cta": "Get started now",
+      "monthlyPrice": "97",
+      "yearlyPrice": "77"
     },
     "currency": "BRL",
     "period": "month",
@@ -160,46 +159,46 @@
   },
   "faq": {
     "title": "Frequently asked questions",
-    "subtitle": "Answers to your top questions",
-    "support": "Didn't find what you're looking for? Contact our",
+    "subtitle": "Everything you need to know before getting started",
+    "support": "Still have questions? Talk to our",
     "supportLink": "support team",
     "q1": {
-      "question": "How does 100% offline mode work?",
-      "answer": "LeanERP stores all data locally on your computer. You can sell, print receipts, and manage inventory without internet. When connection returns, we automatically sync with cloud backup."
+      "question": "What is Dify?",
+      "answer": "We're your agent team that works while you sleep. We research, write, analyze data, connect tools, schedule tasks — all through conversation. It's like having a team of smart assistants available 24 hours a day."
     },
     "q2": {
-      "question": "My computer is old. Will it run?",
-      "answer": "Yes. We've tested LeanERP on Windows XP machines, 2GB RAM, and processors from 2008. If it turns on, LeanERP runs."
+      "question": "Do I need to know how to code?",
+      "answer": "No. Everything works through plain language conversation. Automated recipes come ready-made, agents are pre-configured, and connections are plug-and-play."
     },
     "q3": {
-      "question": "Can I migrate data from my current system?",
-      "answer": "Yes, we offer free assisted migration. Our team imports your products, customers, and sales history without you losing a single day of operation."
+      "question": "Which AI models do you use?",
+      "answer": "We work with ChatGPT, Claude, Gemini, local models via Ollama, and 100+ models via OpenRouter. You choose which one we use for each situation."
     },
     "q4": {
-      "question": "What if I need more modules later?",
-      "answer": "You add modules whenever you want, without changing plans. Pay only for what you use, when you need it."
+      "question": "Is my data secure?",
+      "answer": "Yes. Each workspace is completely isolated from others. Passwords are encrypted, we have active security protections, and we automatically detect sensitive data."
     },
     "q5": {
-      "question": "Is data secure offline?",
-      "answer": "Yes. We use AES-256 encryption on the local database. Automatic backups are sent to the cloud when connection is available."
+      "question": "Can I connect the tools I already use?",
+      "answer": "Yes. We have 50+ ready-made connections — WhatsApp, databases, GitHub, Notion, Google Calendar, and much more. And if you need something specific, we create custom connections."
     },
     "q6": {
-      "question": "How long does it take to start using?",
-      "answer": "Installation in 5 minutes. Basic product setup in 30 minutes. You're operational the same day."
+      "question": "How does the agent team work?",
+      "answer": "We're specialized agents — a researcher, a writer, an analyst, a dev. Each of us has our own way of working and our own tools. We talk to each other, split tasks, and work together. You follow everything on a real-time visual dashboard."
     }
   },
   "finalCta": {
-    "title": "Ready to simplify your management?",
-    "subtitle": "Join over 500 retailers who discovered that ERP can be light, fast, and affordable.",
+    "title": "Your agent team is ready to start",
+    "subtitle": "Talk to us and watch it all happen. Free to start, no commitment.",
     "cta": {
-      "primary": "Start 30-day free trial",
-      "secondary": "Schedule a demo"
+      "primary": "Get started",
+      "secondary": "See how it works"
     },
     "microcopy": "Setup in 5 minutes. No credit card required."
   },
   "footer": {
-    "brand": "LeanERP",
-    "tagline": "Your ERP, your way, any machine.",
+    "brand": "dify",
+    "tagline": "We're your agent team that works while you sleep.",
     "product": {
       "title": "Product",
       "features": "Features",
@@ -208,10 +207,10 @@
       "docs": "Documentation"
     },
     "company": {
-      "title": "Company",
+      "title": "Community",
       "about": "About us",
       "blog": "Blog",
-      "careers": "Careers",
+      "careers": "Contribute",
       "contact": "Contact"
     },
     "legal": {
@@ -220,6 +219,6 @@
       "terms": "Terms of use",
       "cookies": "Cookies"
     },
-    "copyright": "© {year} LeanERP. All rights reserved."
+    "copyright": "© {year} Dify. All rights reserved."
   }
 }

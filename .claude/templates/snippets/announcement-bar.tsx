@@ -2,10 +2,17 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { useTranslations } from "next-intl"
 import { X, Sparkles } from "lucide-react"
 import { AnimatePresence, motion } from "framer-motion"
 import { cn } from "@/lib/utils"
+
+interface AnnouncementBarProps {
+  cta: string
+  text: string
+  href: string
+  closeLabel?: string
+  className?: string
+}
 
 const iconVariants = {
   hidden: { x: 0, y: 0, opacity: 0, rotate: 0 },
@@ -28,15 +35,20 @@ const iconVariants = {
   }),
 }
 
-export function AnnouncementBar() {
-  const t = useTranslations("announcement")
+export function AnnouncementBar({
+  cta,
+  text,
+  href,
+  closeLabel = "Close",
+  className,
+}: AnnouncementBarProps) {
   const [isVisible, setIsVisible] = React.useState(true)
   const [isHovered, setIsHovered] = React.useState(false)
 
   if (!isVisible) return null
 
   return (
-    <div className="mx-auto flex items-center justify-center py-2">
+    <div className={cn("mx-auto flex items-center justify-center", className)}>
       <AnimatePresence>
         <motion.div
           className="relative"
@@ -76,7 +88,7 @@ export function AnnouncementBar() {
             )}
           >
             <Link
-              href={t("link")}
+              href={href}
               className={cn(
                 "my-[-1px] rounded-sm px-0 py-1 text-[13px] font-medium underline underline-offset-[5px] outline-none",
                 "text-foreground decoration-primary/30",
@@ -86,16 +98,16 @@ export function AnnouncementBar() {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
-              {t("cta")}
+              {cta}
             </Link>
 
             <span className="text-[0.8125rem] text-primary dark:text-primary/80">
-              {t("text")}
+              {text}
             </span>
 
             <button
               onClick={() => setIsVisible(false)}
-              aria-label={t("close")}
+              aria-label={closeLabel}
               className={cn(
                 "m-0 flex size-6 shrink-0 cursor-pointer items-center justify-center rounded border-0 bg-transparent p-0",
                 "text-primary hover:bg-primary/10",

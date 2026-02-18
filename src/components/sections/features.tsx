@@ -1,7 +1,7 @@
 "use client"
 
 import { useTranslations } from "next-intl"
-import { Box, Lock, Sparkles, Zap, Search } from "lucide-react"
+import { MessageSquare, Workflow, Users, BookOpen, Plug, Calendar, Shield } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { GlowingEffect } from "@/components/shared/glowing-effect"
 import { SectionHeader } from "@/components/shared/section-header"
@@ -48,11 +48,13 @@ function GridItem({ area, icon, title, description }: GridItemProps) {
 
 // Map feature keys to icons — customize per project
 const featureIcons = [
-  <Zap key="zap" className="h-4 w-4" />,
-  <Box key="box" className="h-4 w-4" />,
-  <Lock key="lock" className="h-4 w-4" />,
-  <Sparkles key="sparkles" className="h-4 w-4" />,
-  <Search key="search" className="h-4 w-4" />,
+  <MessageSquare key="message" className="h-4 w-4" />,
+  <Workflow key="workflow" className="h-4 w-4" />,
+  <Users key="users" className="h-4 w-4" />,
+  <BookOpen key="book-open" className="h-4 w-4" />,
+  <Plug key="plug" className="h-4 w-4" />,
+  <Calendar key="calendar" className="h-4 w-4" />,
+  <Shield key="shield" className="h-4 w-4" />,
 ]
 
 export function Features() {
@@ -60,17 +62,19 @@ export function Features() {
 
   const features = [
     { key: "feature1", area: "md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]" },
-    { key: "feature2", area: "md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]" },
-    { key: "feature3", area: "md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]" },
-    { key: "feature4", area: "md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]" },
-    { key: "feature5", area: "md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]" },
+    { key: "feature2", area: "md:[grid-area:1/7/2/13] xl:[grid-area:1/5/2/9]" },
+    { key: "feature3", area: "md:[grid-area:2/1/3/7] xl:[grid-area:1/9/2/13]" },
+    { key: "feature4", area: "md:[grid-area:2/7/3/13] xl:[grid-area:2/1/3/5]" },
+    { key: "feature5", area: "md:[grid-area:3/1/4/7] xl:[grid-area:2/5/3/9]" },
+    { key: "feature6", area: "md:[grid-area:3/7/4/13] xl:[grid-area:2/9/3/13]" },
+    { key: "feature7", area: "md:[grid-area:4/1/5/13] xl:[grid-area:3/1/4/13]" },
   ]
 
   return (
     <AnimatedSection id="features" className="bg-muted/30 py-20 md:py-32">
       <SectionHeader title={t("title")} subtitle={t("subtitle")} />
 
-      <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
+      <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-4 lg:gap-4 xl:grid-rows-3">
         {features.map((feature, index) => (
           <GridItem
             key={feature.key}
