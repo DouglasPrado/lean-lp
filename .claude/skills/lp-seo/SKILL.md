@@ -219,5 +219,5 @@ Before launch:
 ## Conexão com Outras Skills
 
 - **Estrutura**: Seguir a heading hierarchy ao criar componentes em `lp-structure`. Hero usa `<h1>`, todas outras seções usam `<h2>`, sub-items usam `<h3>`
-- **Copy**: As chaves `metadata.*` no template i18n (`.claude/templates/snippets/i18n-message-template.json`) são usadas pelo `generateMetadata()` acima. Ao escrever copy via `lp-copy`, preencher `metadata.title` (≤60 chars) e `metadata.description` (150-160 chars)
+- **Copy**: As chaves `metadata.*` nos arquivos i18n (`src/messages/pt-BR.json`, `src/messages/en.json`) são usadas pelo `generateMetadata()` acima. Ao escrever copy via `lp-copy`, preencher `metadata.title` (≤60 chars) e `metadata.description` (150-160 chars)
 - **Cores**: O `globals.css` gerado por `lp-colors` define as CSS variables que os componentes usam. Gerar cores ANTES de configurar SEO/metadata

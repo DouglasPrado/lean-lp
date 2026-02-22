@@ -122,7 +122,7 @@ Before finalizing any section copy:
 
 ## Estrutura de Chaves i18n
 
-O copy é escrito em `src/messages/{locale}.json`. Usar o template base em `.claude/templates/snippets/i18n-message-template.json` como ponto de partida.
+O copy é escrito em `src/messages/{locale}.json`. Criar os arquivos `src/messages/pt-BR.json` e `src/messages/en.json` seguindo o mapa de chaves abaixo.
 
 ### Mapa de Chaves por Seção
 

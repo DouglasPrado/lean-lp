@@ -179,68 +179,87 @@ const t = useTranslations("hero")
 4. Use `viewport={{ once: true }}` on all Framer Motion animations
 5. Keep LCP element (hero image/text) above fold without layout shift
 
-## Integração com Outras Skills e Templates
+## Guia de Criação de Componentes
 
-### Templates Prontos
+### Padrão Canônico de Seção
 
-Copiar templates de seções de `.claude/templates/sections/` para `src/components/sections/`.
-Copiar snippets de `.claude/templates/snippets/` para `src/components/shared/`.
-Cada seção importa snippets de `@/components/shared/` — NÃO duplicar código manualmente.
+Toda seção DEVE seguir este padrão:
 
-Templates disponíveis (10 seções):
+1. `"use client"` — obrigatório para Framer Motion
+2. `useTranslations("sectionName")` — i18n via next-intl
+3. `motion.div` com `whileInView` + `viewport={{ once: true, margin: "-100px" }}`
+4. Wrapper: `<section className="py-20 md:py-32">`
+5. Container: `<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">`
 
-- `navbar.tsx`, `hero.tsx`, `social-proof.tsx`
-- `benefits.tsx`, `features.tsx`, `testimonials.tsx`, `pricing.tsx`
-- `faq.tsx`, `final-cta.tsx`, `footer.tsx`
+**TypeScript**: Framer Motion transitions precisam de `as const` para satisfazer tipos estritos:
 
-Snippets compartilhados (importar de `@/components/shared/`):
+```tsx
+transition: { duration: 0.5, ease: "easeOut" as const }
+transition: { type: "spring" as const, stiffness: 300 }
+```
 
-- `AnnouncementBar` — pill banner animado com ícones flutuantes (Sparkles), dismissível via botão X. Usado DENTRO do Hero (não é seção separada). Props: `cta` (string), `text` (string), `href` (string), `closeLabel` (string, optional), `className` (string, optional). Usa `framer-motion` (AnimatePresence + motion), `lucide-react` (X, Sparkles). i18n: chaves ficam em `hero.announcement.*`
-- `SectionHeader` — h2 + subtitle com animação (usar em TODAS as seções)
-- `AnimatedSection` — wrapper com Framer Motion whileInView
-- `AnimatedGroup` — animação stagger de grupo com presets (fade, slide, blur, zoom, flip, bounce, etc). Usado no Hero para as animações estilo Tailark
-- `GlowingEffect` — efeito de borda brilhante que segue o cursor. Usado no Features (bento grid). Requer `motion` (npm). Props: `spread`, `glow`, `proximity`, `inactiveZone`, `borderWidth`, `disabled`
-- `MarqueeAnimation` — marquee de texto com velocidade reativa ao scroll (componente utilitário). Requer `@motionone/utils`. Props: `children` (string), `direction` ("left"|"right"), `baseVelocity` (number), `className`
-- `InfiniteSlider` — carrossel infinito de logos/itens. Requer `react-use-measure`. Props: `gap`, `duration`, `durationOnHover`, `reverse`, `direction`, `className`. Também aceita `speed`/`speedOnHover` como alias
-- `ProgressiveBlur` — blur progressivo nas bordas de containers. Requer `motion`. Props: `direction` ("top"|"right"|"bottom"|"left"), `blurLayers` (number), `blurIntensity` (number), `className`
-- `HeroBackground` — wrapper decorativo com glow radial que conecta visualmente o Hero ao Social Proof. Usa `--gradient-color` CSS variable. Props: `children` (ReactNode), `className`. Usar no page.tsx envolvendo `<Hero />` + `<SocialProof />`
-- `Sparkles` — efeito de partículas brilhantes. Usado no Social Proof (efeito sparkles abaixo dos logos). Requer `@tsparticles/react` + `@tsparticles/slim`. Props: `density` (number), `speed` (number), `color` (string), `size` (number), `opacity` (number), `className`. Usa CSS variables `--gradient-color`, `--sparkles-color`, `--sparkles-color-dark` geradas pelo `generate-palette.py`
-- `TextColor` — texto com gradiente animado que cicla entre 3 palavras (efeito neon cycling). Usado no Hero title. Props: `words` (tupla de 3 strings), `className`. Gradientes customizáveis via `gradientPairs` no componente. Injeta keyframes CSS automaticamente
-- `HeroVideoDialog` — modal de vídeo com thumbnail clicável + play button animado. Usado no Hero (product screenshot → video). Props: `videoSrc` (string, URL embed), `thumbnailSrc` (string), `thumbnailAlt` (string), `animationStyle` ("from-center"|"from-bottom"|"from-top"|"fade"|etc), `className`. Usa `next/image`, `lucide-react` (Play, XIcon), `framer-motion` (AnimatePresence + motion)
-- `GlassCard` — card com glassmorphism padrão
-- `CtaButtonPair` — par de botões primary + outline (props: `primaryText`, `secondaryText`, `className`)
-- `BadgePill` — badge/pill para tags e labels (variants: default, primary, outline)
-- `GradientText` — texto com gradiente animado
-- `LanguageSwitcher` — switcher de idioma next-intl (usar no Navbar)
+### Padrões de Componentes Shared
 
-Hooks (importar de `@/hooks/`):
+Criar em `src/components/shared/` conforme necessidade do projeto. Padrões comuns:
 
-- `useMediaQuery` — hook responsivo para detectar breakpoints. Usado no Pricing (efeito 3D apenas em desktop). Arquivo: `use-media-query.ts`
+| Padrão | Propósito | CSS/Uso |
+|--------|-----------|---------|
+| **SectionHeader** | h2 + subtitle com animação | Usar em TODAS as seções. `fadeUp` variant |
+| **AnimatedSection** | Wrapper com whileInView | `motion.div` com stagger children |
+| **GlassCard** | Card glassmorphism | `bg-background/50 backdrop-blur-xl border border-border/50 rounded-2xl shadow-lg` |
+| **GlowingEffect** | Borda brilhante cursor-following | Requer `motion` (npm) |
+| **CtaButtonPair** | Botões primary + outline | Usa shadcn/ui `Button` |
+| **BadgePill** | Badge/pill para tags | Usa shadcn/ui `Badge` |
+| **GradientText** | Texto com gradiente | `bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent` |
+| **LanguageSwitcher** | Toggle de idioma | next-intl + shadcn/ui `DropdownMenu` |
+| **InfiniteSlider** | Carrossel infinito | Requer `react-use-measure` |
 
-Componentes shadcn/ui necessários (instalar via `npx shadcn-ui@latest add`):
+Cada componente shared deve ser autocontido, aceitar `className` para flexibilidade, e usar `cn()` para composição de classes.
 
-- `button`, `badge`, `switch`, `label`, `accordion` (usado no FAQ)
+### Seções Recomendadas
 
-Dependências npm extras (além de framer-motion e next-intl):
+Estrutura típica de uma landing page SaaS (adaptar conforme o projeto):
 
-- `motion` — para GlowingEffect (Features) e ProgressiveBlur
-- `@motionone/utils` — para MarqueeAnimation (componente utilitário) — função `wrap`
-- `react-use-measure` — para InfiniteSlider
-- `@tsparticles/react` — para Sparkles (Social Proof)
-- `@tsparticles/slim` — engine slim do tsparticles (Social Proof)
-- `next-themes` — para useTheme no Social Proof (detectar dark/light mode)
-- `canvas-confetti` — confetti no toggle anual (Pricing)
-- `@number-flow/react` — animação de preços no toggle mensal/anual (Pricing)
+1. **Navbar** — navegação sticky com mobile menu
+2. **Hero** — headline h1, CTAs, imagem/vídeo do produto
+3. **Social Proof** — logos, métricas, ou badges de confiança
+4. **Benefits** — 3-4 benefícios principais com ícones
+5. **Features** — features detalhadas (bento grid, cards)
+6. **Testimonials** — depoimentos com nome, cargo, foto
+7. **Pricing** — planos com toggle mensal/anual
+8. **FAQ** — accordion com top 5-7 objeções
+9. **Final CTA** — headline final + botão de conversão
+10. **Footer** — links, marca, copyright
+
+Cada projeto decide quais seções incluir e a ordem.
+
+### shadcn/ui (instalar conforme necessidade)
+
+```bash
+npx shadcn@latest add button badge accordion switch label dropdown-menu
+```
+
+### Dependências npm opcionais
+
+Instalar conforme os componentes que o projeto precisar:
+
+- `motion` — efeitos avançados (glow, progressive blur)
+- `react-use-measure` — medição de elementos (carrosséis)
+- `@tsparticles/react` + `@tsparticles/slim` — efeitos de partículas
+- `@motionone/utils` — utilitários de animação (marquee)
+- `next-themes` — detecção de dark/light mode
+- `canvas-confetti` — efeitos de celebração
+- `@number-flow/react` — animação numérica
 
 ### Conexão com Outras Skills
 
 - **Cores**: Antes de criar componentes, gerar a paleta via `lp-colors`. Os componentes usam CSS variables (`bg-primary`, `text-muted-foreground`, etc.)
-- **Copy**: As seções usam `useTranslations()` do next-intl. O conteúdo vem de `lp-copy` + template i18n em `.claude/templates/snippets/i18n-message-template.json`
+- **Copy**: As seções usam `useTranslations()` do next-intl. Criar `src/messages/pt-BR.json` e `en.json` com chaves por seção seguindo o mapa de chaves em `lp-copy`
 - **SEO**: Seguir heading hierarchy de `lp-seo` (h1 apenas no hero, h2 por seção)
 
 ## Validação Final (OBRIGATÓRIO)
 
-Após completar o setup do projeto e copiar todos os templates, **SEMPRE** executar os seguintes passos de validação:
+Após criar os componentes do projeto, **SEMPRE** executar os seguintes passos de validação:
 
 ### 1. Instalar dependências
 
@@ -258,11 +277,11 @@ npm run build
 
 Verificar se o build completa sem erros. Erros comuns:
 
-- **"Module not found"** → arquivo não copiado ou import path incorreto. Verificar que todos os snippets estão em `src/components/shared/` e seções em `src/components/sections/`
+- **"Module not found"** → arquivo não criado ou import path incorreto. Verificar que todos os componentes estão em `src/components/shared/` e seções em `src/components/sections/`
 - **"Cannot find module 'next-intl'"** → dependência não instalada. Rodar `npm install next-intl`
 - **"Couldn't find next-intl config"** → falta `createNextIntlPlugin` no `next.config.ts`. Verificar se o arquivo `next.config.ts` foi copiado do template
 - **TypeScript errors** → verificar tipos e props dos componentes. Rodar `npx tsc --noEmit` para listar todos os erros
-- **"Cannot find module '@/components/shared/...'"** → snippet não copiado. Verificar `templates/snippets/` vs `src/components/shared/`
+- **"Cannot find module '@/components/shared/...'"** → componente não criado. Verificar que o arquivo existe em `src/components/shared/`
 - **CSS/Tailwind errors** → verificar se `globals.css` foi gerado pelo `generate-palette.py` e está importado no layout
 
 ### 3. Executar o projeto em dev
@@ -281,7 +300,7 @@ Aguardar o servidor iniciar e verificar:
 
 Ao executar o projeto, verificar que:
 
-- [ ] Todas as 10 seções renderizam (Navbar, Hero com AnnouncementBar, SocialProof, Benefits, Features, Testimonials, Pricing, FAQ, FinalCTA, Footer)
+- [ ] Todas as seções criadas renderizam corretamente
 - [ ] Textos i18n aparecem corretamente (não mostram chaves como `hero.title`)
 - [ ] Cores da paleta estão aplicadas (primary, secondary, background, foreground)
 - [ ] Dark mode funciona (se `next-themes` configurado)

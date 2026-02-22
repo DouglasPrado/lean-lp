@@ -1,224 +1,177 @@
 {
   "metadata": {
-    "title": "Dify — Your AI Agent Team That Works While You Sleep",
-    "description": "AI agents that research, write, analyze, connect, schedule, and deliver. All through conversation, all on autopilot.",
-    "siteName": "Dify",
-    "keywords": "AI agent team, agents that execute tasks, AI automation, AI assistants for business, intelligent agent platform",
-    "og": {
-      "title": "Dify — Your AI Agent Team That Works While You Sleep",
-      "description": "Research, docs, data analysis, automations, integrations — everything you'd ask a whole team to do, Dify handles in a conversation.",
-      "url": "https://dify.com.br/en",
-      "imageAlt": "Dify - Your AI Agent Team"
-    },
-    "canonical": "https://dify.com.br/en"
-  },
-  "announcement": {
-    "text": "New: 50+ connected apps — WhatsApp, GitHub, Notion and more",
-    "link": "/changelog",
-    "cta": "Learn more"
+    "title": "dify — Grow your business without becoming a slave to operations",
+    "description": "Create AI agents that handle daily tasks — support, follow-up, content, reports — connected to your stack, with approvals and recurring tasks.",
+    "keywords": "AI agents, one-person business, automation, solo founder, support automation, follow-up, dify",
+    "ogTitle": "dify — Grow your business without becoming a slave to operations",
+    "ogDescription": "AI agents that handle daily tasks — connected to your stack, with checkpoints.",
+    "ogImageAlt": "dify — AI agents for solo founders"
   },
   "navbar": {
-    "brand": "dify",
+    "howItWorks": "How it works",
+    "benefits": "Benefits",
     "features": "Features",
-    "pricing": "Pricing",
     "faq": "FAQ",
-    "language": "EN",
-    "cta": "Get started",
-    "login": "Sign in"
+    "cta": "Book a demo"
   },
   "hero": {
-    "badge": "Your AI agent team",
-    "title": "We're your agent team",
-    "titleWord1": "that works",
-    "titleWord2": "while you",
-    "titleWord3": "sleep.",
-    "subtitle": "You talk, we execute. Research, documentation, data analysis, automations, integrations — everything you'd ask a whole team to do, Dify handles in a single conversation.",
-    "cta": {
-      "primary": "Get started",
-      "secondary": "See how it works",
-      "microcopy": "17+ tools ready to use. 50+ connected apps."
-    },
-    "video": {
-      "src": "https://www.youtube.com/embed/dify-demo",
-      "thumbnail": "/images/hero-dify.png",
-      "thumbnailAlt": "Dify — AI agent team executing tasks in real time"
-    }
+    "badge": "For solo founders & one-person businesses",
+    "title": "Grow your business without becoming hostage to operations.",
+    "subtitle": "Create AI agents that handle daily tasks (support, follow-up, content, reports) connected to your stack — in real-time, with recurring tasks and approval checkpoints so you stay in control.",
+    "ctaPrimary": "Book a demo",
+    "ctaSecondary": "See how it works",
+    "microcopy": "15–20 min · no strings attached · bring 1 routine that eats your week",
+    "example": "Lead lands on WhatsApp → agent asks questions, logs to Notion/CRM, drafts a reply and only sends with your OK."
   },
-  "socialProof": {
-    "subtitle": "You talk. We deliver.",
-    "title": "Numbers that prove it",
-    "metric1": { "value": "17+", "label": "ready-to-use tools" },
-    "metric2": { "value": "50+", "label": "connected apps" },
-    "metric3": { "value": "5+", "label": "AI models" },
-    "metric4": { "value": "24/7", "label": "availability" }
+  "integrations": {
+    "label": "Integrations",
+    "title": "Your entire stack connected in one place",
+    "description": "Connect the tools you already use — communication, CRM, productivity, payments, and analytics — and let agents work within your real workflow.",
+    "cta": "Book a demo",
+    "ctaSecondary": "See how it works →"
   },
   "benefits": {
-    "title": "Who is Dify for?",
-    "subtitle": "Founders, PMs, devs, and marketers already use Dify to do in minutes what used to take hours.",
+    "title": "You're still 1 person. Just with a \"team\" running alongside you.",
+    "subtitle": "Not \"another chatbot\". It's work delivered.",
     "item1": {
-      "title": "Scale without hiring",
-      "description": "We structure your MVP, analyze the market, generate documentation, automate processes. We work day and night while you focus on growing the business."
+      "title": "Stop starting from scratch every day",
+      "description": "Agents follow processes, checklists, and standards — and hand you back the finished task."
     },
     "item2": {
-      "title": "From idea to results",
-      "description": "Automated research, feature prioritization, complete documentation, data analysis. Everything you'd ask 3 different people, one conversation with us handles it."
+      "title": "Less context-switching, more focus on growth",
+      "description": "Get triage, repetitive replies, updates, and reports off your plate."
     },
     "item3": {
-      "title": "Ship 10x faster",
-      "description": "Automated pull requests, assisted database queries, code reviews, self-writing documentation. Less busywork, more results."
+      "title": "Automation with a handbrake",
+      "description": "You set approvals and limits. The agent doesn't overstep."
     },
     "item4": {
-      "title": "Marketing on autopilot",
-      "description": "We create content, automate WhatsApp, analyze metrics, deliver periodic reports. Your marketing operation runs itself."
+      "title": "Your stack, the way it already works",
+      "description": "Connect the tools you already use and start with one simple flow."
+    }
+  },
+  "howItWorks": {
+    "title": "Start small. Scale what works.",
+    "step1": {
+      "title": "Pick a routine that's holding you back",
+      "description": "Support triage, follow-up, onboarding, weekly report."
+    },
+    "step2": {
+      "title": "Connect your tools",
+      "description": "WhatsApp, Notion, GitHub, calendar, database, and 50+ more apps."
+    },
+    "step3": {
+      "title": "Set rules + approvals",
+      "description": "Tone of voice, format, limits, and where you want an OK before execution."
+    },
+    "step4": {
+      "title": "Run in real-time or on schedule",
+      "description": "The agent executes, logs, and notifies you — no more \"remembering to do it\"."
+    }
+  },
+  "useCases": {
+    "title": "The flows that free up the most time when you're running solo.",
+    "subtitle": "Each flow combines agents + integrations + approvals to take ops off your plate.",
+    "case1": {
+      "title": "Inbox zero (WhatsApp / email / DM)",
+      "description": "Auto-triage by topic and urgency. Suggested replies in your tone of voice. Sends only with your approval.",
+      "status": "Automatic",
+      "meta": "50+ apps",
+      "cta": "Book a demo →"
+    },
+    "case2": {
+      "title": "Sales & follow-up without ghosting",
+      "description": "Qualification questions asked automatically. Follow-up cadence that never drops. Auto-logged to Notion or CRM.",
+      "status": "Recurring",
+      "meta": "CRM",
+      "cta": "Book a demo →"
+    },
+    "case3": {
+      "title": "Content & marketing ops",
+      "description": "Brief, draft, and review with checkpoints. Repurpose 1 idea into multiple formats. Recurring calendar.",
+      "status": "Checkpoints",
+      "meta": "Multi-format",
+      "cta": "Book a demo →"
+    },
+    "case4": {
+      "title": "Weekly business routine",
+      "description": "Weekly report on clients, pipeline, and pending items. Checklists, reminders, and summaries of what changed.",
+      "status": "Weekly",
+      "meta": "Reports",
+      "cta": "Book a demo →"
     }
   },
   "features": {
-    "title": "Everything you need, one platform",
-    "subtitle": "Tools that make things happen while you focus on what matters.",
-    "feature1": {
-      "title": "Chat that Executes",
-      "description": "We're not a chatbot. We understand what you want done and do it. No menus, no buttons — just talk naturally and we execute instantly."
+    "title": "Big-team structure, one-person pace.",
+    "connections": {
+      "title": "50+ connected apps",
+      "description": "Connect WhatsApp, GitHub, Notion, and more."
     },
-    "feature2": {
-      "title": "Automated Recipes",
-      "description": "Define the steps once and we run them every time. Market research, product structuring, pull requests — everything becomes a recipe on autopilot."
+    "tools": {
+      "title": "17+ ready-made tools",
+      "description": "Start with building blocks and customize for your workflow."
     },
-    "feature3": {
-      "title": "Specialized Agents",
-      "description": "A full team, each with their own talent. Researcher, writer, dev, analyst — we split tasks and work together like a real team."
+    "realtime": {
+      "title": "Real-time execution",
+      "description": "The agent acts on your stack and delivers results."
     },
-    "feature4": {
-      "title": "Knowledge Base",
-      "description": "Upload PDFs, spreadsheets, documents. We read everything and use that knowledge for precise answers. Each agent accesses only what's relevant."
+    "recurring": {
+      "title": "Recurring tasks",
+      "description": "Scheduled routines that run on their own."
     },
-    "feature5": {
-      "title": "Connection Store",
-      "description": "WhatsApp, GitHub, Notion, databases, and 50+ more tools. Connect in two clicks and we start using them right away."
+    "approval": {
+      "title": "Approval checkpoints",
+      "description": "You decide what's automatic and what needs your OK."
     },
-    "feature6": {
-      "title": "Scheduler",
-      "description": "Say 'I want a report every Monday at 9am' and done. We schedule, execute, and notify you. Everything on autopilot."
-    },
-    "feature7": {
-      "title": "Smart Protection",
-      "description": "You set our limits. We filter content, detect sensitive data, and validate everything in and out. Powerful and secure."
+    "models": {
+      "title": "ChatGPT / Claude / Gemini",
+      "description": "Choose the ideal model for your use case."
     }
   },
-  "testimonials": {
-    "title": "Trusted by teams",
-    "subtitle": "Teams that already transformed their results with Dify.",
-    "item1": {
-      "quote": "We cut 80% of documentation time. The ROI was immediate. I recommend it for any operation that relies on manual processes.",
-      "author": "Lucas Ferreira",
-      "role": "Director of Operations, TechScale"
-    },
-    "item2": {
-      "quote": "Customer satisfaction went up 40% since our agents started serving 24/7. It's like having a team that never sleeps.",
-      "author": "Ana Beatriz Costa",
-      "role": "Head of CX, Inova Digital"
-    },
-    "item3": {
-      "quote": "We automated 3 days of analysis per week. Now we have real-time dashboards and the team focuses on what matters.",
-      "author": "Pedro Henrique Silva",
-      "role": "CTO, DataFlow"
-    }
-  },
-  "pricing": {
-    "title": "Invest in results, not costs",
-    "subtitle": "Start free and scale as your results grow.",
-    "recommended": "Most popular",
-    "free": {
-      "name": "Starter",
-      "description": "To experience the power of your agent team.",
-      "feature1": "1 active agent",
-      "feature2": "100 executions per month",
-      "feature3": "Basic integrations",
-      "feature4": "Community support",
-      "cta": "Get started free",
-      "monthlyPrice": "0",
-      "yearlyPrice": "0"
-    },
-    "pro": {
-      "name": "Pro",
-      "description": "For those who want the full team working 24/7.",
-      "feature1": "Unlimited agents",
-      "feature2": "10,000 executions per month",
-      "feature3": "Full knowledge base",
-      "feature4": "Priority support",
-      "feature5": "All connections (50+ apps)",
-      "cta": "Get started now",
-      "monthlyPrice": "97",
-      "yearlyPrice": "77"
-    },
-    "currency": "BRL",
-    "period": "month",
-    "annualBilling": "Annual billing",
-    "savingsLabel": "(Save 20%)",
-    "billedMonthly": "billed monthly",
-    "billedAnnually": "billed annually"
+  "demoCta": {
+    "title": "What you walk away with in 15–20 min",
+    "item1": "1 routine from your business mapped out (input → decision → output)",
+    "item2": "1 recommended agent to implement first (with checkpoints)",
+    "item3": "Ideal integrations for your stack",
+    "item4": "Clear next steps (what to automate now vs later)",
+    "cta": "Book a demo",
+    "microcopy": "practical · no strings attached · made for solo founders"
   },
   "faq": {
     "title": "Frequently asked questions",
-    "subtitle": "Everything you need to know before getting started",
-    "support": "Still have questions? Talk to our",
-    "supportLink": "support team",
     "q1": {
-      "question": "What is Dify?",
-      "answer": "We're your agent team that works while you sleep. We research, write, analyze data, connect tools, schedule tasks — all through conversation. It's like having a team of smart assistants available 24 hours a day."
+      "question": "Does this actually work for someone running solo?",
+      "answer": "That's exactly who it's for: taking repetitive ops off your plate and maintaining consistency without hiring."
     },
     "q2": {
-      "question": "Do I need to know how to code?",
-      "answer": "No. Everything works through plain language conversation. Automated recipes come ready-made, agents are pre-configured, and connections are plug-and-play."
+      "question": "Do I need to become an \"automation expert\"?",
+      "answer": "No. You start with one simple flow and evolve from there. During the demo we build the first path together."
     },
     "q3": {
-      "question": "Which AI models do you use?",
-      "answer": "We work with ChatGPT, Claude, Gemini, local models via Ollama, and 100+ models via OpenRouter. You choose which one we use for each situation."
+      "question": "What if the agent sends something wrong to a client?",
+      "answer": "You use approval checkpoints. You can require your OK before sending, publishing, or updating anything critical."
     },
     "q4": {
-      "question": "Is my data secure?",
-      "answer": "Yes. Each workspace is completely isolated from others. Passwords are encrypted, we have active security protections, and we automatically detect sensitive data."
+      "question": "Which tools can I connect?",
+      "answer": "50+ connected apps — WhatsApp, GitHub, Notion, and more. New integrations ship frequently."
     },
     "q5": {
-      "question": "Can I connect the tools I already use?",
-      "answer": "Yes. We have 50+ ready-made connections — WhatsApp, databases, GitHub, Notion, Google Calendar, and much more. And if you need something specific, we create custom connections."
+      "question": "Which AI models does it work with?",
+      "answer": "Compatible with ChatGPT, Claude, and Gemini."
     },
     "q6": {
-      "question": "How does the agent team work?",
-      "answer": "We're specialized agents — a researcher, a writer, an analyst, a dev. Each of us has our own way of working and our own tools. We talk to each other, split tasks, and work together. You follow everything on a real-time visual dashboard."
+      "question": "Is there public pricing?",
+      "answer": "Currently, the path is via demo because it varies by volume, integrations, and use case."
     }
   },
   "finalCta": {
-    "title": "Your agent team is ready to start",
-    "subtitle": "Talk to us and watch it all happen. Free to start, no commitment.",
-    "cta": {
-      "primary": "Get started",
-      "secondary": "See how it works"
-    },
-    "microcopy": "Setup in 5 minutes. No credit card required."
+    "title": "Ready to stop your business from depending on you for everything?",
+    "subtitle": "Book a demo and see a real routine from your day become an agent-powered flow — connected to your stack with checkpoints.",
+    "ctaPrimary": "Book a demo",
+    "ctaSecondary": "See how it works",
+    "microcopy": "15–20 min · no strings attached · bring 1 weekly routine"
   },
   "footer": {
-    "brand": "dify",
-    "tagline": "We're your agent team that works while you sleep.",
-    "product": {
-      "title": "Product",
-      "features": "Features",
-      "pricing": "Pricing",
-      "changelog": "Changelog",
-      "docs": "Documentation"
-    },
-    "company": {
-      "title": "Community",
-      "about": "About us",
-      "blog": "Blog",
-      "careers": "Contribute",
-      "contact": "Contact"
-    },
-    "legal": {
-      "title": "Legal",
-      "privacy": "Privacy",
-      "terms": "Terms of use",
-      "cookies": "Cookies"
-    },
-    "copyright": "© {year} Dify. All rights reserved."
+    "copyright": "© 2025 dify. All rights reserved."
   }
 }

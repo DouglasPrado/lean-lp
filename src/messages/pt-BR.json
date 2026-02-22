@@ -1,224 +1,177 @@
 {
   "metadata": {
-    "title": "Dify — Seu time de agentes que trabalha enquanto você dorme",
-    "description": "Agentes de IA que pesquisam, escrevem, analisam, conectam, agendam e entregam. Tudo via conversa, tudo no automático.",
-    "siteName": "Dify",
-    "keywords": "time de agentes IA, agentes que executam tarefas, automação com inteligência artificial, assistentes IA para empresas, plataforma agentes inteligentes",
-    "og": {
-      "title": "Dify — Seu time de agentes que trabalha enquanto você dorme",
-      "description": "Pesquisa, documentação, análise de dados, automações, integrações — tudo que você pediria pra um time inteiro, o Dify resolve numa conversa.",
-      "url": "https://dify.com.br",
-      "imageAlt": "Dify - Seu time de agentes de IA"
-    },
-    "canonical": "https://dify.com.br"
-  },
-  "announcement": {
-    "text": "Novo: +50 apps conectados — WhatsApp, GitHub, Notion e mais",
-    "link": "/changelog",
-    "cta": "Saiba mais"
+    "title": "dify — Faça seu negócio crescer sem virar refém da operação",
+    "description": "Crie agentes de IA que executam tarefas do dia a dia — suporte, follow-up, conteúdo, relatórios — conectados ao seu stack, com aprovações e tarefas recorrentes.",
+    "keywords": "agentes IA, one-person business, automação, solo founder, suporte automático, follow-up, dify",
+    "ogTitle": "dify — Faça seu negócio crescer sem virar refém da operação",
+    "ogDescription": "Agentes de IA que executam tarefas do dia a dia — conectados ao seu stack, com checkpoints.",
+    "ogImageAlt": "dify — Agentes de IA para solo founders"
   },
   "navbar": {
-    "brand": "dify",
-    "features": "Recursos",
-    "pricing": "Preços",
+    "howItWorks": "Como funciona",
+    "benefits": "Benefícios",
+    "features": "Features",
     "faq": "FAQ",
-    "language": "PT",
-    "cta": "Comece agora",
-    "login": "Entrar"
+    "cta": "Agendar demo"
   },
   "hero": {
-    "badge": "Seu time de agentes de IA",
-    "title": "Somos o seu time de agentes",
-    "titleWord1": "que trabalha",
-    "titleWord2": "enquanto você",
-    "titleWord3": "dorme.",
-    "subtitle": "Você conversa, a gente executa. Pesquisa, documentação, análise de dados, automações, integrações — tudo que você precisaria pedir pra um time inteiro, o Dify resolve numa conversa.",
-    "cta": {
-      "primary": "Comece agora",
-      "secondary": "Veja como funciona",
-      "microcopy": "+17 ferramentas prontas. +50 apps conectados."
-    },
-    "video": {
-      "src": "https://www.youtube.com/embed/dify-demo",
-      "thumbnail": "/images/hero-dify.png",
-      "thumbnailAlt": "Dify — time de agentes de IA executando tarefas em tempo real"
-    }
+    "badge": "Para solo founders e one-person businesses",
+    "title": "Faça seu negócio crescer sem virar refém da operação.",
+    "subtitle": "Crie agentes de IA que executam tarefas do dia a dia (suporte, follow-up, conteúdo, relatórios) conectados ao seu stack — em tempo real, com tarefas recorrentes e pontos de aprovação pra você manter controle.",
+    "ctaPrimary": "Agendar demo",
+    "ctaSecondary": "Ver como funciona",
+    "microcopy": "15–20 min · sem compromisso · traga 1 rotina que te consome toda semana",
+    "example": "Chega lead no WhatsApp → o agente faz perguntas, registra no Notion/CRM, sugere resposta e só envia com seu OK."
   },
-  "socialProof": {
-    "subtitle": "Você fala. A gente faz.",
-    "title": "Números que provam",
-    "metric1": { "value": "17+", "label": "ferramentas prontas" },
-    "metric2": { "value": "50+", "label": "apps conectados" },
-    "metric3": { "value": "5+", "label": "modelos de IA" },
-    "metric4": { "value": "24/7", "label": "disponibilidade" }
+  "integrations": {
+    "label": "Integrações",
+    "title": "Seu stack inteiro conectado num só lugar",
+    "description": "Conecte as ferramentas que você já usa — comunicação, CRM, produtividade, pagamentos e analytics — e deixe agentes trabalharem no seu workflow real.",
+    "cta": "Agendar demo",
+    "ctaSecondary": "Ver como funciona →"
   },
   "benefits": {
-    "title": "Pra quem é o Dify?",
-    "subtitle": "Founders, PMs, devs e marketing já usam o Dify pra fazer em minutos o que levaria horas.",
+    "title": "Você continua sendo 1 pessoa. Só que com um \"time\" rodando junto.",
+    "subtitle": "Não é \"mais um chat\". É trabalho entregue.",
     "item1": {
-      "title": "Escale sem contratar",
-      "description": "Estruturamos seu MVP, analisamos o mercado, geramos documentação, automatizamos processos. Trabalhamos dia e noite enquanto você foca em crescer o negócio."
+      "title": "Pare de recomeçar todo dia do zero",
+      "description": "Agentes seguem processos, checklists e padrões — e te devolvem a tarefa pronta."
     },
     "item2": {
-      "title": "Da ideia ao resultado",
-      "description": "Pesquisas automáticas, priorização de features, documentação completa, análise de dados. Tudo que você pediria pra 3 pessoas diferentes, uma conversa com a gente resolve."
+      "title": "Menos contexto trocado, mais foco em crescimento",
+      "description": "Tire da sua frente triagens, respostas repetidas, atualizações e relatórios."
     },
     "item3": {
-      "title": "Entregue 10x mais rápido",
-      "description": "Pull requests automáticos, consultas ao banco assistidas, review de código, documentação que se escreve sozinha. Menos burocracia, mais resultado."
+      "title": "Automação com freio de mão",
+      "description": "Você define aprovações e limites. O agente não passa do ponto."
     },
     "item4": {
-      "title": "Operação no automático",
-      "description": "Criamos conteúdo, automatizamos WhatsApp, analisamos métricas, entregamos relatórios periódicos. Sua operação de marketing roda sozinha."
+      "title": "Seu stack, do jeito que já funciona hoje",
+      "description": "Conecte as ferramentas que você já usa e comece por um fluxo simples."
+    }
+  },
+  "howItWorks": {
+    "title": "Comece pequeno. Escale o que funciona.",
+    "step1": {
+      "title": "Escolha uma rotina que te prende",
+      "description": "Triagem de suporte, follow-up, onboarding, relatório semanal."
+    },
+    "step2": {
+      "title": "Conecte suas ferramentas",
+      "description": "WhatsApp, Notion, GitHub, agenda, banco de dados e mais de 50 apps."
+    },
+    "step3": {
+      "title": "Configure regras + aprovações",
+      "description": "Tom de voz, formato, limites e onde você quer \"ok\" antes de executar."
+    },
+    "step4": {
+      "title": "Rode em tempo real ou recorrente",
+      "description": "O agente executa, registra e te avisa — sem você ficar \"lembrando de fazer\"."
+    }
+  },
+  "useCases": {
+    "title": "Os fluxos que mais liberam tempo de quem tá sozinho.",
+    "subtitle": "Cada fluxo combina agentes + integrações + aprovações para tirar o operacional do seu colo.",
+    "case1": {
+      "title": "Inbox zero (WhatsApp / e-mail / DM)",
+      "description": "Triagem automática por tema e urgência. Respostas sugeridas no seu tom de voz. Envio só com sua aprovação.",
+      "status": "Automático",
+      "meta": "+50 apps",
+      "cta": "Agendar demo →"
+    },
+    "case2": {
+      "title": "Vendas e follow-up sem \"sumir\"",
+      "description": "Perguntas de qualificação feitas automaticamente. Cadência de follow-up que não para. Registro no Notion ou CRM.",
+      "status": "Recorrente",
+      "meta": "CRM",
+      "cta": "Agendar demo →"
+    },
+    "case3": {
+      "title": "Conteúdo e marketing operacional",
+      "description": "Brief, rascunho e revisão com checkpoints. Reaproveitamento de 1 ideia em vários formatos. Calendário recorrente.",
+      "status": "Checkpoints",
+      "meta": "Multi-formato",
+      "cta": "Agendar demo →"
+    },
+    "case4": {
+      "title": "Rotina semanal do negócio",
+      "description": "Relatório semanal de clientes, pipeline e pendências. Checklists, lembretes e resumos do que mudou.",
+      "status": "Semanal",
+      "meta": "Relatórios",
+      "cta": "Agendar demo →"
     }
   },
   "features": {
-    "title": "Tudo que você precisa, numa só plataforma",
-    "subtitle": "Ferramentas que fazem acontecer enquanto você foca no que importa.",
-    "feature1": {
-      "title": "Chat que Executa",
-      "description": "Não somos um chatbot. Entendemos o que você quer fazer e fazemos. Sem menus, sem botões — só fale normalmente e a gente executa na hora."
+    "title": "Estrutura de time grande, no ritmo de 1 pessoa.",
+    "connections": {
+      "title": "+50 apps conectados",
+      "description": "Conecte WhatsApp, GitHub, Notion e mais."
     },
-    "feature2": {
-      "title": "Receitas Automatizadas",
-      "description": "Defina os passos uma vez e a gente executa sempre. Pesquisa de mercado, estruturação de produto, pull requests — tudo vira receita no piloto automático."
+    "tools": {
+      "title": "+17 ferramentas prontas",
+      "description": "Comece com blocos prontos e ajuste pro seu jeito."
     },
-    "feature3": {
-      "title": "Agentes Especializados",
-      "description": "Um time inteiro, cada um com seu talento. Pesquisador, redator, dev, analista — dividimos tarefas e trabalhamos juntos como um time de verdade."
+    "realtime": {
+      "title": "Execução em tempo real",
+      "description": "O agente age no seu stack e entrega resultado."
     },
-    "feature4": {
-      "title": "Base de Conhecimento",
-      "description": "Suba PDFs, planilhas, documentos. A gente lê tudo e usa esse conhecimento pra dar respostas precisas. Cada agente acessa só o que é relevante."
+    "recurring": {
+      "title": "Tarefas recorrentes",
+      "description": "Rotinas programadas pra rodar sozinhas."
     },
-    "feature5": {
-      "title": "Loja de Conexões",
-      "description": "WhatsApp, GitHub, Notion, banco de dados e mais de 50 ferramentas. Conecte em dois cliques e a gente já começa a usar."
+    "approval": {
+      "title": "Pontos de aprovação",
+      "description": "Você define o que é \"automático\" e o que precisa de \"ok\"."
     },
-    "feature6": {
-      "title": "Agendador",
-      "description": "Diga 'quero um relatório toda segunda às 9h' e pronto. Agendamos, executamos e te avisamos. Tudo no piloto automático."
-    },
-    "feature7": {
-      "title": "Proteção Inteligente",
-      "description": "Você define nossos limites. Filtramos conteúdo, detectamos dados sensíveis e validamos tudo que entra e sai. Potentes e seguros."
+    "models": {
+      "title": "ChatGPT / Claude / Gemini",
+      "description": "Escolha o modelo ideal pro seu caso."
     }
   },
-  "testimonials": {
-    "title": "Quem usa, recomenda",
-    "subtitle": "Times que já transformaram seus resultados com o Dify.",
-    "item1": {
-      "quote": "Reduzimos 80% do tempo com documentação. O ROI foi imediato. Recomendo para qualquer operação que depende de processos manuais.",
-      "author": "Lucas Ferreira",
-      "role": "Diretor de Operações, TechScale"
-    },
-    "item2": {
-      "quote": "A satisfação do cliente subiu 40% desde que nossos agentes começaram a atender 24h. É como ter um time que nunca dorme.",
-      "author": "Ana Beatriz Costa",
-      "role": "Head de CX, Inova Digital"
-    },
-    "item3": {
-      "quote": "Automatizamos 3 dias de análise por semana. Agora temos dashboards em tempo real e o time foca no que importa.",
-      "author": "Pedro Henrique Silva",
-      "role": "CTO, DataFlow"
-    }
-  },
-  "pricing": {
-    "title": "Invista em resultado, não em custo",
-    "subtitle": "Comece grátis e escale conforme seus resultados crescem.",
-    "recommended": "Mais escolhido",
-    "free": {
-      "name": "Starter",
-      "description": "Para conhecer o poder do seu time de agentes.",
-      "feature1": "1 agente ativo",
-      "feature2": "100 execuções por mês",
-      "feature3": "Integrações básicas",
-      "feature4": "Suporte da comunidade",
-      "cta": "Começar grátis",
-      "monthlyPrice": "0",
-      "yearlyPrice": "0"
-    },
-    "pro": {
-      "name": "Pro",
-      "description": "Para quem quer o time completo trabalhando 24/7.",
-      "feature1": "Agentes ilimitados",
-      "feature2": "10.000 execuções por mês",
-      "feature3": "Base de conhecimento completa",
-      "feature4": "Suporte prioritário",
-      "feature5": "Todas as conexões (+50 apps)",
-      "cta": "Comece agora",
-      "monthlyPrice": "97",
-      "yearlyPrice": "77"
-    },
-    "currency": "BRL",
-    "period": "mês",
-    "annualBilling": "Cobrança anual",
-    "savingsLabel": "(Economize 20%)",
-    "billedMonthly": "cobrado mensalmente",
-    "billedAnnually": "cobrado anualmente"
+  "demoCta": {
+    "title": "O que você sai levando em 15–20 min",
+    "item1": "1 rotina do seu negócio desenhada (entrada → decisão → saída)",
+    "item2": "1 agente recomendado pra implementar primeiro (com checkpoints)",
+    "item3": "Integrações ideais pro seu stack",
+    "item4": "Próximos passos claros (o que automatizar agora vs depois)",
+    "cta": "Agendar demo",
+    "microcopy": "prático · sem compromisso · feito pra solo founder"
   },
   "faq": {
     "title": "Perguntas frequentes",
-    "subtitle": "Tudo o que você precisa saber antes de começar",
-    "support": "Ainda com dúvidas? Fale com nosso",
-    "supportLink": "time de suporte",
     "q1": {
-      "question": "O que é o Dify?",
-      "answer": "Somos o seu time de agentes que trabalha enquanto você dorme. Pesquisamos, escrevemos, analisamos dados, conectamos ferramentas, agendamos tarefas — tudo via conversa. É como ter um time de assistentes inteligentes disponível 24 horas."
+      "question": "Isso serve pra quem tá sozinho mesmo?",
+      "answer": "Serve justamente pra isso: tirar do seu colo o operacional repetitivo e manter consistência sem contratar."
     },
     "q2": {
-      "question": "Preciso saber programar?",
-      "answer": "Não. Tudo funciona por conversa em linguagem normal. As receitas automatizadas vêm prontas, os agentes já estão configurados e as conexões são plug-and-play."
+      "question": "Vou precisar virar \"especialista em automação\"?",
+      "answer": "Não. Você começa com um fluxo simples e vai evoluindo. Na demo a gente monta o primeiro caminho com você."
     },
     "q3": {
-      "question": "Quais IAs vocês usam?",
-      "answer": "Funcionamos com ChatGPT, Claude, Gemini, modelos locais via Ollama e mais de 100 modelos via OpenRouter. Você escolhe qual a gente usa em cada situação."
+      "question": "E se o agente mandar algo errado pra um cliente?",
+      "answer": "Você usa pontos de aprovação. Dá pra exigir seu ok antes de enviar, publicar ou atualizar qualquer coisa crítica."
     },
     "q4": {
-      "question": "Meus dados estão seguros?",
-      "answer": "Sim. Cada espaço de trabalho é completamente separado dos outros. Senhas são criptografadas, temos proteções de segurança ativas e detectamos dados sensíveis automaticamente."
+      "question": "Quais ferramentas dá pra conectar?",
+      "answer": "São +50 apps conectados — WhatsApp, GitHub, Notion e mais. Integrações novas saem frequentemente."
     },
     "q5": {
-      "question": "Posso conectar com as ferramentas que já uso?",
-      "answer": "Sim. Temos mais de 50 conexões prontas — WhatsApp, banco de dados, GitHub, Notion, Google Calendar e muito mais. E se precisar de algo específico, criamos conexões customizadas."
+      "question": "Funciona com quais modelos?",
+      "answer": "Compatível com ChatGPT, Claude e Gemini."
     },
     "q6": {
-      "question": "Como funciona o time de agentes?",
-      "answer": "Somos agentes especializados — um pesquisador, um redator, um analista, um dev. Cada um de nós tem seu jeito de trabalhar e suas ferramentas. Conversamos entre nós, dividimos tarefas e trabalhamos juntos. Você acompanha tudo num painel visual em tempo real."
+      "question": "Tem preço público?",
+      "answer": "Hoje, o caminho é via demo porque varia por volume, integrações e caso de uso."
     }
   },
   "finalCta": {
-    "title": "Seu time de agentes está pronto pra começar",
-    "subtitle": "Converse com a gente e veja tudo acontecer. Grátis para começar, sem compromisso.",
-    "cta": {
-      "primary": "Comece agora",
-      "secondary": "Veja como funciona"
-    },
-    "microcopy": "Setup em 5 minutos. Sem cartão de crédito."
+    "title": "Bora fazer seu negócio parar de depender de você pra tudo?",
+    "subtitle": "Agende uma demo e veja uma rotina real do seu dia virar fluxo com agentes — conectada ao seu stack e com checkpoints.",
+    "ctaPrimary": "Agendar demo",
+    "ctaSecondary": "Ver como funciona",
+    "microcopy": "15–20 min · sem compromisso · traga 1 rotina semanal"
   },
   "footer": {
-    "brand": "dify",
-    "tagline": "Somos o seu time de agentes que trabalha enquanto você dorme.",
-    "product": {
-      "title": "Produto",
-      "features": "Recursos",
-      "pricing": "Preços",
-      "changelog": "Novidades",
-      "docs": "Documentação"
-    },
-    "company": {
-      "title": "Comunidade",
-      "about": "Sobre nós",
-      "blog": "Blog",
-      "careers": "Contribuir",
-      "contact": "Contato"
-    },
-    "legal": {
-      "title": "Legal",
-      "privacy": "Privacidade",
-      "terms": "Termos de uso",
-      "cookies": "Cookies"
-    },
-    "copyright": "© {year} Dify. Todos os direitos reservados."
+    "copyright": "© 2025 dify. Todos os direitos reservados."
   }
 }

@@ -18,9 +18,9 @@ Uses Semantic Release for automated versioning and changelog generation.
    - [ ] Storybook: run `npx storybook build` — builds without errors
    - [ ] Visual regression: check Storybook snapshots
 
-3. **i18n** (ref: template em `.claude/templates/snippets/i18n-message-template.json`)
+3. **i18n** (ref: mapa de chaves em `.claude/skills/lp-copy/SKILL.md`)
    - [ ] All translation keys exist in every locale file (pt-BR.json, en.json)
-   - [ ] Keys match the structure in i18n-message-template.json
+   - [ ] Keys match between pt-BR.json and en.json (all sections covered)
    - [ ] No hardcoded strings in components
    - [ ] Crowdin sync is up to date: `npx crowdin push && npx crowdin pull`
    - [ ] Language switcher works correctly

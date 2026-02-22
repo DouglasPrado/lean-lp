@@ -9,27 +9,23 @@ Multi-idioma (next-intl + Crowdin). Foco em conversão.
 ## Workflow de Construção
 
 Ao criar uma nova landing page do zero, seguir estas fases EM ORDEM.
-Cada fase referencia skills, templates e configs específicos.
+Cada fase referencia skills e configs específicos.
 
 ### Fase 0 — Setup do Projeto
 
 1. Criar projeto Next.js: `npx create-next-app@latest`
-2. **Rodar o script de setup automático** que copia TUDO (configs, templates, snippets, i18n, page/layout):
+2. **Rodar o script de setup automático** que cria a estrutura de pastas e copia configs DevOps:
    ```bash
    bash .claude/scripts/setup-project.sh .
    ```
-   O script cria toda a estrutura de pastas e copia:
+   O script cria:
    - Configs DevOps → raiz (`.prettierrc`, `.lintstagedrc.js`, `commitlint.config.js`, `.releaserc.json`, `vitest.config.ts`, `playwright.config.ts`, `crowdin.yml`)
    - Storybook → `.storybook/` (`main.ts`, `preview.ts`)
    - Husky hooks → `.husky/` (`pre-commit`, `commit-msg`)
    - CI/CD → `.github/workflows/` (`ci-release.yml`)
-   - Snippets → `src/components/shared/` (todos os `.tsx`)
-   - Seções → `src/components/sections/` (todos os `.tsx`)
-   - i18n → `src/messages/` (`pt-BR.json` + `en.json`)
    - Lib → `src/lib/` (`animations.ts`, `utils.ts`)
    - i18n config → `src/i18n/` (`routing.ts`, `request.ts`)
-   - Middleware → `src/middleware.ts`
-   - Page + Layout → `src/app/[locale]/` (`page.tsx`, `layout.tsx`)
+   - Proxy → `src/proxy.ts`
    - package.json → merge de scripts e config no existente
 3. Instalar dependências (ver seção "Dependências" abaixo)
 4. Iniciar shadcn/ui: `npx shadcn@latest init`
@@ -53,15 +49,12 @@ Cada fase referencia skills, templates e configs específicos.
 ### Fase 2 — Estrutura de Componentes
 
 > **Skill**: Ler `.claude/skills/lp-structure/SKILL.md` ANTES de começar
->
-> **Nota**: O `setup-project.sh` (Fase 0) já copiou os snippets, seções, animations.ts, utils.ts, page.tsx e layout.tsx. Esta fase é para **personalizar e ajustar**.
 
-1. Verificar que a estrutura foi criada pelo setup:
-   - `src/components/shared/` → 10 snippets (section-header, animated-section, animated-group, infinite-slider, glass-card, glowing-effect, cta-button-pair, badge-pill, gradient-text, language-switcher)
-   - `src/components/sections/` → 11 seções (announcement-bar, navbar, hero, social-proof, benefits, features, testimonials, pricing, faq, final-cta, footer)
-   - `src/lib/animations.ts` → variants Framer Motion (fadeUp, fadeIn, scaleIn, staggerContainer, staggerSlow)
-   - `src/app/[locale]/page.tsx` → composição das seções
-   - `src/app/[locale]/layout.tsx` → metadata + i18n provider
+1. Criar os componentes do zero seguindo o padrão canônico de `lp-structure`:
+   - Criar seções em `src/components/sections/` (`"use client"` + `useTranslations` + `motion.div whileInView`)
+   - Criar componentes shared em `src/components/shared/` conforme necessidade (SectionHeader, AnimatedSection, GlassCard, etc.)
+   - Criar `src/app/[locale]/page.tsx` com a composição das seções
+   - Criar `src/app/[locale]/layout.tsx` com metadata + i18n provider
 2. Criar configs específicos do produto:
    - `src/config/site.ts` → metadata e branding
    - `src/config/pricing.ts` → dados de pricing
@@ -71,17 +64,15 @@ Cada fase referencia skills, templates e configs específicos.
 ### Fase 3 — Conteúdo e Copy
 
 > **Skill**: Ler `.claude/skills/lp-copy/SKILL.md` ANTES de escrever qualquer texto
->
-> **Nota**: O `setup-project.sh` (Fase 0) já copiou `pt-BR.json` e `en.json` para `src/messages/`. Esta fase é para **preencher o conteúdo real**.
 
-1. Abrir `src/messages/pt-BR.json` — já contém a estrutura completa de chaves por seção
+1. Criar `src/messages/pt-BR.json` com a estrutura de chaves por seção (ver mapa de chaves em `lp-copy`)
 2. Preencher o copy seguindo os frameworks de lp-copy:
    - Hero: fórmula `[Action verb] + [desired outcome] + [without pain point]`
    - Benefits: padrão `[What it does] → [Why it matters] → [Proof point]`
    - Pricing: nomes descritivos (Starter, Pro, Enterprise)
    - FAQ: top 5-7 objeções como perguntas
 3. Substituir todos os "ProductName" pelo nome real do produto
-4. Abrir `src/messages/en.json` — já existe com tradução cultural, ajustar com o conteúdo real do produto
+4. Criar `src/messages/en.json` com adaptação cultural do PT-BR (nunca tradução literal)
 5. As chaves seguem o padrão: `seção.campo` (ex: `hero.title`, `pricing.pro.feature1`, `faq.q1.question`)
 
 ### Fase 4 — SEO e Metadata
@@ -89,7 +80,7 @@ Cada fase referencia skills, templates e configs específicos.
 > **Skill**: Ler `.claude/skills/lp-seo/SKILL.md` ANTES de configurar
 
 1. Configurar metadata em `app/[locale]/layout.tsx` seguindo o template de lp-seo
-2. As chaves de metadata já estão no template i18n: `metadata.title`, `metadata.description`, `metadata.og.*`
+2. Incluir chaves `metadata.*` nos arquivos i18n: `metadata.title`, `metadata.description`, `metadata.og.*`
 3. Criar `app/sitemap.ts` e `app/robots.ts` seguindo os exemplos de lp-seo
 4. Adicionar JSON-LD schemas (ver `lp-seo/references/schema-markup.md`):
    - SoftwareApplication (obrigatório)
@@ -122,45 +113,43 @@ Cada fase referencia skills, templates e configs específicos.
 │   ├── commands/              # /release e /checklist
 │   ├── skills/                # lp-colors, lp-copy, lp-structure, lp-seo
 │   └── templates/
-│       ├── configs/           # DevOps configs para copiar na Fase 0
-│       ├── sections/          # Templates TSX das 11 seções
-│       └── snippets/          # Componentes shared + i18n template
-├── .github/workflows/         # CI/CD (copiar de configs/)
-├── .husky/                    # Git hooks (copiar de configs/)
-├── .storybook/                # Storybook config (copiar de configs/)
+│       └── configs/           # DevOps configs para copiar na Fase 0
+├── .github/workflows/         # CI/CD (Fase 0)
+├── .husky/                    # Git hooks (Fase 0)
+├── .storybook/                # Storybook config (Fase 0)
 ├── e2e/                       # Playwright E2E tests
 ├── src/
 │   ├── app/
 │   │   ├── [locale]/
-│   │   │   ├── layout.tsx     # Metadata + i18n provider
-│   │   │   └── page.tsx       # Composição das seções
+│   │   │   ├── layout.tsx     # Metadata + i18n provider (Fase 2)
+│   │   │   └── page.tsx       # Composição das seções (Fase 2)
 │   │   ├── globals.css        # Gerado por lp-colors (Fase 1)
 │   │   ├── sitemap.ts         # lp-seo (Fase 4)
 │   │   └── robots.ts          # lp-seo (Fase 4)
 │   ├── components/
-│   │   ├── sections/          # Copiados de templates/sections/ (Fase 2)
-│   │   ├── shared/            # Copiados de templates/snippets/ (Fase 2)
+│   │   ├── sections/          # Criados por projeto seguindo lp-structure (Fase 2)
+│   │   ├── shared/            # Criados conforme necessidade (Fase 2)
 │   │   └── ui/                # shadcn/ui (via npx shadcn@latest add)
 │   ├── lib/
-│   │   ├── utils.ts           # cn() do shadcn
+│   │   ├── utils.ts           # cn() do shadcn (Fase 0)
 │   │   ├── fonts.ts           # Config de fontes
-│   │   ├── animations.ts      # Framer Motion variants (Fase 2)
+│   │   ├── animations.ts      # Framer Motion variants (Fase 0)
 │   │   └── schema.ts          # JSON-LD helpers (Fase 4)
 │   ├── messages/
-│   │   ├── pt-BR.json         # Copiado de i18n-message-template.json (Fase 3)
-│   │   └── en.json            # Tradução cultural (Fase 3)
+│   │   ├── pt-BR.json         # Fonte primária (Fase 3, via lp-copy)
+│   │   └── en.json            # Adaptação cultural (Fase 3)
 │   ├── config/
 │   │   ├── site.ts            # Metadata, links, branding
 │   │   └── pricing.ts         # Dados de pricing
 │   ├── __tests__/             # Vitest unit tests
 │   └── types/
 │       └── index.ts
-├── crowdin.yml                # Copiado de configs/ (Fase 0)
-├── .releaserc.json            # Copiado de configs/ (Fase 0)
-├── commitlint.config.js       # Copiado de configs/ (Fase 0)
-├── vitest.config.ts           # Copiado de configs/ (Fase 0)
-├── playwright.config.ts       # Copiado de configs/ (Fase 0)
-└── .prettierrc                # Copiado de configs/ (Fase 0)
+├── crowdin.yml                # Fase 0
+├── .releaserc.json            # Fase 0
+├── commitlint.config.js       # Fase 0
+├── vitest.config.ts           # Fase 0
+├── playwright.config.ts       # Fase 0
+└── .prettierrc                # Fase 0
 ```
 
 ## Skills — Quando Usar Cada Uma

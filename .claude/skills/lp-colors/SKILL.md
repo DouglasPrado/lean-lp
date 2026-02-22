@@ -102,7 +102,7 @@ After generating, common tweaks in `globals.css`:
 
 ## Conexão com Outras Skills
 
-- **Estrutura**: Os templates de seções em `lp-structure` e `.claude/templates/sections/` usam classes como `bg-primary`, `text-muted-foreground`, `border-border/50` — essas classes dependem das CSS variables geradas por este script. Gerar cores ANTES de criar componentes
+- **Estrutura**: Os componentes de seções usam classes como `bg-primary`, `text-muted-foreground`, `border-border/50` — essas classes dependem das CSS variables geradas por este script. Gerar cores ANTES de criar componentes
 - **Copy/i18n**: As cores não afetam o copy, mas o preset escolhido (minimal/soft/bold) deve ser coerente com o tom de voz definido em `lp-copy`
 - **SEO**: O `globals.css` gerado inclui `@layer base` com estilos de `body` que afetam o rendering da página
 - **Fase no Workflow**: Esta skill é usada na **Fase 1** do CLAUDE.md — antes de estrutura, copy e SEO

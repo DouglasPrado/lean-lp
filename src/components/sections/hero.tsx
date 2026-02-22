@@ -1,156 +1,127 @@
 "use client"
 
-import React from "react"
-import Link from "next/link"
+import { motion } from "framer-motion"
 import { useTranslations } from "next-intl"
-import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { AnimatedGroup } from "@/components/shared/animated-group"
-import { TextColor } from "@/components/shared/text-color"
-import { HeroVideoDialog } from "@/components/shared/hero-video-dialog"
+import { Badge } from "@/components/ui/badge"
+import { ArrowRight } from "lucide-react"
 
-const transitionVariants = {
-  item: {
-    hidden: {
-      opacity: 0,
-      filter: "blur(12px)",
-      y: 12,
-    },
-    visible: {
-      opacity: 1,
-      filter: "blur(0px)",
-      y: 0,
-      transition: {
-        type: "spring" as const,
-        bounce: 0.3,
-        duration: 1.5,
-      },
-    },
-  },
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
+}
+
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12 } },
 }
 
 export function Hero() {
   const t = useTranslations("hero")
 
   return (
-    <section className="relative overflow-hidden">
-      {/* Decorative radial gradients */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 isolate z-[2] hidden opacity-50 contain-strict lg:block"
-      >
-        <div className="absolute top-0 left-0 h-[80rem] w-[35rem] -translate-y-[350px] -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(var(--primary)/0.08)_0,hsla(var(--primary)/0.02)_50%,transparent_80%)]" />
-        <div className="absolute top-0 left-0 h-[80rem] w-56 [translate:5%_-50%] -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(var(--primary)/0.06)_0,hsla(var(--primary)/0.02)_80%,transparent_100%)]" />
-        <div className="absolute top-0 left-0 h-[80rem] w-56 -translate-y-[350px] -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(var(--primary)/0.04)_0,hsla(var(--primary)/0.02)_80%,transparent_100%)]" />
-      </div>
+    <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-32">
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
 
-      <div className="relative pt-24 md:pt-36">
-        {/* Background fade overlay */}
-        <div
-          aria-hidden
-          className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--background)_75%)]"
-        />
+      {/* Floating orbs */}
+      <motion.div
+        className="absolute -top-32 left-1/4 h-64 w-64 rounded-full bg-primary/10 blur-3xl"
+        animate={{ y: [0, 30, 0], x: [0, -15, 0] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" as const }}
+      />
+      <motion.div
+        className="absolute top-1/3 -right-16 h-48 w-48 rounded-full bg-primary/5 blur-3xl"
+        animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" as const }}
+      />
 
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center sm:mx-auto">
-            {/* Badge + Title + Subtitle */}
-            <AnimatedGroup variants={transitionVariants}>
-              {/* Animated badge */}
-              <Link
-                href="#"
-                className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-black/5 transition-all duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
-              >
-                <span className="text-foreground text-sm">{t("badge")}</span>
-                <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700" />
-                <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
-                  <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
-                    <span className="flex size-6">
-                      <ArrowRight className="m-auto size-3" />
-                    </span>
-                    <span className="flex size-6">
-                      <ArrowRight className="m-auto size-3" />
-                    </span>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Main headline — static line + animated gradient words */}
-              <h1 className="mx-auto mt-8 max-w-4xl text-5xl font-bold tracking-tight text-balance sm:text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem]">
-                {t("title")}
-                <br />
-                <TextColor words={[t("titleWord1"), t("titleWord2"), t("titleWord3")]} />
-              </h1>
-
-              {/* Subtitle */}
-              <p className="text-muted-foreground mx-auto mt-8 max-w-2xl text-lg text-balance">
-                {t("subtitle")}
-              </p>
-            </AnimatedGroup>
-
-            {/* CTA Buttons */}
-            <AnimatedGroup
-              variants={{
-                container: {
-                  visible: {
-                    transition: {
-                      staggerChildren: 0.05,
-                      delayChildren: 0.75,
-                    },
-                  },
-                },
-                ...transitionVariants,
-              }}
-              className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row"
-            >
-              <div className="bg-foreground/10 rounded-[14px] border p-0.5">
-                <Button asChild size="lg" className="rounded-xl px-5 text-base">
-                  <Link href="#">
-                    <span className="text-nowrap">{t("cta.primary")}</span>
-                  </Link>
-                </Button>
-              </div>
-              <Button asChild size="lg" variant="ghost" className="h-10.5 rounded-xl px-5">
-                <Link href="#">
-                  <span className="text-nowrap">{t("cta.secondary")}</span>
-                </Link>
-              </Button>
-            </AnimatedGroup>
-
-            {/* Microcopy */}
-            <p className="text-muted-foreground mt-4 text-sm">{t("cta.microcopy")}</p>
-          </div>
-        </div>
-
-        {/* App screenshot mockup */}
-        <AnimatedGroup
-          variants={{
-            container: {
-              visible: {
-                transition: {
-                  staggerChildren: 0.05,
-                  delayChildren: 0.75,
-                },
-              },
-            },
-            ...transitionVariants,
-          }}
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={stagger}
+          className="mx-auto max-w-4xl text-center"
         >
-          <div className="relative mt-8 overflow-hidden px-2 sm:mt-12 md:mt-20">
-            <div
-              aria-hidden
-              className="to-background absolute inset-0 z-10 bg-gradient-to-b from-transparent from-35%"
+          {/* Badge with pulse glow */}
+          <motion.div variants={fadeUp}>
+            <motion.div
+              className="inline-block"
+              animate={{ boxShadow: ["0 0 0 0 hsl(var(--primary) / 0)", "0 0 0 8px hsl(var(--primary) / 0.08)", "0 0 0 0 hsl(var(--primary) / 0)"] }}
+              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" as const }}
+              style={{ borderRadius: "9999px" }}
+            >
+              <Badge variant="outline" className="border-primary/30 text-primary mb-6">
+                {t("badge")}
+              </Badge>
+            </motion.div>
+          </motion.div>
+
+          <motion.h1
+            variants={fadeUp}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight"
+          >
+            {t("title")}
+          </motion.h1>
+
+          <motion.p
+            variants={fadeUp}
+            className="mt-6 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+          >
+            {t("subtitle")}
+          </motion.p>
+
+          {/* CTAs with hover micro-interactions */}
+          <motion.div
+            variants={fadeUp}
+            className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
+          >
+            <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+              <Button asChild size="lg" className="gap-2 text-base">
+                <a href="#agendar-demo">
+                  {t("ctaPrimary")}
+                  <motion.span
+                    className="inline-block"
+                    whileHover={{ x: 4 }}
+                    transition={{ type: "spring" as const, stiffness: 400, damping: 15 }}
+                  >
+                    <ArrowRight className="h-4 w-4" />
+                  </motion.span>
+                </a>
+              </Button>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+              <Button asChild variant="outline" size="lg" className="text-base">
+                <a href="#como-funciona">{t("ctaSecondary")}</a>
+              </Button>
+            </motion.div>
+          </motion.div>
+
+          <motion.p
+            variants={fadeUp}
+            className="mt-4 text-sm text-muted-foreground"
+          >
+            {t("microcopy")}
+          </motion.p>
+
+          {/* Example card with shimmer border */}
+          <motion.div
+            variants={fadeUp}
+            className="relative mt-12 rounded-xl border border-border/50 bg-card/50 p-4 md:p-6 backdrop-blur-sm overflow-hidden group"
+            whileHover={{ borderColor: "hsl(var(--primary) / 0.3)" }}
+            transition={{ duration: 0.3 }}
+          >
+            {/* Shimmer sweep */}
+            <motion.div
+              className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-primary/5 to-transparent"
+              animate={{ translateX: ["-100%", "100%"] }}
+              transition={{ duration: 3, repeat: Infinity, repeatDelay: 4, ease: "easeInOut" as const }}
             />
-            <div className="ring-background bg-background relative mx-auto max-w-7xl overflow-hidden rounded-2xl border p-4 shadow-lg ring-1 inset-shadow-2xs shadow-zinc-950/15 dark:inset-shadow-white/20">
-              <HeroVideoDialog
-                animationStyle="from-center"
-                videoSrc={t("video.src")}
-                thumbnailSrc={t("video.thumbnail")}
-                thumbnailAlt={t("video.thumbnailAlt")}
-                className="rounded-xl"
-              />
-            </div>
-          </div>
-        </AnimatedGroup>
+            <p className="relative text-sm text-muted-foreground font-mono">
+              {t("example")}
+            </p>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   )

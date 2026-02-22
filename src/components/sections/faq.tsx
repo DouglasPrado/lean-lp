@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import { motion } from "framer-motion"
 import { useTranslations } from "next-intl"
 import {
   Accordion,
@@ -8,59 +8,49 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { SectionHeader } from "@/components/shared/section-header"
+
+const staggerItems = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.08 } },
+}
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 12 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" as const } },
+}
+
+const questions = ["q1", "q2", "q3", "q4", "q5", "q6"]
 
 export function Faq() {
   const t = useTranslations("faq")
 
-  const faqs = [
-    { id: "q1", question: t("q1.question"), answer: t("q1.answer") },
-    { id: "q2", question: t("q2.question"), answer: t("q2.answer") },
-    { id: "q3", question: t("q3.question"), answer: t("q3.answer") },
-    { id: "q4", question: t("q4.question"), answer: t("q4.answer") },
-    { id: "q5", question: t("q5.question"), answer: t("q5.answer") },
-    { id: "q6", question: t("q6.question"), answer: t("q6.answer") },
-  ]
-
   return (
-    <section id="faq" className="py-16 md:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-8 md:grid-cols-5 md:gap-12">
-          {/* Left column — heading + support link (desktop) */}
-          <div className="md:col-span-2">
-            <h2 className="text-foreground text-4xl font-semibold">{t("title")}</h2>
-            <p className="text-muted-foreground mt-4 text-lg text-balance">{t("subtitle")}</p>
-            <p className="text-muted-foreground mt-6 hidden md:block">
-              {t("support")}{" "}
-              <Link href="#" className="text-primary font-medium hover:underline">
-                {t("supportLink")}
-              </Link>
-            </p>
-          </div>
+    <section id="faq" className="py-20 md:py-32">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <SectionHeader title={t("title")} />
 
-          {/* Right column — accordion */}
-          <div className="md:col-span-3">
-            <Accordion type="single" collapsible>
-              {faqs.map((faq) => (
-                <AccordionItem key={faq.id} value={faq.id} className="border-dotted">
-                  <AccordionTrigger className="cursor-pointer text-base hover:no-underline">
-                    {faq.question}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerItems}
+        >
+          <Accordion type="single" collapsible className="w-full">
+            {questions.map((q) => (
+              <motion.div key={q} variants={fadeUp}>
+                <AccordionItem value={q} className="transition-colors duration-200 hover:border-primary/20">
+                  <AccordionTrigger className="text-left text-base hover:text-foreground transition-colors">
+                    {t(`${q}.question`)}
                   </AccordionTrigger>
-                  <AccordionContent>
-                    <p className="text-base">{faq.answer}</p>
+                  <AccordionContent className="text-muted-foreground">
+                    {t(`${q}.answer`)}
                   </AccordionContent>
                 </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-
-          {/* Support link — mobile only */}
-          <p className="text-muted-foreground mt-6 md:hidden">
-            {t("support")}{" "}
-            <Link href="#" className="text-primary font-medium hover:underline">
-              {t("supportLink")}
-            </Link>
-          </p>
-        </div>
+              </motion.div>
+            ))}
+          </Accordion>
+        </motion.div>
       </div>
     </section>
   )
