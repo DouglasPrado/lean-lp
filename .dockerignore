@@ -1,0 +1,14 @@
+node_modules
+.next
+.git
+.gitignore
+.claude
+.husky
+.storybook
+.github
+e2e
+*.md
+Dockerfile
+docker-compose*
+.dockerignore
+.env*
