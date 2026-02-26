@@ -53,10 +53,9 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `${siteConfig.url}/${locale}`,
-      languages: {
-        "pt-BR": `${siteConfig.url}/pt-BR`,
-        en: `${siteConfig.url}/en`,
-      },
+      languages: Object.fromEntries(
+        routing.locales.map((l) => [l, `${siteConfig.url}/${l}`])
+      ),
     },
     robots: {
       index: true,
@@ -75,7 +74,7 @@ export async function generateMetadata({
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params
 
-  if (!routing.locales.includes(locale as "pt-BR" | "en")) {
+  if (!(routing.locales as readonly string[]).includes(locale)) {
     notFound()
   }
 
