@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "title": "dify — Haz crecer tu negocio sin ser esclavo de las operaciones",
+    "description": "Crea agentes de IA que ejecutan tareas diarias — soporte, seguimiento, contenido, reportes — conectados a tu stack, con aprobaciones y tareas recurrentes.",
+    "keywords": "agentes IA, one-person business, automatización, emprendedor solo, soporte automático, seguimiento, dify",
+    "ogTitle": "dify — Haz crecer tu negocio sin ser esclavo de las operaciones",
+    "ogDescription": "Agentes de IA que ejecutan tareas diarias — conectados a tu stack, con checkpoints.",
+    "ogImageAlt": "dify — Agentes de IA para emprendedores solos"
+  },
+  "navbar": {
+    "howItWorks": "Cómo funciona",
+    "benefits": "Beneficios",
+    "features": "Características",
+    "faq": "FAQ",
+    "cta": "Agendar demo"
+  },
+  "hero": {
+    "badge": "Para emprendedores solos y negocios unipersonales",
+    "title": "Haz crecer tu negocio sin ser rehén de las operaciones.",
+    "subtitle": "Crea agentes de IA que ejecutan tareas diarias (soporte, seguimiento, contenido, reportes) conectados a tu stack — en tiempo real, con tareas recurrentes y puntos de aprobación para que mantengas el control.",
+    "ctaPrimary": "Agendar demo",
+    "ctaSecondary": "Ver cómo funciona",
+    "microcopy": "15–20 min · sin compromiso · trae 1 rutina que te consume cada semana",
+    "example": "Llega un lead por WhatsApp → el agente hace preguntas, registra en Notion/CRM, redacta una respuesta y solo la envía con tu OK."
+  },
+  "integrations": {
+    "label": "Integraciones",
+    "title": "Todo tu stack conectado en un solo lugar",
+    "description": "Conecta las herramientas que ya usas — comunicación, CRM, productividad, pagos y analítica — y deja que los agentes trabajen en tu flujo de trabajo real.",
+    "cta": "Agendar demo",
+    "ctaSecondary": "Ver cómo funciona →"
+  },
+  "benefits": {
+    "title": "Sigues siendo 1 persona. Solo que ahora con un \"equipo\" trabajando contigo.",
+    "subtitle": "No es \"otro chatbot\". Es trabajo entregado.",
+    "item1": {
+      "title": "Deja de empezar de cero cada día",
+      "description": "Los agentes siguen procesos, checklists y estándares — y te devuelven la tarea terminada."
+    },
+    "item2": {
+      "title": "Menos cambio de contexto, más foco en crecer",
+      "description": "Quítate de encima triajes, respuestas repetidas, actualizaciones y reportes."
+    },
+    "item3": {
+      "title": "Automatización con freno de mano",
+      "description": "Tú defines aprobaciones y límites. El agente no se pasa de la raya."
+    },
+    "item4": {
+      "title": "Tu stack, como ya funciona hoy",
+      "description": "Conecta las herramientas que ya usas y empieza con un flujo simple."
+    }
+  },
+  "howItWorks": {
+    "title": "Empieza pequeño. Escala lo que funciona.",
+    "step1": {
+      "title": "Elige una rutina que te frena",
+      "description": "Triaje de soporte, seguimiento, onboarding, reporte semanal."
+    },
+    "step2": {
+      "title": "Conecta tus herramientas",
+      "description": "WhatsApp, Notion, GitHub, calendario, base de datos y más de 50 apps."
+    },
+    "step3": {
+      "title": "Configura reglas + aprobaciones",
+      "description": "Tono de voz, formato, límites y dónde quieres un OK antes de ejecutar."
+    },
+    "step4": {
+      "title": "Ejecuta en tiempo real o programado",
+      "description": "El agente ejecuta, registra y te avisa — sin tener que \"acordarte de hacerlo\"."
+    }
+  },
+  "useCases": {
+    "title": "Los flujos que más tiempo liberan cuando operas solo.",
+    "subtitle": "Cada flujo combina agentes + integraciones + aprobaciones para quitarte lo operativo de encima.",
+    "case1": {
+      "title": "Inbox zero (WhatsApp / email / DM)",
+      "description": "Triaje automático por tema y urgencia. Respuestas sugeridas en tu tono de voz. Envío solo con tu aprobación.",
+      "status": "Automático",
+      "meta": "50+ apps",
+      "cta": "Agendar demo →"
+    },
+    "case2": {
+      "title": "Ventas y seguimiento sin desaparecer",
+      "description": "Preguntas de calificación hechas automáticamente. Cadencia de seguimiento que nunca para. Registro automático en Notion o CRM.",
+      "status": "Recurrente",
+      "meta": "CRM",
+      "cta": "Agendar demo →"
+    },
+    "case3": {
+      "title": "Contenido y marketing operativo",
+      "description": "Brief, borrador y revisión con checkpoints. Reutiliza 1 idea en múltiples formatos. Calendario recurrente.",
+      "status": "Checkpoints",
+      "meta": "Multi-formato",
+      "cta": "Agendar demo →"
+    },
+    "case4": {
+      "title": "Rutina semanal del negocio",
+      "description": "Reporte semanal de clientes, pipeline y pendientes. Checklists, recordatorios y resúmenes de lo que cambió.",
+      "status": "Semanal",
+      "meta": "Reportes",
+      "cta": "Agendar demo →"
+    }
+  },
+  "features": {
+    "title": "Estructura de equipo grande, ritmo de 1 persona.",
+    "connections": {
+      "title": "50+ apps conectadas",
+      "description": "Conecta WhatsApp, GitHub, Notion y más."
+    },
+    "tools": {
+      "title": "17+ herramientas listas",
+      "description": "Empieza con bloques listos y ajústalos a tu flujo."
+    },
+    "realtime": {
+      "title": "Ejecución en tiempo real",
+      "description": "El agente actúa en tu stack y entrega resultados."
+    },
+    "recurring": {
+      "title": "Tareas recurrentes",
+      "description": "Rutinas programadas que se ejecutan solas."
+    },
+    "approval": {
+      "title": "Puntos de aprobación",
+      "description": "Tú decides qué es automático y qué necesita tu OK."
+    },
+    "models": {
+      "title": "ChatGPT / Claude / Gemini",
+      "description": "Elige el modelo ideal para tu caso de uso."
+    }
+  },
+  "demoCta": {
+    "title": "Lo que te llevas en 15–20 min",
+    "item1": "1 rutina de tu negocio mapeada (entrada → decisión → salida)",
+    "item2": "1 agente recomendado para implementar primero (con checkpoints)",
+    "item3": "Integraciones ideales para tu stack",
+    "item4": "Próximos pasos claros (qué automatizar ahora vs después)",
+    "cta": "Agendar demo",
+    "microcopy": "práctico · sin compromiso · hecho para emprendedores solos"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": {
+      "question": "¿Esto realmente funciona para alguien que opera solo?",
+      "answer": "Exactamente para eso está: quitar lo operativo repetitivo y mantener consistencia sin contratar."
+    },
+    "q2": {
+      "question": "¿Necesito ser \"experto en automatización\"?",
+      "answer": "No. Empiezas con un flujo simple y vas evolucionando. En la demo construimos el primer camino contigo."
+    },
+    "q3": {
+      "question": "¿Qué pasa si el agente le envía algo incorrecto a un cliente?",
+      "answer": "Usas puntos de aprobación. Puedes exigir tu OK antes de enviar, publicar o actualizar cualquier cosa crítica."
+    },
+    "q4": {
+      "question": "¿Qué herramientas puedo conectar?",
+      "answer": "50+ apps conectadas — WhatsApp, GitHub, Notion y más. Nuevas integraciones salen frecuentemente."
+    },
+    "q5": {
+      "question": "¿Con qué modelos de IA funciona?",
+      "answer": "Compatible con ChatGPT, Claude y Gemini."
+    },
+    "q6": {
+      "question": "¿Hay precio público?",
+      "answer": "Actualmente el camino es vía demo porque varía por volumen, integraciones y caso de uso."
+    }
+  },
+  "finalCta": {
+    "title": "¿Listo para que tu negocio deje de depender de ti para todo?",
+    "subtitle": "Agenda una demo y mira cómo una rutina real de tu día se convierte en un flujo con agentes — conectado a tu stack y con checkpoints.",
+    "ctaPrimary": "Agendar demo",
+    "ctaSecondary": "Ver cómo funciona",
+    "microcopy": "15–20 min · sin compromiso · trae 1 rutina semanal"
+  },
+  "footer": {
+    "copyright": "© 2025 dify. Todos los derechos reservados."
+  }
+}

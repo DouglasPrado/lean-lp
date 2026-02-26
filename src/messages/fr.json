@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "title": "dify — Développez votre business sans devenir esclave des opérations",
+    "description": "Créez des agents IA qui gèrent les tâches quotidiennes — support, relance, contenu, rapports — connectés à votre stack, avec approbations et tâches récurrentes.",
+    "keywords": "agents IA, solopreneur, automatisation, entrepreneur solo, support automatisé, relance, dify",
+    "ogTitle": "dify — Développez votre business sans devenir esclave des opérations",
+    "ogDescription": "Des agents IA qui gèrent les tâches quotidiennes — connectés à votre stack, avec des checkpoints.",
+    "ogImageAlt": "dify — Agents IA pour solopreneurs"
+  },
+  "navbar": {
+    "howItWorks": "Comment ça marche",
+    "benefits": "Avantages",
+    "features": "Fonctionnalités",
+    "faq": "FAQ",
+    "cta": "Réserver une démo"
+  },
+  "hero": {
+    "badge": "Pour solopreneurs et entreprises unipersonnelles",
+    "title": "Développez votre business sans être otage des opérations.",
+    "subtitle": "Créez des agents IA qui gèrent les tâches quotidiennes (support, relance, contenu, rapports) connectés à votre stack — en temps réel, avec des tâches récurrentes et des points d'approbation pour garder le contrôle.",
+    "ctaPrimary": "Réserver une démo",
+    "ctaSecondary": "Voir comment ça marche",
+    "microcopy": "15–20 min · sans engagement · apportez 1 routine qui vous bouffe la semaine",
+    "example": "Un lead arrive sur WhatsApp → l'agent pose des questions, enregistre dans Notion/CRM, rédige une réponse et ne l'envoie qu'avec votre OK."
+  },
+  "integrations": {
+    "label": "Intégrations",
+    "title": "Tout votre stack connecté en un seul endroit",
+    "description": "Connectez les outils que vous utilisez déjà — communication, CRM, productivité, paiements et analytics — et laissez les agents travailler dans votre workflow réel.",
+    "cta": "Réserver une démo",
+    "ctaSecondary": "Voir comment ça marche →"
+  },
+  "benefits": {
+    "title": "Vous restez 1 personne. Juste avec une \"équipe\" qui tourne à vos côtés.",
+    "subtitle": "Pas \"encore un chatbot\". Du travail livré.",
+    "item1": {
+      "title": "Arrêtez de repartir de zéro chaque jour",
+      "description": "Les agents suivent des process, des checklists et des standards — et vous rendent la tâche terminée."
+    },
+    "item2": {
+      "title": "Moins de context-switching, plus de focus sur la croissance",
+      "description": "Débarrassez-vous du tri, des réponses répétitives, des mises à jour et des rapports."
+    },
+    "item3": {
+      "title": "Automatisation avec frein à main",
+      "description": "Vous définissez les approbations et les limites. L'agent ne dépasse pas les bornes."
+    },
+    "item4": {
+      "title": "Votre stack, tel qu'il fonctionne déjà",
+      "description": "Connectez les outils que vous utilisez déjà et commencez par un flux simple."
+    }
+  },
+  "howItWorks": {
+    "title": "Commencez petit. Scalez ce qui marche.",
+    "step1": {
+      "title": "Choisissez une routine qui vous freine",
+      "description": "Tri du support, relance, onboarding, rapport hebdomadaire."
+    },
+    "step2": {
+      "title": "Connectez vos outils",
+      "description": "WhatsApp, Notion, GitHub, agenda, base de données et plus de 50 apps."
+    },
+    "step3": {
+      "title": "Configurez les règles + approbations",
+      "description": "Ton, format, limites et où vous voulez un OK avant exécution."
+    },
+    "step4": {
+      "title": "Exécutez en temps réel ou en récurrent",
+      "description": "L'agent exécute, enregistre et vous notifie — fini de \"penser à le faire\"."
+    }
+  },
+  "useCases": {
+    "title": "Les flux qui libèrent le plus de temps quand on est seul.",
+    "subtitle": "Chaque flux combine agents + intégrations + approbations pour vous décharger de l'opérationnel.",
+    "case1": {
+      "title": "Inbox zero (WhatsApp / email / DM)",
+      "description": "Tri automatique par sujet et urgence. Réponses suggérées dans votre ton. Envoi uniquement avec votre approbation.",
+      "status": "Automatique",
+      "meta": "50+ apps",
+      "cta": "Réserver une démo →"
+    },
+    "case2": {
+      "title": "Ventes et relance sans disparaître",
+      "description": "Questions de qualification posées automatiquement. Cadence de relance qui ne s'arrête jamais. Enregistrement automatique dans Notion ou CRM.",
+      "status": "Récurrent",
+      "meta": "CRM",
+      "cta": "Réserver une démo →"
+    },
+    "case3": {
+      "title": "Contenu et marketing opérationnel",
+      "description": "Brief, brouillon et relecture avec checkpoints. Réutilisation d'1 idée en plusieurs formats. Calendrier récurrent.",
+      "status": "Checkpoints",
+      "meta": "Multi-format",
+      "cta": "Réserver une démo →"
+    },
+    "case4": {
+      "title": "Routine hebdomadaire du business",
+      "description": "Rapport hebdomadaire clients, pipeline et en-cours. Checklists, rappels et résumés des changements.",
+      "status": "Hebdomadaire",
+      "meta": "Rapports",
+      "cta": "Réserver une démo →"
+    }
+  },
+  "features": {
+    "title": "La structure d'une grande équipe, le rythme d'1 personne.",
+    "connections": {
+      "title": "50+ apps connectées",
+      "description": "Connectez WhatsApp, GitHub, Notion et plus."
+    },
+    "tools": {
+      "title": "17+ outils prêts à l'emploi",
+      "description": "Commencez avec des blocs prêts et adaptez-les à votre flux."
+    },
+    "realtime": {
+      "title": "Exécution en temps réel",
+      "description": "L'agent agit dans votre stack et livre les résultats."
+    },
+    "recurring": {
+      "title": "Tâches récurrentes",
+      "description": "Des routines programmées qui tournent toutes seules."
+    },
+    "approval": {
+      "title": "Points d'approbation",
+      "description": "Vous décidez ce qui est automatique et ce qui nécessite votre OK."
+    },
+    "models": {
+      "title": "ChatGPT / Claude / Gemini",
+      "description": "Choisissez le modèle idéal pour votre cas d'usage."
+    }
+  },
+  "demoCta": {
+    "title": "Ce que vous repartez avec en 15–20 min",
+    "item1": "1 routine de votre business cartographiée (entrée → décision → sortie)",
+    "item2": "1 agent recommandé à implémenter en premier (avec checkpoints)",
+    "item3": "Les intégrations idéales pour votre stack",
+    "item4": "Les prochaines étapes claires (quoi automatiser maintenant vs plus tard)",
+    "cta": "Réserver une démo",
+    "microcopy": "pratique · sans engagement · fait pour les solopreneurs"
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": {
+      "question": "Ça marche vraiment pour quelqu'un qui gère tout seul ?",
+      "answer": "C'est exactement pour ça : retirer l'opérationnel répétitif et maintenir la cohérence sans recruter."
+    },
+    "q2": {
+      "question": "Dois-je devenir un « expert en automatisation » ?",
+      "answer": "Non. Commencez par un flux simple et évoluez. Pendant la démo, on construit le premier parcours ensemble."
+    },
+    "q3": {
+      "question": "Et si l'agent envoie quelque chose d'incorrect à un client ?",
+      "answer": "Vous utilisez des points d'approbation. Vous pouvez exiger votre OK avant d'envoyer, publier ou mettre à jour quoi que ce soit de critique."
+    },
+    "q4": {
+      "question": "Quels outils peut-on connecter ?",
+      "answer": "50+ apps connectées — WhatsApp, GitHub, Notion et plus. De nouvelles intégrations sortent régulièrement."
+    },
+    "q5": {
+      "question": "Avec quels modèles d'IA ça fonctionne ?",
+      "answer": "Compatible avec ChatGPT, Claude et Gemini."
+    },
+    "q6": {
+      "question": "Y a-t-il un prix public ?",
+      "answer": "Actuellement, le parcours passe par une démo car ça varie selon le volume, les intégrations et le cas d'usage."
+    }
+  },
+  "finalCta": {
+    "title": "Prêt à ce que votre business ne dépende plus de vous pour tout ?",
+    "subtitle": "Réservez une démo et voyez comment une routine réelle de votre journée devient un flux piloté par des agents — connecté à votre stack avec des checkpoints.",
+    "ctaPrimary": "Réserver une démo",
+    "ctaSecondary": "Voir comment ça marche",
+    "microcopy": "15–20 min · sans engagement · apportez 1 routine hebdomadaire"
+  },
+  "footer": {
+    "copyright": "© 2025 dify. Tous droits réservés."
+  }
+}
