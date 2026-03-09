@@ -11,6 +11,7 @@ const navLinks = [
   { href: "#beneficios", key: "benefits" },
   { href: "#features", key: "features" },
   { href: "#faq", key: "faq" },
+  { href: "https://docs.dify.com.br", key: "docs", external: true },
 ]
 
 export function Navbar() {
@@ -36,6 +37,7 @@ export function Navbar() {
               href={link.href}
               className="text-muted-foreground hover:text-foreground relative text-sm transition-colors"
               whileHover="hover"
+              {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             >
               {t(link.key)}
               <motion.span
@@ -107,6 +109,7 @@ export function Navbar() {
                   initial={{ opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
+                  {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 >
                   {t(link.key)}
                 </motion.a>
