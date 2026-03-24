@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import { siteConfig } from "@/config/site"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -60,7 +61,7 @@ export function FinalCta() {
           >
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="gap-2 text-base">
-                <a href="#agendar-demo">
+                <a href={siteConfig.links.demo} target="_blank" rel="noopener noreferrer">
                   {t("ctaPrimary")}
                   <ArrowRight className="h-4 w-4" />
                 </a>

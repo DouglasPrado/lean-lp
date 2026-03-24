@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { useState } from "react"
+import { siteConfig } from "@/config/site"
 
 const navLinks = [
   { href: "#como-funciona", key: "howItWorks" },
@@ -53,7 +54,7 @@ export function Navbar() {
         <div className="hidden md:block">
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button asChild size="sm">
-              <a href="#agendar-demo">{t("cta")}</a>
+              <a href={siteConfig.links.demo} target="_blank" rel="noopener noreferrer">{t("cta")}</a>
             </Button>
           </motion.div>
         </div>
@@ -115,7 +116,7 @@ export function Navbar() {
                 </motion.a>
               ))}
               <Button asChild size="sm" className="w-full">
-                <a href="#agendar-demo">{t("cta")}</a>
+                <a href={siteConfig.links.demo} target="_blank" rel="noopener noreferrer">{t("cta")}</a>
               </Button>
             </div>
           </motion.div>

@@ -93,6 +93,8 @@ function BentoGrid({ items }: BentoGridProps) {
               {item.ctaHref ? (
                 <a
                   href={item.ctaHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-xs text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 hover:text-primary"
                 >
                   {item.cta || "Explore →"}

@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { useTranslations } from "next-intl"
+import { siteConfig } from "@/config/site"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -100,7 +101,7 @@ export function SocialProof() {
             </motion.p>
             <motion.div variants={fadeUp} className="flex flex-wrap gap-3">
               <Button size="lg" asChild>
-                <a href="#agendar-demo">{t("cta")}</a>
+                <a href={siteConfig.links.demo} target="_blank" rel="noopener noreferrer">{t("cta")}</a>
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <a href="#como-funciona">{t("ctaSecondary")}</a>

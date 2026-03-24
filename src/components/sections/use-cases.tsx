@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl"
 import { MessageSquare, TrendingUp, Pencil, CalendarClock } from "lucide-react"
 import { BentoGrid, type BentoItem } from "@/components/ui/bento-grid"
 import { SectionHeader } from "@/components/shared/section-header"
+import { siteConfig } from "@/config/site"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -49,7 +50,7 @@ export function UseCases() {
     status: t(`${c.key}.status`),
     meta: t(`${c.key}.meta`),
     cta: t(`${c.key}.cta`),
-    ctaHref: "#agendar-demo",
+    ctaHref: siteConfig.links.demo,
     tags: c.tags,
     colSpan: c.colSpan,
     hasPersistentHover: c.hasPersistentHover,

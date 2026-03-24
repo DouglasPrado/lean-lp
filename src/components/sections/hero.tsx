@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight } from "lucide-react"
+import { siteConfig } from "@/config/site"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -78,7 +79,7 @@ export function Hero() {
           >
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <Button asChild size="lg" className="gap-2 text-base">
-                <a href="#agendar-demo">
+                <a href={siteConfig.links.demo} target="_blank" rel="noopener noreferrer">
                   {t("ctaPrimary")}
                   <motion.span
                     className="inline-block"
